@@ -1,0 +1,81 @@
+@import "@/assets/scss/variables.scss";
+
+.Theme {
+    // padding-top: 50px;
+    // min-height: 99.9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    // @include md {
+    //   min-height: auto; // Testing purpose on ipad
+    // }
+  }
+:root {
+    --box-bg: transparent;
+    --target-learner-bg: #def2ff;
+    --color: #363636;
+    --gray_color:#262c35;
+    --background-color: ##f3f6ff;
+    --brand_primary: #262c35;
+    --brand_secondary: #52aaff;
+    --background_primary: #f1f3f6;
+    --background_secondary: #fafafa;
+    --background_tertiary: #ffffff;
+    --background_blue: #418dfe;
+    --text_primary: #262c35;
+    --text_secondary: #393B35;
+    --text_tertiary: #ffffff;
+    --text_blue: #418dfe;
+    --text_code: #d63384;
+    --a_visited: #A300A7;
+    --primary_border: #e6e6e6;
+    --background_peek_contrast: #000000;
+    --background-error: #fcf5ef;
+    --logo_background_primary: #4e4e54;
+    --background_error: #fcf5ef;
+    --primary_white: #ffffff;
+    --primary_black: #000000;
+    --brancd_secondary: #91c7fa;
+    --rating-border: #0000001f
+    --border_light: #e0e0e0;
+    --border_light_secondary: #d4d5d8;
+    --bg-primary-dark: #262c35;
+    --icon-color-banner:rgb(84, 85, 85);
+    --topic-card-box-shadow:0px 32px 32px 0px #00000040;
+    --border_light_secondary_consistent: #d4d5d8;
+    --publication-bg : #ffffff;
+    --book-image-bg :#f1f3f6;
+    --menu-bg-color:#00000059;
+  }
+  
+  [data-theme="dark"] {
+    --box-bg: transparent;
+    --border_light: #40464e;
+    --border_light_secondary: #40464e;
+    --brancd_secondary: #52aaff;
+    --background_error: #fcf5ef;
+    --logo_background_primary: #fafafa;
+    --background_peek_contrast: #ffffff;
+    --primary_border: #545555;
+    --brand_primary: #ffffff;
+    --brand_secondary: #52aaff;
+    --background_primary: #262c35;
+    --background_secondary: #4e4e54;
+    --background_tertiary: #000000;
+    --background_blue: #418dfe;
+    --text_primary: #ffffff;
+    --text_secondary: #818185;
+    --text_tertiary: #262c35;
+    --text_blue: #6ebaff;
+    --text_code: #ff6ac2;
+    --a_visited: #ff9283;
+    --rating-border: #c4c4c4;
+    --bg-primary-dark: black;
+    --icon-color-banner:white;
+    --topic-card-box-shadow:0 4px 8px rgb(255 244 244 / 60%);
+    --publication-bg : #262c35;
+    --book-image-bg :#202020;
+    --menu-bg-color:#ffffff59;
+  
+  }

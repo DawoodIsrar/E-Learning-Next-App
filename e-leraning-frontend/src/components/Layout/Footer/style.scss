@@ -1,0 +1,65 @@
+@import "@/assets/scss/mixin.scss";
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/globals.scss";
+.footer-wrapper {
+  background-color: var(--bg-primary-dark);
+  color: white;
+  .footer-top {
+    padding: 12px 48px;
+    border-bottom: 1px solid white;
+    p {
+      color: white;
+    }
+    @include dflexwithjustify(space-between);
+    @include respond-to(tablet-view) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-links {
+    padding: 24px 48px;
+
+    @include dflexwithjustify(space-between);
+    @include respond-to(mobile-view) {
+      flex-direction: column-reverse;
+    }
+    .links-wrapper {
+      width: 40%;
+      @include respond-to(mobile-view) {
+        width: 100%;
+        flex-direction: column;
+      }
+      @include dflexwithjustify(space-between);
+      .footer-links-list {
+        ul {
+          list-style: none;
+          padding: 0px;
+          @include respond-to(tablet-view) {
+            margin: 0px;
+          }
+          li {
+            padding-block: 5px;
+
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-logo {
+    padding: 24px 48px;
+    @include dflexwithjustifyandalign(space-between, center);
+    @include respond-to(tablet-view) {
+      flex-direction: column;
+      align-items: start;
+    }
+    img {
+      cursor: pointer;
+      background-color: white;
+    }
+  }
+}

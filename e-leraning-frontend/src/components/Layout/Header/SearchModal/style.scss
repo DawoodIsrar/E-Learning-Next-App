@@ -1,0 +1,46 @@
+@import "@/assets/scss/mixin.scss";
+@import "@/assets/scss/variables.scss";
+
+.search-modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: $background_primary;
+  bottom: 0;
+  z-index: 2;
+
+  .search-barr {
+    position: relative;
+    .search-inputt {
+      position: relative;
+      border-bottom: 1px solid #d1d7dc;
+      .search-wrapper {
+        @include dflexwithjustifyandalign(center, center);
+        gap: 10px;
+        width: 100%;
+      }
+      cursor: pointer;
+      @include dflexwithjustifyandalign(space-between, center);
+      gap: 10px;
+      min-height: 25px;
+      padding: 10px;
+      img {
+        position: relative;
+
+        width: 24px;
+        height: 24px;
+      }
+      input {
+        position: relative;
+        width: 100%;
+        background-color: $background_primary;
+
+        &:focus-within {
+          outline: none;
+        }
+        border: none;
+        background-color: none;
+      }
+    }
+  }
+}
