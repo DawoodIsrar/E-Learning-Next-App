@@ -1,0 +1,41 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.post-wrapper {
+  @include respond-to(tablet-view) {
+    width: 100%;
+  }
+
+  .main-title {
+    margin-bottom: 15px;
+    @include respond-to(tablet-view) {
+      display: none;
+    }
+  }
+  .posts-div {
+    .posts-chunk-div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .single-post-div {
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      h4 {
+        font-weight: 600;
+      }
+      @include dflexwithjustify(space-between);
+      flex-direction: column;
+      .post-date {
+        @include dflexwithjustifyandalign(space-between, center);
+        @include respond-to(mobile-view) {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

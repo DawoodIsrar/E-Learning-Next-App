@@ -1,0 +1,61 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.hero-container-wrapper {
+  background-color: $background_primary;
+
+  .hero-container {
+    width: 100%;
+    gap: 25px;
+    @include dflexwithjustifyandalign(space-between, flex-start);
+    @include max-alignment;
+    @include respond-to(tablet-view) {
+      gap: 0px;
+      padding: 24px;
+      flex-direction: column-reverse;
+    }
+    @include respond-to(mobile-view) {
+      padding: 0px !important;
+    }
+
+    .hero-text {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding-block: 100px;
+
+      @include respond-to(tablet-view) {
+        padding: 0px;
+        width: 100vw;
+        max-width: 100%;
+        gap: 16px;
+        padding: 24px;
+      }
+
+      .hero-text-header {
+        width: 99%;
+      }
+
+      .hero-text-body {
+        max-width: 580px;
+        width: 100%;
+        @include respond-to(tablet-view) {
+          letter-spacing: -0.006em;
+          max-width: 100%;
+        }
+      }
+      .socialbutton-wrapper {
+        max-width: 350px;
+        @include respond-to(tablet-view) {
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        @include respond-to(mobile-view) {
+          display: flex;
+        }
+      }
+    }
+  }
+}

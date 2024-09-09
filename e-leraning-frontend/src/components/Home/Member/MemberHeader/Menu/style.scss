@@ -1,0 +1,218 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.menu {
+  border: 1px solid $primary_border;
+  cursor: pointer;
+  background-color: $background_primary;
+  @include dflexwithjustify(center);
+  align-items: center;
+  max-width: 120px;
+  width: 120px;
+  height: 50px;
+  padding: 10px 24px;
+  gap: 8px;
+  border-radius: 46px;
+  @include respond-to(tablet-view) {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+  }
+
+  &:hover {
+    background: var(--background_blue);
+    .menu-mode {
+      color: white;
+    }
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  }
+
+  .menu-mode {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    @include respond-to(tablet-view) {
+      display: none;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+
+  left: 0;
+  top: 65px !important;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.35);
+  .nav-menu {
+    background-color: $background_tertiary;
+    position: absolute;
+    left: 0%;
+    width: 100% !important;
+    list-style-type: none;
+    padding: 32px 0px;
+    z-index: 999;
+    border: $button_border;
+    @include respond-to(mobile-view) {
+      padding: 0px;
+      margin-bottom: 100px;
+    }
+    .auth-button-wrapper {
+      @include respond-to(mobile-view) {
+        position: fixed;
+        bottom: 0;
+        background-color: var(--background_primary);
+        padding: 16px 24px;
+      }
+    }
+
+    .menu-dropdown-wrapper {
+      @include max-alignment;
+      padding: 0px 50px;
+      display: flex;
+      gap: 24px;
+
+      @include respond-to(tablet-view) {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+      }
+      @include respond-to(mobile-view) {
+        margin-bottom: 50px;
+      }
+      .account-and-other {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        @include respond-to(tablet-view) {
+          width: 100%;
+        }
+      }
+      .menu-stright-line-divider {
+        width: 1px;
+        background-color: #e6e6e6;
+        @include respond-to(tablet-view) {
+          display: none;
+        }
+      }
+      .menu-account,
+      .menu-other {
+        h4,
+        .nav-buttons,
+        .log-out {
+          padding-left: 24px;
+        }
+        a {
+          text-decoration: none;
+        }
+        min-width: 281px;
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        .menu-main-title {
+          display: flex;
+          gap: 8px;
+        }
+        .courses-list {
+          display: flex;
+          gap: 24px;
+          @include respond-to(tablet-view) {
+            flex-direction: column;
+            gap: 12px;
+          }
+          .course-column {
+            min-width: 287px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+        }
+        @include respond-to(tablet-view) {
+          max-width: 100%;
+
+          // h5 {
+          //   padding-inline: 24px;
+          // }
+        }
+      }
+      .courses-menu {
+        max-width: unset;
+        @include respond-to(tablet-view) {
+          margin-bottom: 90px;
+        }
+        @include respond-to(mobile-view) {
+          margin-bottom: 100px;
+        }
+      }
+      .auth-button-wrapper {
+        display: none;
+        width: 100%;
+        @include respond-to(tablet-view) {
+          @include dflexwithjustify(center);
+          width: 100%;
+          gap: 8px;
+        }
+
+        .login-Button {
+          @include flex-center;
+          padding: 0 14px;
+          border-radius: $nav_radius;
+          border: 1px solid $primary_border;
+          font-size: 16px;
+          cursor: pointer;
+          font-weight: 600;
+          color: $text_primary;
+          width: 159px;
+          font-weight: 700;
+          background-color: $background_tertiary;
+          text-decoration: none;
+          height: 44px;
+          &:hover {
+            background-color: var(--background_blue);
+          }
+        }
+        .signup-Button {
+          @include flex-center;
+          width: 159px;
+          font-weight: 700;
+
+          height: $nav_height;
+          padding: 0 14px;
+          border-radius: $nav_radius;
+          border: $button_border;
+          cursor: pointer;
+          background-color: $background_peek_contrast;
+          color: $text_tertiary;
+          text-decoration: none;
+          &:hover {
+            background-color: var(--background_blue);
+            color: white;
+          }
+        }
+      }
+    }
+    .header-mobile-search-wrapper {
+      width: 100%;
+      padding-top: 16px;
+      @include dflexwithjustify(center);
+      display: none;
+      @include respond-to(mobile-view) {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .header-mobile-search {
+          align-self: center;
+        }
+      }
+    }
+  }
+}

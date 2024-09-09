@@ -1,0 +1,39 @@
+@import "../../assets/scss/theme";
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.errorPage {
+  @include dflexwithjustifyandalign(center, center);
+  flex-direction: column;
+  gap: 10px;
+  min-height: calc(100vh - 75px);
+  @include md {
+    min-height: calc(var(--vh, 1vh) * 100 - 105px);
+  }
+  color: var(--errorpage-color) !important;
+
+  a {
+    @include flex-center();
+    text-decoration: none;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 15px;
+    background: linear-gradient(88deg, #004cb6 -44.71%, #009af9 100%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $white-color;
+    @include md {
+      width: 150px;
+      font-size: 18px;
+    }
+    @include sm {
+      width: 100px;
+      font-size: 16px;
+    }
+  }
+  &:visited {
+    color: $white-color;
+  }
+}

@@ -1,0 +1,175 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.recent-main-wrapper {
+  background-color: $background_primary !important;
+
+  .Recent-courses-wrapper {
+    padding-bottom: 64px;
+    background-color: $background_primary !important;
+
+    @include max-alignment;
+    @include respond-to(tablet-view) {
+      padding: 24px;
+    }
+  }
+  .recent-course-header {
+    @include dflexwithalign(center);
+    gap: 5px;
+    padding-bottom: 24px;
+    @include respond-to(tablet-view) {
+      padding-bottom: 18px;
+    }
+
+    .recently-viewed-icon {
+      width: 35px;
+      height: 35px;
+      @include respond-to(tablet-view) {
+        width: $course_card_font;
+        height: $course_card_font;
+      }
+    }
+
+    .recent-course-header-h3 {
+      letter-spacing: 0.00054em;
+      user-select: none;
+
+      @include respond-to(tablet-view) {
+        width: 100%;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  .loading-wrapper {
+    @include dflexwithalign(center);
+    flex-direction: column;
+    margin: 32px 0px;
+  }
+  .helper-text {
+    font-size: 19px;
+    @include respond-to(tablet-view) {
+      font-size: 16px;
+    }
+  }
+  .topic-slider {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.slick-arrow {
+  display: none !important;
+  background: hsla(0, 0%, 8%, 0.2) !important;
+  transition: all 0.3s;
+}
+
+.slick-arrow:hover {
+  background: hsla(0, 0%, 8%, 0.4) !important;
+}
+
+.slick-slider {
+  transition: transform 1s !important;
+}
+
+.slick-slider:hover .slick-arrow {
+  display: flex !important;
+}
+
+.slick-prev {
+  margin-left: 1rem !important;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  align-items: center !important;
+  border-color: black !important;
+  height: 100% !important;
+  width: 60px !important;
+  z-index: 12 !important;
+  @include respond-to(mobile-view) {
+    height: 60px !important;
+    border-radius: 100%;
+  }
+}
+
+.slick-next {
+  margin-right: 0.7rem !important;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  align-items: center !important;
+  border-color: black !important;
+  height: 100% !important;
+  width: 60px !important;
+  z-index: 12 !important;
+  @include respond-to(mobile-view) {
+    height: 60px !important;
+    border-radius: 100%;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 0.75vw;
+  height: 0.75vw;
+  min-width: 9px;
+  min-height: 9px;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  color: transparent !important;
+  font-family: none !important;
+  transform: rotate(-54deg) translateX(-40%) translateY(-70%);
+  animation: animate 2s infinite;
+  transition: all 0.3s;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  width: 1.5vw !important;
+  height: 1.5vw !important;
+}
+
+.slick-prev:before {
+  transform: rotate(133deg) translateX(10%) translateY(50%) !important;
+}
+
+.slick-next:before {
+  transform: rotate(-54deg) translateX(-10%) translateY(-80%) !important;
+}
+.slick-track {
+  float: left !important;
+}
+.slick-next {
+  right: -14px !important;
+}
+.slick-prev {
+  left: -20px !important;
+}
+.slick-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.slick-slider {
+  .slick-list {
+    @include hide-scrollbar;
+    padding-block: 10px;
+    overflow: scroll;
+  }
+}
+.hide-scrollbar {
+  @include hide-scrollbar;
+  overflow: scroll;
+  display: flex;
+  gap: 15px;
+}
+
+@media screen and (max-width: 550px) {
+  .slick-track {
+    padding: 11px 0px;
+  }
+}

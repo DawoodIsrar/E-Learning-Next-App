@@ -1,0 +1,36 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.course-bookmarks-name {
+  width: 100%;
+  border-radius: 10px;
+  gap: 48px;
+  .course-page-name-heading {
+    h2 {
+      color: $primary_white;
+    }
+  }
+  @include dflexwithjustifyandalign(space-around, start);
+  flex-direction: column;
+  h2 {
+    font-weight: 700;
+  }
+  img {
+    margin-top: 4px;
+    @include respond-to(tablet-view) {
+      max-width: 45px;
+      max-height: 45px;
+    }
+  }
+  .course-icon-container {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    .image-div {
+      @include dflexwithjustifyandalign(center, center);
+      background-color: $primary_white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  }
+}

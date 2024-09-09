@@ -1,0 +1,36 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-div {
+  display: flex;
+  justify-content: center;
+}
+
+.course-search-result-card-wrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+  h3 {
+    color: $text_tertiary;
+  }
+  .course-not-found {
+    text-align: center;
+  }
+
+  @include respond-to(tablet-view) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-content: center;
+    gap: 16px;
+  }
+
+  @include respond-to(mobile-view) {
+    grid-template-columns: repeat(auto-fill, 164px);
+    gap: 16px;
+  }
+  @include respond-to(mobile-view) {
+    .main-card-wrapper {
+      height: 138px;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.course-p-banner {
+  display: flex;
+  flex-direction: column;
+  @include max-alignment;
+  margin-inline: auto;
+  margin-bottom: 50px;
+  border-radius: 24px;
+  position: relative;
+  padding: 32px 48px;
+  //older 1360px mediaquery
+
+  @include respond-to(tablet-view) {
+    padding: 50px 35px;
+    align-items: center;
+    margin-bottom: 30px;
+    @include dflexwithalign(center);
+  }
+
+  * {
+    margin: 0;
+  }
+  .mob-view-course-image {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: none;
+  }
+  .course-banner-internal-wrapper {
+    @include dflexwithjustify(space-between);
+
+    @include respond-to(tablet-view) {
+      .large-view-course-image {
+        display: none;
+      }
+      .mob-view-course-image {
+        display: block;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 22px;
+    @include respond-to(tablet-view) {
+      text-align: left;
+      align-items: center;
+      gap: 22px;
+    }
+  }
+  .course-title-image {
+    @include dflexwithjustify(space-between);
+    flex-direction: column;
+  }
+  .banner-content-btn {
+    margin-top: 21px;
+    .start-chapter-btn {
+      margin-top: 21px;
+      background-color: #262c35;
+
+      span {
+        color: $primary_white;
+      }
+    }
+  }
+  .cover-image {
+    max-width: 495px;
+    max-height: 354px;
+    height: 100%;
+    width: 100%;
+
+    @include respond-to(tablet-view) {
+      align-self: center;
+      position: relative;
+      max-width: 250px;
+      max-height: 179px;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      right: 0%;
+    }
+  }
+  .caption {
+    display: block;
+    max-width: fit-content;
+    font-weight: 600;
+  }
+  .heading {
+    max-width: 656px;
+    @include respond-to(tablet-view) {
+      max-width: unset;
+    }
+    font-weight: 700;
+    @include respond-to(tablet-view) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  .start-chapter-btn {
+    @include dflexwithjustifyandalign(center, center);
+    background-color: $primary_black;
+    border-radius: 16px;
+    font-weight: 600;
+    gap: 8px;
+    border: none;
+    max-width: 295px;
+    width: 100%;
+    max-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    height: 48px;
+    cursor: pointer;
+  }
+  .supporting-text {
+    margin-top: 50px;
+    max-width: 560px;
+    font-weight: $secondary_weight;
+  }
+}

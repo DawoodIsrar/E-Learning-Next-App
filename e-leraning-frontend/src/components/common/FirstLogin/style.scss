@@ -1,0 +1,49 @@
+@import "@/assets/scss/theme";
+@import "@/assets/scss/mixins.scss";
+
+.first-login {
+  height: calc(100vh - 400px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  @include respond-to(tablet-view) {
+    height: calc(100vh - 540px);
+  }
+  @include respond-to(mobile-view) {
+    height: 100%;
+  }
+
+  .first-login-container {
+    text-align: center;
+    .first-login-heading {
+      font-size: 2rem;
+      line-height: 40px;
+      margin-bottom: 10px;
+      color: var(--text_primary);
+    }
+    p:first-of-type {
+      margin-bottom: 100px;
+    }
+  }
+
+  .button-on-first-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: auto;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(87.62deg, #004cb6 -44.71%, #009af9 100%);
+    border-radius: 15px;
+    color: #ffffff;
+    margin-bottom: 100px;
+    cursor: pointer;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,98 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.auth-buttons-area {
+  max-width: 328px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .auth-signup-button {
+    width: 300px;
+    height: 48px;
+    padding: 10px 32px;
+    background-color: $brand_primary;
+    list-style: none;
+    color: $text_tertiary;
+    border-radius: $social_buttons_radius;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    &:hover {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      background: $background_blue;
+      color: $primary_white;
+    }
+    &:disabled {
+      background: $background_primary;
+      border: 1px solid $background_primary;
+      color: $text_secondary;
+      cursor: not-allowed;
+    }
+
+    &:focus,
+    &:visited,
+    &:link,
+    &:active {
+      text-decoration: none;
+    }
+
+    @include respond-to(mobile-view) {
+      min-width: 280px;
+      width: 100%;
+      max-height: 48px;
+    }
+  }
+
+  .auth-button-wrapper {
+    @include dflexwithjustify(space-between);
+    max-width: 300px;
+    gap: 10px;
+    @include respond-to(tablet-view) {
+      max-width: 328px;
+    }
+  }
+
+  .auth-buttons {
+    background-color: $background_primary;
+    @include flex-center;
+    width: 144px;
+    height: 46px;
+    cursor: pointer;
+    flex: 1;
+    border: 1px solid $primary_border;
+    border-radius: $social_buttons_radius;
+    &:hover {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: normal;
+      background: $brancd_secondary;
+      color: $text_tertiary;
+    }
+    &:disabled {
+      background: $brancd_secondary;
+      border: 1px solid $background_primary;
+      color: $text_secondary;
+      cursor: not-allowed;
+    }
+    @include respond-to(mobile-view) {
+      padding: 24px 0;
+      width: 159px;
+      height: 46px;
+      cursor: pointer;
+      flex: 1;
+      border: 1px solid var(--primary_border);
+      border-radius: $social_buttons_radius;
+      @include respond-to(mobile-view) {
+        padding: 24px 0;
+        width: 159px;
+        height: 46px;
+      }
+    }
+  }
+}

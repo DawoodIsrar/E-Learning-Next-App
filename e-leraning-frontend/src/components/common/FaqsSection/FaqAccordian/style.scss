@@ -1,0 +1,89 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.faq-accordian {
+  .accordion {
+    border-radius: 20px;
+    background-color: $background_primary !important;
+
+    .tab:last-child {
+      border-bottom: none !important;
+    }
+    .tab {
+      border-bottom: 1px solid $primary_border;
+
+      .tab-input {
+        display: none;
+      }
+      .tab-label {
+        padding: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 295px;
+        padding-inline: 24px;
+        padding-block: 24px;
+        flex-grow: 1;
+        line-height: 26px;
+        font-weight: 700;
+        background-color: transparent;
+        gap: 5px;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          @include dflexwithjustifyandalign(center, center);
+          border-radius: 50%;
+          background-color: $background_secondary;
+          border: 1px solid $primary_border;
+          @include respond-to(tablet-view) {
+            min-width: 20px;
+            min-height: 20px;
+          }
+          svg {
+            margin-left: 2px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .tab-content {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: black;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        padding-inline: 24px;
+        &:last-child {
+          border-radius: 20px;
+        }
+        p {
+          padding-block: 7px;
+        }
+      }
+
+      .tab-input:checked + .tab-label + .tab-content {
+        max-height: 200px;
+      }
+      .tab-input:checked + .tab-label {
+        border-bottom: none;
+      }
+      .tab-input:checked ~ .tab-label {
+        svg {
+          transform: rotate(180deg);
+          margin-left: -1px;
+        }
+      }
+
+      .tab-input.icon {
+        transition: transform 0.3s, fill 0.3s;
+      }
+      .rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

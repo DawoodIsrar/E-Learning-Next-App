@@ -1,0 +1,76 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.chapter-card-title-outer {
+  @include dflexwithjustify(space-between);
+  position: relative;
+  margin-top: 10px;
+  button {
+    background-color: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .bookImage {
+    width: 24px;
+    height: 24px;
+  }
+  a {
+    padding: 0px;
+  }
+  .dropdown-content-last {
+    @include dflexwithjustifyandalign(center, center);
+    position: absolute;
+    right: 0;
+    top: -48px;
+    background-color: $background_tertiary;
+    border-radius: 12px;
+    height: 40px;
+    min-width: 112px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    @include respond-to(mobile-view) {
+      right: 0;
+      top: -76px;
+
+      min-width: 125px;
+      padding: 8px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      flex-wrap: wrap-reverse;
+      height: fit-content;
+      width: 100%;
+    }
+  }
+  .dropdown-content {
+    @include dflexwithjustifyandalign(start, center);
+    position: absolute;
+    left: -130px;
+    top: -125px;
+    background-color: $background_tertiary;
+    border-radius: 12px;
+    min-width: 255px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
+    z-index: 1;
+    padding: 12px 16px;
+    gap: 10px;
+    border: 1px solid var(--rating-border);
+  }
+
+  .dropdown-content a {
+    @include dflexwithjustifyandalign(center, center);
+    color: $primary_black;
+    text-decoration: none;
+    gap: 10px;
+  }
+
+  .dropdown-content &:hover {
+    background-color: $primary_white;
+  }
+  .bookmark-button-icon {
+    height: fit-content;
+    cursor: pointer;
+  }
+}

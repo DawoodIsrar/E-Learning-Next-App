@@ -1,0 +1,96 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.categrory-card-wrapper {
+  width: 48%;
+  text-decoration: none;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: var(--topic-card-box-shadow);
+    p {
+      text-decoration: none;
+      font-weight: 400;
+    }
+  }
+  @include dflexwithjustifyandalign(start, start);
+  @include respond-to(mobile-view) {
+    flex-direction: column;
+    gap: 12px;
+  }
+  padding: 20px;
+  background-color: $background_tertiary;
+  border-radius: 20px;
+  gap: 20px;
+  .img-and-title-container {
+    @include respond-to(mobile-view) {
+      @include dflexwithjustifyandalign(center, center);
+      gap: 10px;
+    }
+    .headin-img-container {
+      display: none;
+      @include respond-to(mobile-view) {
+        display: block;
+      }
+    }
+    .img-container {
+      background-color: #c8eaef;
+      padding: 27px;
+      border-radius: 30px;
+      @include respond-to(tablet-view) {
+        // display: none;
+        padding: 13px;
+        img {
+          width: 72px;
+          height: 72px;
+        }
+      }
+    }
+  }
+
+  .category-post {
+    @include dflexwithjustifyandalign(space-between, start);
+    gap: 20px;
+    height: 100%;
+    @include respond-to(mobile-view) {
+      h2 {
+        display: none;
+      }
+    }
+    flex-direction: column;
+    @include respond-to(tablet-view) {
+      gap: 10px;
+    }
+    .headin-img-container {
+      @include respond-to(tablet-view) {
+        display: flex;
+        gap: 10px;
+      }
+    }
+    .p-mbl {
+      @include respond-to(mobile-view) {
+        padding-inline: 7px;
+      }
+    }
+    .date-section {
+      width: 100%;
+      @include dflexwithjustify(flex-start);
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 10px;
+      .second-row {
+        display: flex;
+        gap: 10px;
+      }
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+        @include dflexwithjustifyandalign(flex-start, flex-start);
+        flex-direction: column;
+        .second-row {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}

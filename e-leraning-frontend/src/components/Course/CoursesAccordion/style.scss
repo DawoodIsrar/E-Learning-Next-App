@@ -1,0 +1,164 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.accordion-root {
+  @include respond-to(mobile-view) {
+    border-radius: 24px;
+  }
+
+  .accordion-item {
+    background-color: transparent;
+
+    .accordion-trigger-wrapper {
+      display: grid;
+      gap: 20px;
+      @include respond-to(tablet-view) {
+        gap: 10px;
+      }
+      p {
+        text-align: start;
+      }
+      .bookmark-and-title {
+        @include dflexwithalign(center);
+        gap: 12px;
+        svg {
+          max-width: 24px;
+          max-height: 24px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .recently-title {
+        margin-top: 21px;
+      }
+    }
+
+    .chapter-name-div {
+      .library-icon {
+        @include dflexwithjustifyandalign(center, center);
+        min-width: 32px;
+        min-height: 32px;
+
+        border-radius: 24px;
+        background-color: $background_tertiary;
+        @include respond-to(mobile-view) {
+          display: none;
+        }
+      }
+      p {
+        padding-top: 0px;
+        font-weight: 600;
+        @include respond-to(tablet-view) {
+          display: none;
+        }
+      }
+      .arrow-icon {
+        &[data-state="open"] {
+          background-color: aqua;
+          transform: rotate(180deg);
+        }
+
+        &[data-state="closed"] {
+          transform: rotate(0deg);
+        }
+      }
+      @include dflexwithalign(center);
+      gap: 12px;
+    }
+
+    .accordion-border-bottom {
+      border-bottom: 1px solid #0000001f;
+    }
+  }
+
+  .accordion-trigger {
+    padding: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    @include respond-to(mobile-view) {
+      padding: 0px;
+    }
+    .accordion-trigger-container {
+      border: none;
+      background-color: $background_primary;
+      @include dflexwithalign(center);
+      justify-content: space-between;
+      gap: 10px;
+      text-align: left;
+      @include respond-to(mobile-view) {
+        align-items: flex-start;
+      }
+
+      .title {
+        width: 100%;
+        flex-grow: 1;
+        font-weight: 700;
+        @include respond-to(mobile-view) {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .accordion-content {
+    background-color: $background_primary;
+    padding-block: 12px;
+    .course_details {
+      padding: 24px;
+      border: 1px solid $primary_border;
+      background-color: $background_secondary;
+      border-radius: 14px;
+      color: $text_tertiary;
+
+      ul {
+        padding: 0px;
+        padding-left: 24px;
+        ul {
+          li {
+            padding-left: 12px;
+            color: $text_primary;
+          }
+        }
+      }
+      // commenting because its causing issue for ul with any h or p tag on it.
+      // ul,
+      // ol {
+      //   margin-left: 17px;
+      // }
+    }
+    p {
+      padding: 15px;
+    }
+
+    &[data-state="open"] {
+      animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+    }
+    &[data-state="closed"] {
+      animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+    }
+  }
+}
+
+.w_max {
+  width: max-content;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}

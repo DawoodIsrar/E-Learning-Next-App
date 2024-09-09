@@ -1,0 +1,831 @@
+@import "./theme";
+
+.userSettingsViewContainer {
+  width: calc(100% - 5rem);
+  margin: 0 auto;
+
+  @include lg {
+    width: calc(100% - 2.5rem);
+  }
+}
+
+.userSettings_detailsContainer {
+  margin-top: 1.8rem;
+
+  @include md {
+    margin-top: 1rem;
+  }
+}
+
+.userSettings_details {
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: var(--usersettings-details-p);
+
+    @include md {
+      font-size: 1.1rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 1rem;
+    margin-bottom: 0.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: break-spaces;
+    max-width: 95vw;
+
+    @include md {
+      font-size: 1.125rem;
+    }
+  }
+
+  div {
+    color: $User_Settings_Blue;
+    font-size: 1.125rem;
+    font-weight: 300;
+    cursor: pointer;
+    padding-left: 1rem;
+    display: inline-block;
+
+    @include md {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.first_name_container {
+  margin-top: -8px;
+}
+
+.emailaddresscontainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: -10px;
+}
+
+.userinputfieldmaincontainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.cancelIcon {
+  margin-left: 20px !important;
+  cursor: pointer;
+}
+
+.userSettings_tagImage {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.userSettings_tagImage svg {
+  height: 100%;
+  width: auto;
+}
+
+.userSetting_colorPicker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 !important;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+.userSetting_colorPicker::-webkit-color-swatch {
+  border-radius: 0.3rem;
+  border: 1px solid black;
+}
+.userSetting_colorPicker::-moz-color-swatch {
+  border-radius: 0.3rem;
+  border: 1px solid black;
+}
+
+.usersetting_inputfield_dark {
+  background: #4f4f4f !important;
+  border: 1px solid rgba(230, 230, 230, 0.5) !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  width: 400px !important;
+  height: 40px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  line-height: 21px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.015em !important;
+  margin-top: 5px !important;
+  padding: 2px 5px 2px 5px;
+  color: #ffffff !important;
+}
+
+.usersetting_inputfield_dark::placeholder {
+  color: grey !important;
+}
+.usersetting_inputfield_light {
+  background: #ffffff !important;
+  border: 1px solid rgba(230, 230, 230, 0.5) !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  width: 400px !important;
+  height: 40px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  line-height: 21px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.015em !important;
+  padding: 2px 5px 2px 5px;
+  color: #363636 !important;
+}
+
+.usersetting_inputfield_light::placeholder {
+  color: grey !important;
+}
+
+.addiconcontainer {
+  position: relative;
+  // top: -10px;
+  left: 3px;
+}
+.tagimageusersettingpage {
+  margin-right: 5px;
+  width: 35px !important;
+  position: relative;
+  top: 6px;
+  height: 24px !important;
+}
+
+.editoricon_image {
+  width: 20px;
+  height: 20px;
+  padding-left: 4px;
+}
+
+.editoricon_image_two {
+  width: 20px;
+  height: 20px;
+  padding-left: 4px;
+}
+
+.editorimage_icon {
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  letter-spacing: -0.015em !important;
+  text-shadow: 0px 0px #00000000;
+  background-color: #004cb6 !important;
+  display: inline-block;
+  background-image: -webkit-linear-gradient(
+    87.62deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  ) !important;
+  background-image: -webkit-conic-gradient(
+    87.62deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  ) !important;
+  -webkit-box-decoration-break: clone;
+  -webkit-background-clip: text !important;
+  -moz-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -moz-text-fill-color: transparent !important;
+  -webkit-mask-image: linear-gradient(87.62deg, #004cb6 -44.71%, #009af9 100%);
+}
+
+.editoricon_image_two {
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  letter-spacing: -0.015em !important;
+  background: linear-gradient(
+    87.62deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  padding-left: 4px !important;
+}
+
+.editorimage_icon_two {
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  letter-spacing: -0.015em !important;
+  color: #c8c8c8 !important;
+}
+
+.usersettingmembericon {
+  width: 100px;
+  height: 100px;
+}
+
+.profile_sub_input {
+  background: #ffffff !important;
+  border: 1px solid rgba(230, 230, 230, 0.5) !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  width: 400px !important;
+  height: 40px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  line-height: 21px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.015em !important;
+  padding: 2px 5px 2px 5px;
+  color: #363636 !important;
+  &.bookmark_input_field {
+    width: -webkit-fill-available !important;
+  }
+}
+
+.profile_sub_input::placeholder {
+  color: grey !important;
+}
+
+.profile_sub_input_two {
+  background: #4f4f4f !important;
+  border: 1px solid rgba(230, 230, 230, 0.5) !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  width: -webkit-fill-available !important;
+  height: 40px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  line-height: 21px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.015em !important;
+  padding: 2px 5px 2px 5px;
+  color: #ffffff !important;
+}
+
+.profile_sub_input_two::placeholder {
+  color: grey !important;
+}
+
+.user_header_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.user_root_container {
+  display: flex;
+  position: relative;
+  left: 40px;
+}
+
+.user_root_container_two {
+  display: flex;
+  position: relative;
+  top: -30px;
+  left: 40px;
+}
+
+.vector_image {
+  padding: 10px 5px 18px 5px;
+}
+
+.bookmark_input_field_cont {
+  margin-bottom: 0.5rem;
+}
+
+.vector_container {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center !important;
+  text-align: center;
+  letter-spacing: -0.015em;
+}
+
+.vector_container_deletefield {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center !important;
+  text-align: center;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.7rem;
+}
+
+.bookmark_list_container {
+  max-height: 350px;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+.vector_containertwo {
+  margin-top: -10px;
+}
+
+.errorMessage {
+  color: red;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.user_buttons {
+  background: linear-gradient(
+    87.62deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  ) !important;
+  width: 200px !important;
+  height: 40px !important;
+  border-radius: 15px !important;
+  font-family: Helvetica !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 21px !important;
+  line-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  letter-spacing: -0.015em !important;
+  margin-left: 16px !important;
+  text-transform: none !important;
+  color: #ffffff !important;
+}
+
+.user_container_root {
+  margin-top: 5vh;
+  margin-bottom: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5vw;
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
+
+  @include sm {
+    margin-top: 3vh;
+  }
+}
+
+.user_sub_root_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.user_buttons_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+
+  @include md {
+    padding-bottom: 4rem;
+  }
+
+  & > div {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    color: var(--user-buttons-container-color);
+
+    @include md {
+      font-size: 1rem;
+    }
+    // @include themed() {
+    //   color: t("greyBlack");
+    // }
+
+    svg {
+      font-weight: 400;
+      transform: translate(-5px, 5px);
+      font-size: 1.5rem;
+
+      @include md {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.user_subcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.hidden_user_input {
+  visibility: hidden;
+}
+
+.user_update_button {
+  background: #4f4f4f !important;
+  border-radius: 15px !important;
+  font-family: Helvetica !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 80px !important;
+  height: 19px !important;
+  letter-spacing: -0.015em !important;
+  color: #ffffff !important;
+  text-transform: none !important;
+}
+
+.user_update_button_sub {
+  font-family: Helvetica !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 11px !important;
+  line-height: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  letter-spacing: -0.015em !important;
+  color: #ffffff !important;
+  width: 80px !important;
+  height: 19px !important;
+  background: linear-gradient(
+    87.62deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  ) !important;
+  border-radius: 15px !important;
+  text-transform: none !important;
+}
+
+.addcategory_text_bookmark {
+  font-family: Helvetica !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 21px !important;
+  line-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.015em !important;
+  margin-bottom: 1rem;
+
+  @include md {
+    margin-bottom: 1rem;
+  }
+}
+
+.addcategory_text_bookmark_two {
+  font-family: Helvetica !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 21px !important;
+  line-height: 24px !important;
+  margin-top: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: -0.015em !important;
+}
+
+.user_bookmark_container {
+  border: 1px solid $Box_Title_Gray;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+
+  @include md {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 944px) {
+  .inputFeild {
+    margin-left: 45px !important;
+  }
+
+  .vector_container_deletefield {
+    // margin-left: 74px;
+  }
+  .user_bookmark_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hidden_user_input {
+    display: none;
+  }
+  .user_sub_root_container {
+    width: 100%;
+  }
+
+  .vectorcontainermobile {
+    position: relative;
+    top: -10px;
+    left: -10px;
+  }
+  .usersettingmembericon {
+    position: relative;
+    left: 30px;
+  }
+
+  .user_update_button {
+    font-size: 8px !important;
+    line-height: 14px !important;
+    width: 50px !important;
+    height: 15px !important;
+    position: relative;
+    left: 12px;
+    top: 8px;
+  }
+
+  .user_update_button_sub {
+    width: 80px !important;
+    height: 20px !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
+    font-weight: 300px !important;
+    position: relative;
+    left: -58px;
+    top: 25px;
+  }
+
+  .user_container_root {
+    margin-top: 5vh;
+  }
+
+  .editoricon_image {
+    width: 11px;
+    height: 11px;
+  }
+
+  .editoricon_image_two {
+    width: 11px;
+    height: 11px;
+  }
+
+  .editorimage_icon {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px !important;
+    line-height: 9px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding-left: 2px !important;
+  }
+  .vector_container > span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 9px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+  }
+
+  .vector_container_deletefield > span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 9px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+  }
+
+  .user_buttons {
+    width: 90px !important;
+    height: 29.26px !important;
+    margin-top: 10px !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    margin-left: 0px !important;
+  }
+
+  .user_buttons_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+  }
+  .usersettingbackbutton {
+    padding-top: 10px;
+  }
+
+  .profile_sub_input_two {
+    // width: 367px !important;
+    margin-top: 0px !important;
+    margin-right: -12px !important;
+  }
+
+  .profile_sub_input {
+    width: -webkit-fill-available !important;
+    margin-top: 0px !important;
+    margin-right: -12px !important;
+  }
+
+  .addiconcontainer {
+    position: relative;
+    top: -10px;
+    left: -3px;
+  }
+
+  .tagimageusersettingpage {
+    width: 15px;
+    height: 18px;
+    position: relative;
+    top: 5px;
+  }
+
+  .user_root_container_two {
+    display: flex;
+    position: relative;
+    top: -30px;
+    left: 0px;
+  }
+
+  .user_root_container {
+    display: flex;
+    position: relative;
+    left: 10px;
+  }
+
+  .emailaddresscontainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 00px;
+  }
+
+  .editorimage_icon_two {
+    font-weight: 700;
+    font-size: 8px !important;
+    line-height: 9px;
+    position: relative;
+    left: 10px;
+  }
+  .editoricon_image {
+    width: 11px;
+    height: 11px;
+    position: relative;
+    left: 1px;
+  }
+  .editoricon_image_two {
+    width: 11px;
+    height: 11px;
+    position: relative;
+    left: 8px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .first_name_container {
+    margin-top: -28px;
+  }
+  .profile_sub_input {
+    width: -webkit-fill-available !important;
+    height: 40px !important;
+    font-weight: 300 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    margin-right: -15px !important;
+  }
+
+  .usersetting_inputfield_dark {
+    border: none !important;
+    width: 300px !important;
+    height: 30px !important;
+    font-weight: 300 !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
+  }
+
+  .usersetting_inputfield_light {
+    border: none !important;
+    width: 300px !important;
+    height: 40px !important;
+    font-weight: 300 !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
+  }
+
+  .addiconcontainer {
+    position: relative;
+    top: -2px;
+    left: -2px;
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .tagimageusersettingpage {
+    width: 15px !important;
+    height: 18px !important;
+    position: relative;
+    top: 5px;
+  }
+
+  .addcategory_text_bookmark {
+    font-weight: 300 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .addcategory_text_bookmark_two {
+    font-weight: 300 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .profile_sub_input_two {
+    // width: 267px !important;
+    margin-right: -15px !important;
+    height: 30px !important;
+    font-weight: 300 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .bookmark_input_field {
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 944px) {
+  .bookmark_input_field_cont {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .bookmark_input_field {
+    margin-left: 0px !important;
+  }
+}

@@ -1,0 +1,29 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-div {
+  display: flex;
+  justify-content: center;
+}
+
+.course-card-wrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+
+  .course-not-found {
+    text-align: center;
+  }
+
+  @include respond-to(tablet-view) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-content: center;
+    gap: 16px;
+  }
+
+  @include respond-to(mobile-view) {
+    grid-template-columns: repeat(auto-fill, minmax(154px, max-content));
+    gap: 16px;
+  }
+}

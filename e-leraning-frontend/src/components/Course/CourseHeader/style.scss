@@ -1,0 +1,9 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.courses-with-bookmark-header {
+  background-color: $background_primary;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}

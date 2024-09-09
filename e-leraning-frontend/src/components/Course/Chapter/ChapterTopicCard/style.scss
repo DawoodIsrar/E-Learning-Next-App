@@ -1,0 +1,94 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+@import "../../../Topic/style.scss";
+
+.flex-center {
+  @include flex-center(space-between, start);
+  margin-top: 16px;
+
+  .chapter-card-title {
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 258px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    @include respond-to(mobile-view) {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    h3 {
+      margin-top: 0px;
+    }
+    .bookmark-libraary {
+      min-width: 24px;
+      min-height: 24px;
+    }
+  }
+}
+
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 295px;
+  height: 290px;
+  @include respond-to(tablet-view) {
+    height: fit-content;
+  }
+  @include respond-to(mobile-view) {
+    width: 250px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  .img-component {
+    top: -4px;
+  }
+  .chapter-card-img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: box-shadow 0.2s;
+    height: auto;
+    aspect-ratio: 4/3;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    background-color: lightgray;
+    height: 222px;
+    &:hover {
+      box-shadow: var(--topic-card-box-shadow);
+    }
+    @include respond-to(mobile-view) {
+      height: 195px;
+    }
+  }
+}
+
+.img-component {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.chapter-card-img {
+  img {
+    @include respond-to(mobile-view) {
+      width: 250px;
+      height: 195px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "./theme";
+@import "./CourseStructure.scss";
+
+.courseTopicList {
+  @extend .courseStructure;
+  max-width: 100%;
+  @include sm {
+    width: 98%;
+  }
+
+  .courseStructureHeader_IconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+
+    @include sm {
+      height: 75px;
+      width: 75px;
+    }
+
+    img {
+      height: 100px;
+      max-width: 80%;
+      width: auto;
+    }
+  }
+  .courseStructure_table {
+    table {
+      th {
+        &:nth-child(5) {
+          text-align: left;
+        }
+
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+          text-align: center;
+        }
+
+        &:nth-child(8) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      td {
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+          text-align: center;
+          font-size: 12px;
+        }
+
+        &:nth-child(8) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .courseStructureHeader_Main {
+    grid-template-columns: 1fr 0.6fr 1fr;
+
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+  }
+}

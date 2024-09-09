@@ -1,0 +1,270 @@
+@import "@/assets/scss/theme";
+
+.userFeedbacks {
+  padding-bottom: 5rem;
+  width: calc(100% - 5rem);
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2.5rem;
+  max-width: 100vw;
+  overflow: hidden;
+
+  @include lg {
+    width: 100%;
+  }
+
+  .userFeedbacks_feedbackWrapper {
+    max-height: calc(100vh - 425px);
+    padding-bottom: 50px;
+    overflow: auto;
+
+    @include md {
+      max-height: inherit;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .userFeedbacks_tabs {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 14px;
+
+    span {
+      height: 39px;
+      width: 173px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $BG_Input_Form_Dark;
+      font-size: 18px;
+      font-weight: 700;
+      color: $white-color;
+      border-radius: 10px 10px 0px 0px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 1.2;
+
+      @include md {
+        font-size: 16px;
+      }
+
+      @include sm {
+        height: 25px;
+        font-size: 11px;
+        width: 115px;
+      }
+    }
+
+    .userFeedbacks_tabActive {
+      background: linear-gradient(88deg, #004cb6 -44.71%, #009af9 100%);
+    }
+  }
+
+  &_Course {
+    padding-bottom: 0;
+  }
+
+  .userFeedbacks_header {
+    display: flex;
+    gap: 2.2rem;
+    font-size: 18px;
+    font-weight: 700;
+
+    @include md {
+      display: none;
+    }
+
+    div {
+      &:first-child {
+        min-width: 4.75rem;
+      }
+
+      &:nth-child(2) {
+        min-width: 140px;
+      }
+
+      &:nth-child(3) {
+        min-width: 204px;
+      }
+
+      &:nth-child(4) {
+        min-width: 400px;
+      }
+    }
+  }
+
+  .userFeedbacks_feedbackTopicName {
+    min-width: 204px;
+    width: 204px;
+
+    @include md {
+      font-weight: 700;
+      font-size: 16px;
+      min-width: auto;
+      width: calc(100vw - 17rem);
+    }
+    @include sm {
+      font-size: 14px;
+      width: calc(100vw - 13rem);
+    }
+  }
+
+  @include md {
+    width: calc(100% - 2rem);
+  }
+
+  .userFeedbacks_heading {
+    font-size: 1.3rem;
+    padding-bottom: 0.25rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--userFeedbacks-heading-border-bottom);
+    // @include themed() {
+    //   border-bottom: 1px solid t("bodyText");
+    // }
+  }
+
+  .userFeedbacks_feedback {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #97ceff;
+    padding-bottom: 15px;
+
+    @include md {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    @include sm {
+      gap: 1rem;
+    }
+
+    & > img,
+    & > svg {
+      height: 4.75rem;
+      width: 4.75rem;
+      border-radius: 50%;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .userFeedbacks_feedbackDarkImage {
+      background: url("../../assets/images/ProfileIconDark.svg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .userFeedbacks_feedbackLightImage {
+      background: url("../../assets/images/ProfileIconLight.svg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .userFeedbacks_feedbackMain {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+      width: 140px;
+      min-width: 140px;
+
+      @include md {
+        width: 6rem;
+        min-width: 6rem;
+        gap: 3px;
+      }
+
+      span {
+        font-size: 1.125rem;
+        font-weight: 300;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:first-child {
+          white-space: nowrap;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        @include md {
+          font-size: 12px;
+        }
+      }
+
+      div {
+        display: flex;
+        gap: 0.4rem;
+
+        @include md {
+          gap: 4px;
+        }
+
+        div {
+          height: 1.25rem;
+          width: 1.4rem;
+          border-radius: 0.3rem;
+          font-size: 0.875rem;
+          color: $white-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include md {
+            height: 13px;
+            width: 16px;
+            font-size: 13px;
+          }
+
+          @include rating-colors;
+        }
+      }
+    }
+
+    .userFeedbacks_feedbackMainCourse {
+      gap: 0.5rem;
+
+      @include md {
+        gap: 3px;
+      }
+    }
+  }
+
+  .userFeedbacks_feedbackContent {
+    font-size: 1.3rem;
+    min-width: 400px;
+
+    @include md {
+      font-size: 1rem;
+      min-width: auto;
+      width: 100%;
+    }
+  }
+
+  .userFeedbacks_Btn {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      height: 2.5rem;
+      padding: 0 4.75rem;
+      border-radius: 1rem;
+      background: linear-gradient(87.62deg, #004cb6 -44.71%, #009af9 100%);
+      font-size: 1.3rem;
+      color: $white-color;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      @include md {
+        padding: 0 3rem;
+        font-size: 1rem;
+        height: 2.25rem;
+      }
+    }
+  }
+}

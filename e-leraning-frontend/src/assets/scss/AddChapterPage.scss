@@ -1,0 +1,159 @@
+@import "./theme";
+@import "@/assets/scss/variables.scss";
+
+.addChapter_topicName {
+  width: calc(100% - 5rem);
+  margin: 0.6rem auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.875rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  align-items: center;
+  color: $text_primary;
+
+  @include md {
+    font-size: 1rem;
+    gap: 0.5rem;
+    width: 90vw;
+  }
+
+  .addChapter_topicNameIcon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: $white-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      max-height: 80%;
+    }
+
+    @include md {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+}
+
+.addChapter {
+  min-height: calc(100vh - 18rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding-top: 3.75rem;
+  padding-bottom: 5rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+
+  .addChapter_buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include sm {
+      gap: 1rem;
+    }
+  }
+
+  button {
+    height: 2.5rem;
+    width: 12.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(87.62deg, #004cb6 -44.71%, #009af9 100%);
+    font-size: 1.3rem;
+    color: $white-color;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: auto;
+
+    @include md {
+      font-size: 1rem;
+    }
+
+    @include sm {
+      padding: 0 1rem;
+      width: 120px;
+      font-size: 0.875rem;
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(240.85deg, #ff0000 0%, #870000 100%);
+
+      @include sm {
+        min-height: 2.5rem;
+        height: auto;
+      }
+    }
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+  }
+
+  span {
+    text-align: center;
+    color: $Box_Red;
+    margin: 0.5rem 0;
+    text-transform: capitalize;
+  }
+
+  .addChapter_identifierInputs {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    b {
+      color: $text_primary;
+    }
+
+    input {
+      width: 143px;
+
+      &:last-child {
+        width: 116px;
+      }
+    }
+  }
+}
+
+.addChapter_input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2.5rem;
+
+  label {
+    color: $text_primary;
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+  }
+
+  input,
+  select {
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    padding: 0 1rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    background-color: var();
+    color: var();
+    box-shadow: var();
+    // @include themed() {
+    //   background-color: t("formInputBg");
+    //   color: t("bodyText");
+    //   box-shadow: t("formInputShadow");
+    // }
+  }
+}

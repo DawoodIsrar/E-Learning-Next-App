@@ -1,0 +1,33 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+@import "../../mixins.scss";
+
+.icon {
+  @include footer-icon();
+  cursor: pointer;
+  background-color: $background_tertiary;
+  min-width: 30px;
+  min-height: 30px;
+}
+.no-border {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  min-width: 36px;
+  min-height: 30px;
+}
+.disable {
+  background: unset;
+  padding: 0px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  @include dflexwithjustifyandalign(center, center);
+  cursor: not-allowed;
+  opacity: 0.5;
+  svg {
+    path {
+      stroke: #c4c4c4;
+    }
+  }
+}

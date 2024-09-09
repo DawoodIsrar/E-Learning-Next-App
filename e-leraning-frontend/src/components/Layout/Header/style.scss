@@ -1,161 +1,134 @@
-@import "@/assets/scss/mixin.scss";
+@import "@/assets/scss/mixins.scss";
 @import "@/assets/scss/variables.scss";
 
-.width-handler {
-  margin-left: unset;
-  margin-right: unset;
-  max-width: 100%;
-  width: 100%;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-inline: 0px;
-  @include respond-to(tablet-view) {
-    width: 100%;
-    padding: 0px;
-    padding-inline: 0px;
-  }
-}
 .header-wrapper {
-  background-color: $background_primary;
-  @include dflexwithjustifyandalign(space-between, center);
-  max-height: 70px;
-  padding: 4px 24px;
-  gap: 30px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
-  @media (max-width: 1200px) {
-    .business {
-      display: none;
-    }
+  border-bottom: 1px solid $primary_border;
+  background-color: $background_tertiary;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  .modal {
+    background-color: $menu-bg-color;
   }
-  .mbl-view-menu {
-    display: none;
+
+  .main-header {
+    @include dflexwithjustifyandalign(space-between, center);
+    @include max-alignment;
+    padding-block: 10px;
+    margin-inline: auto;
+    padding-inline: 48px;
+
     @include respond-to(tablet-view) {
-      display: block;
-      img {
-        width: 24px;
-        height: 24px;
-      }
+      padding-block: 14px;
+      padding-inline: 24px;
     }
-  }
-  .logo {
-    cursor: pointer;
-  }
-  .business {
-    cursor: pointer;
-  }
-  .teach-courses {
-    cursor: pointer;
-  }
-  .cart {
-    img {
-      cursor: pointer;
-    }
-  }
-  .search-bar {
-    flex-grow: 1;
-    background-color: $background_secondary;
-    border-radius: 24px;
-    .search-input {
-      background-color: $background_secondary;
 
-      cursor: pointer;
+    .logo-design {
       @include dflexwithalign(center);
-      gap: 10px;
-      border: 1px solid black;
-      min-height: 25px;
-      padding: 10px;
-      width: 100%;
-      border-radius: 9999px;
-      img {
-        width: 24px;
-        height: 24px;
+      gap: 24px;
+      max-width: 256px;
+      height: 44px;
+      @include respond-to(tablet-view) {
+        gap: 12px;
+        margin-right: 12px;
       }
-      input {
-        background-color: $background_secondary;
-
-        width: 100%;
-        &:focus-within {
-          outline: none;
+      .desktop-view-logo {
+        margin-top: 4px;
+        width: 112px;
+        height: 28px;
+        @include respond-to(tablet-view) {
+          width: 96px;
+          height: 20px;
         }
-        border: none;
-        background-color: none;
       }
     }
-  }
-  .cart {
-    width: 48px;
-    height: 48px;
-    @include dflexwithjustifyandalign(center, center);
-    img {
-      width: 48px;
-      height: 48px;
-    }
-    .search-icon {
-      display: none;
-    }
-  }
-  .auth-buttons {
-    @include dflexwithjustify(center);
-    gap: 10px;
-    height: 40px;
-    a {
-      text-decoration: none;
-      @include dflexwithjustifyandalign(center, center);
-      color: black;
-      cursor: pointer;
-      width: 80px;
-      height: 100%;
-      background-color: none;
-      background: none;
-      cursor: pointer;
-      &:first-child {
-        border: 1px solid;
-        background-color: $background_primary var(--bg-primary-dark);
-        color: $text_primary;
-      }
-      &:nth-child(2) {
-        background-color: var(--bg-primary-dark);
-        color: white;
-        border: none;
-      }
-    }
-    .langueages-btn {
-      width: 40px;
-      height: 100%;
 
-      #english {
-        display: none;
-      }
-      cursor: pointer;
+    .navbar-buttons {
+      @include dflexwithalign(center);
+      gap: 5px;
 
-      @include dflexwithjustifyandalign(center, center);
-      border: 1px solid black;
-      img {
-        width: 24px;
+      .login-Button {
+        @include flex-center;
+        padding: 0 14px;
+        border-radius: $nav_radius;
+        border: 1px solid $primary_border;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+        min-width: 107px;
+        min-height: 44px;
+        width: 100%;
+        height: 100%;
+
+        background-color: $background_primary;
+        text-decoration: none;
+        p {
+          color: $brand_primary;
+          user-select: none;
+        }
+        &:hover {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: normal;
+          background: $background_blue;
+          p {
+            color: $primary_white;
+          }
+        }
+        &:disabled {
+          background: $background_primary;
+          border: 1px solid $background_primary;
+          color: $text_secondary;
+          cursor: not-allowed;
+        }
+      }
+      .signup-Button {
+        @include flex-center;
+        min-width: 107px;
+        min-height: 44px;
+        width: 100%;
+        height: 100%;
+        padding: 0 14px;
+        background-color: $brand_primary;
+        border-radius: $nav_radius;
+        border: 1px solid $primary_border;
+        font-size: $body2_font;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: $tertiary_weight;
+
+        p {
+          color: $text_tertiary;
+
+          user-select: none;
+        }
+        @include respond-to(tablet-view) {
+          display: none;
+        }
+        &:hover {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: normal;
+          background: $background_blue;
+          p {
+            color: $primary_white;
+          }
+        }
+        &:disabled {
+          background: $background_primary;
+          border: 1px solid $background_primary;
+          color: $text_secondary;
+          cursor: not-allowed;
+        }
+      }
+      .vertical-divider {
+        width: 1px;
         height: 24px;
-      }
-    }
-  }
-
-  @include respond-to(tablet-view) {
-    .teach-courses,
-    .business,
-    .search-bar,
-    .auth-buttons {
-      display: none;
-    }
-    .logo {
-      cursor: pointer;
-      width: -webkit-fill-available;
-      display: flex;
-      justify-content: center;
-    }
-    .cart {
-      gap: 10px;
-      .search-icon {
-        display: block;
-        width: 24px;
-        height: 24px;
+        padding: 15px 0px;
+        background-color: #d1d1d1;
+        @include respond-to(tablet-view) {
+          display: none;
+        }
       }
     }
   }

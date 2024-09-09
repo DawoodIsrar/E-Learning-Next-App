@@ -1,0 +1,72 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.header-search {
+  position: relative;
+  border: 1px solid $primary_border;
+  max-width: 400px;
+  padding: 0px 20px;
+  gap: 5px;
+  height: 100%;
+  background-color: $background_secondary;
+
+  @include dflexwithalign(center);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  svg {
+    min-width: 18px;
+    min-height: 18px;
+  }
+  border-radius: 26px;
+  @include respond-to(tablet-view) {
+    width: 220px;
+    height: 100%;
+  }
+
+  @include respond-to(mobile-view) {
+    width: 250px;
+    display: none;
+    height: 100%;
+  }
+
+  .header-search-input {
+    border: none;
+    width: 189px;
+    overflow: hidden;
+    height: 100%;
+    &::placeholder {
+      color: $text_primary;
+    }
+    @include respond-to(tablet-view) {
+      width: 160px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.header-mobile-search {
+  @include respond-to(mobile-view) {
+    border: 1px solid #e0e0e0;
+    min-width: 327px;
+    width: 80%;
+    padding: 0px 20px;
+    gap: 5px;
+    height: 50px;
+    display: flex;
+    font-weight: 500;
+    @include dflexwithalign(center);
+    border-radius: 26px;
+  }
+  .header-mobile-search-input {
+    background-color: $background_tertiary;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    &:focus {
+      outline: none;
+    }
+  }
+}

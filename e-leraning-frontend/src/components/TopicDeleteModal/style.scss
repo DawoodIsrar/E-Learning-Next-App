@@ -1,0 +1,86 @@
+@import "../../assets/scss/theme";
+
+.topicDeleteModal_light {
+  background-color: $BG_Body_Light !important;
+  color: $black-color !important;
+  h4 {
+    color: $black-color;
+  }
+}
+
+.topicDeleteModal {
+  width: 707px;
+  max-height: 90vh;
+  max-width: 90vw;
+  padding: 2.75rem 0 1.9rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: $Font_Body_Light;
+  color: $white-color;
+  border-radius: 0.65rem;
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .topicDeleteModal_icon {
+    position: relative;
+
+    img {
+      height: 5.75rem;
+
+      &:last-child {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 1.9rem;
+      }
+    }
+  }
+
+  .topicDeleteModal_text {
+    width: 386px;
+    max-width: 90%;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+  }
+
+  .topicDeleteModal_textWarning {
+    @extend .topicDeleteModal_text;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 445px;
+  }
+
+  .topicDeleteModal_buttons {
+    display: flex;
+    gap: 1.3rem;
+    align-content: center;
+  }
+
+  button {
+    height: 2.5rem;
+    width: 120px;
+    border-radius: 1rem;
+    background: linear-gradient(87.62deg, #004cb6 -44.71%, #009af9 100%);
+    font-size: 1.3rem;
+    color: $white-color;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: auto;
+
+    &:last-child {
+      background: linear-gradient(240.85deg, #ff0000 0%, #870000 100%);
+    }
+
+    @include sm {
+      padding: 0 1.5rem;
+      width: fit-content;
+    }
+  }
+}

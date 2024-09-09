@@ -1,0 +1,9 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.About-wrapper {
+  background-color: unset !important;
+  .learn-div-wrapper {
+    border-bottom: none;
+  }
+}

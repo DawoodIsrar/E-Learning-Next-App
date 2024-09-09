@@ -1,0 +1,103 @@
+@import "@/assets/scss/mixins.scss";
+
+$color-primary1: #736efe;
+$color-primary2: #5999ff;
+$color-primary3: #44b9ff;
+$color-primary4: #31d8ff;
+$color-primary5: #18ffff;
+
+.redirect {
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  h3 {
+    font-size: 22px;
+    @include respond-to(tablet-view) {
+      font-size: 18px;
+    }
+    @include respond-to(mobile-view) {
+      font-size: 15px;
+    }
+  }
+
+  .container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tittle,
+  .subtitle {
+    margin-bottom: 40px;
+    color: #44b9ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .square-container {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+  }
+
+  .square {
+    margin: 4px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    animation: rotating 2.5s ease infinite;
+  }
+
+  .square1 {
+    background: $color-primary1;
+    animation-delay: 0.2s;
+  }
+  .square2 {
+    background: $color-primary2;
+    animation-delay: 0.4s;
+  }
+  .square3 {
+    background: $color-primary3;
+    animation-delay: 0.6s;
+  }
+  .square4 {
+    background: $color-primary4;
+    animation-delay: 0.8s;
+  }
+  .square5 {
+    background: $color-primary5;
+    animation-delay: 1s;
+  }
+
+  @keyframes rotating {
+    0% {
+      transform: rotate(0) scale(1);
+    }
+    50% {
+      transform: rotate(90deg) scale(0.6);
+    }
+    100% {
+      transform: rotate(90deg) scale(1);
+    }
+  }
+
+  footer {
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: $color-primary4;
+  }
+
+  footer a {
+    color: $color-primary1;
+  }
+}

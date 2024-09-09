@@ -1,0 +1,292 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.p-50 {
+  padding-inline: 50px;
+}
+
+.editor-course-guide {
+  font-weight: 400;
+  margin-top: 35px;
+  max-width: 1600px;
+  margin-inline: auto;
+  width: 100%;
+  @include respond-to(tablet-view) {
+    margin-top: 24px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .practice-bg {
+    margin-top: 24px;
+    background-color: $background_tertiary;
+  }
+
+  img {
+    display: block;
+    margin-inline: auto;
+    margin-top: 24px;
+    width: 95%;
+    max-width: 500px;
+    border-radius: 5px;
+  }
+  a {
+    img {
+      display: inline;
+    }
+  }
+  a.button-anchor-image {
+    margin-top: 16px;
+  }
+
+  .cg-chapter-overview {
+    background-color: $background_tertiary;
+    @include dflexwithjustify(space-between);
+    max-width: 1600px;
+    margin-bottom: 40px;
+    margin-inline: auto;
+    @include respond-to(tablet-view) {
+      margin-bottom: 35px;
+    }
+    @include respond-to(mobile-view) {
+      margin-bottom: 24px;
+      .cg-heading {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 1270px) {
+    .cg-chapter-overview {
+      flex-direction: column;
+      align-items: center;
+    }
+    .cg-accordion-item-body-content {
+      max-width: 100% !important;
+    }
+
+    .cg-heading {
+      max-width: 100% !important;
+    }
+    .cg-accordion {
+      width: 100% !important;
+    }
+  }
+
+  .cg-heading {
+    margin-top: 0;
+    max-width: 360px;
+    padding-bottom: 24px;
+    grid-column: span 4 / span 4;
+    text-align: left;
+    line-height: 38px !important;
+    color: $text_primary;
+    user-select: none;
+  }
+
+  .topic-box {
+    padding-inline: 15px;
+  }
+
+  .cg-accordion {
+    max-width: 800px;
+    height: max-content;
+    width: 100%;
+    border-radius: 20px;
+    background-color: $background_primary;
+    scrollbar-width: none !important;
+  }
+
+  .cg-course {
+    margin: 24px;
+    background-color: var(--cg-course-color);
+    border-radius: 24px;
+    padding: 32px;
+    // color: $primary_white;
+  }
+  // .cg-course > ul > li {
+  //   // color: $primary_white;
+  //   font-weight: 600;
+  // }
+  .cg-course > ul {
+    padding-left: 16px;
+  }
+
+  .cg-arrow {
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 100%;
+    background-color: $background_secondary;
+    @include dflexwithjustifyandalign(center, center);
+
+    svg {
+      stroke: $brand_primary;
+    }
+  }
+  .cg-accordion {
+    width: max-content;
+    max-width: 820px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .cg-accordion-item {
+    border-top: 1px solid $primary_border;
+  }
+  .cg-accordion-item:first-child {
+    border-top: none !important;
+  }
+
+  .cg-accordion-item-header {
+    color: $text_primary;
+    cursor: pointer;
+    @include dflexwithjustifyandalign(space-between, center);
+    width: auto;
+    padding-inline: 24px;
+    background-color: $background_primary;
+    padding-block: 16px;
+    @include respond-to(mobile-view) {
+      padding-inline: 12px;
+    }
+  }
+
+  .cg-list {
+    @include dflexwithjustify(center);
+    max-width: 423px;
+    width: 100%;
+    margin-inline: auto;
+  }
+  .cg-list > ul {
+    background: $background_tertiary;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 16px;
+  }
+  .cg-list > ul > li {
+    margin-left: 20px;
+    line-height: 36px;
+    color: $text_primary;
+    font-size: 16px;
+  }
+
+  .cg-accordion .cg-accordion-item-header + .cg-accordion-item-body {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .cg-accordion .cg-accordion-item-header.active + .cg-accordion-item-body {
+    max-height: fit-content;
+  }
+  .cg-accordion-item-body-content {
+    margin: 0px 24px 12px 24px;
+    p {
+      span {
+        font-weight: 600;
+      }
+    }
+    @include respond-to(mobile-view) {
+      margin: 0px 12px 12px 12px;
+    }
+  }
+  .cg-accordion-item-body-content > ul > li {
+    font-size: 18px;
+    // color: var(--text_primary);
+  }
+  .cg-accordion-item-body-content > ul > li > span {
+    font-weight: 600;
+  }
+  .cg-tab3-first-li {
+    padding-top: 16px;
+  }
+  .cg-accordion {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .cg-accordion-item:first-child > .cg-accordion-item-header {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .cg-accordion-item:last-child > .cg-accordion-item-header {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  .cg-course {
+    img {
+      width: unset !important;
+      margin: 0px;
+      margin-bottom: 36px;
+    }
+    li {
+      color: #262c35;
+      line-height: 36px;
+      @include respond-to(tablet-view) {
+        line-height: unset;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .max-width-590 {
+    max-width: 590px;
+    width: 100%;
+    margin-top: 8px;
+    margin-inline: auto;
+    pre {
+      margin-top: 0px;
+    }
+  }
+  pre {
+    margin-top: 24px;
+  }
+
+  // adding the following properties to apply css on course guide page
+  // .cg-accordion-box > ul > li {
+  //   color: $primary_white;
+  // }
+
+  .cg-accordion-item-header {
+    h3 {
+      color: $text_primary;
+      margin-block: 0px !important;
+      user-select: none;
+    }
+  }
+
+  // altering the base class styles
+  h1,
+  ul,
+  ol,
+  p {
+    margin-top: 1em;
+    margin-bottom: 18px;
+    @include respond-to(tablet-view) {
+      margin-bottom: 16px;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5em;
+    margin-bottom: 18px;
+    @include respond-to(tablet-view) {
+      margin-bottom: 16px;
+    }
+  }
+
+  h5,
+  strong {
+    font-weight: 600;
+  }
+
+  video {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+  }
+}

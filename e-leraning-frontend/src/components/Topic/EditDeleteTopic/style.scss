@@ -1,0 +1,23 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.subcontainerdelet {
+  display: flex;
+  gap: 10px;
+  @mixin detail-btn($bg-color) {
+    background-color: $bg-color;
+    min-width: 75px;
+    height: 25px;
+    border-radius: 15px;
+    color: $primary_white;
+    font-size: $body-responsive;
+    border: none;
+    cursor: pointer;
+  }
+  .detail-delete-btn {
+    text-align: center;
+    @include detail-btn($delete_btn);
+  }
+  .detail-edit-btn {
+    @include detail-btn($edit_btn);
+  }
+}

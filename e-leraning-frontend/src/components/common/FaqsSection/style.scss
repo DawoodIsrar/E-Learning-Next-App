@@ -1,0 +1,33 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.non-page-faq-wrapper {
+  background-color: $background_tertiary;
+
+  .faq-container {
+    @include max-alignment;
+    width: 100%;
+    padding-block: 64px;
+    @include respond-to(tablet-view) {
+      padding: 20px 30px;
+      gap: 30px;
+    }
+    @include respond-to(mobile-view) {
+      flex-direction: column;
+    }
+    .faq-container-inner {
+      @include dflexwithjustify(space-between);
+      flex-direction: row;
+      @media only screen and (max-width: 1460) {
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
+    }
+    .faq-accordian {
+      max-width: 820px;
+      width: 100%;
+      border: $button-border;
+      border-radius: 20px;
+      background-color: $background_primary !important;
+    }
+  }
+}

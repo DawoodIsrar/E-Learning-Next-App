@@ -1,0 +1,130 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+//     ********* Hero Section styles  **********
+
+.right-dev {
+  display: grid;
+  gap: 44px;
+  h1,
+  p {
+    color: white;
+  }
+  h1 {
+    max-width: 601px;
+    width: 100%;
+  }
+  p {
+    max-width: 609px;
+    width: 100%;
+  }
+  img {
+    max-width: 250px;
+    width: 100%;
+    max-height: 53px;
+    height: 100%;
+    @include respond-to(mobile-view) {
+      width: 150px;
+      height: 32px;
+    }
+  }
+  @include respond-to(tablet-view) {
+    gap: 35px;
+  }
+}
+.section-bg-wrapper {
+  background-color: $background_tertiary;
+  .width-handler-div {
+    padding-top: 30px;
+    @include respond-to(tablet-view) {
+      padding-inline: 10px;
+    }
+  }
+}
+.about-wrapper {
+  padding: 10%;
+  display: flex;
+  gap: 40px;
+  background: linear-gradient(240.85deg, #41b8ff 0%, #0055c2 100%);
+  border-radius: 24px;
+
+  @include respond-to(tablet-view) {
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 35px;
+  }
+}
+
+.sub-header-div {
+  max-width: 726px;
+  width: 100%;
+  font-weight: 300;
+  line-height: 77px;
+  margin-left: 106px;
+  letter-spacing: calc(40px * 0.015);
+
+  h5 {
+    letter-spacing: calc(40px * 0.015);
+
+    span {
+      font-weight: 700;
+      letter-spacing: calc(40px * 0.015);
+    }
+  }
+}
+
+.hero-heading {
+  @extend .text-semibold !optional;
+  margin-bottom: 40px;
+  user-select: none;
+  @include respond-to(tablet-view) {
+    text-align: left;
+    padding-left: 12px;
+    margin-bottom: 0px;
+  }
+}
+
+.list-container {
+  padding-left: 24px;
+  list-style-type: disc;
+  line-height: 77px;
+  li {
+    color: $background_peek_contrast;
+  }
+}
+
+.image {
+  width: 299px;
+  height: 301px;
+  @include respond-to(mobile-view) {
+    width: 150px;
+    height: 151px;
+  }
+}
+
+@include respond-to(tablet-view) {
+  .sub-header-div {
+    width: auto;
+  }
+}
+
+@include respond-to(tablet-view) {
+  .sub-header-div {
+    line-height: 30px;
+  }
+
+  .sub-header-div {
+    padding-inline: 24px;
+    margin-left: 0px;
+  }
+
+  .hero-heading {
+    padding-left: 0px;
+    font-size: 24px;
+  }
+  .list-container {
+    padding-inline: 24px;
+    line-height: 30px;
+  }
+}

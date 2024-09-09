@@ -1,0 +1,238 @@
+@import "../../assets/scss/theme";
+@import "@/assets/scss/variables.scss";
+
+.courseStructure_tableTooltip_Main {
+  ul {
+    li {
+      color: $text_secondary;
+    }
+  }
+}
+
+.coursesTable_container {
+  position: relative;
+  top: -2px;
+  padding-bottom: 3.5rem;
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: 0;
+  }
+}
+
+#courseStructureTableTooltip {
+  & > div {
+    background-color: transparent;
+    max-width: none;
+  }
+}
+
+.courseStructure_tableTooltip {
+  position: relative;
+
+  img {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px $white-color);
+  }
+
+  &_Main {
+    width: 300px;
+    background-color: $white-color;
+    color: $black-color;
+    transform: translateX(93px);
+    padding: 1.25rem 0.8rem;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.1;
+    filter: drop-shadow(0px 0px 8px #7bb2ff);
+    transition: all 0.2s;
+    white-space: normal;
+
+    ul {
+      padding: 0 1rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1rem;
+      width: 2rem;
+      bottom: 1px;
+      left: 3.5rem;
+      transform: translateY(100%);
+      background-color: $white-color;
+      clip-path: polygon(0 100%, 0 0, 100% 0);
+    }
+  }
+}
+
+.courseStructure_TableHeader {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.8rem;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-right: 1rem;
+
+  @include sm {
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+
+  & > button {
+    background-color: transparent;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    padding: 5px;
+    color: $text_primary;
+    border: 1px solid $text_primary;
+  }
+}
+
+.courseStructure_table {
+  border-radius: 0 !important;
+  padding-right: 1rem;
+  background-color: var(--courseStructure-table-background) !important;
+
+  @include sm {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+
+  table {
+    overflow-y: visible;
+
+    input[type="checkbox"] {
+      height: 0.9rem;
+      width: 0.9rem;
+      background-color: #fff;
+      border: 1px solid #4f4f4f;
+      box-shadow: 0px 0px 4px #ffffff;
+    }
+  }
+
+  thead {
+    tr {
+      background-color: var(--background_primary);
+    }
+    top: -2px !important;
+    th {
+      padding: 0.8rem 1.125rem;
+      border-bottom: none;
+      position: relative;
+      white-space: nowrap;
+      min-width: fit-content;
+      color: $white-color;
+
+      & > span {
+        color: $white-color;
+
+        &:hover {
+          color: $white-color;
+        }
+        svg {
+          color: $white-color;
+        }
+      }
+
+      & > span.Mui-active {
+        color: $text_blue !important;
+
+        svg {
+          color: $text_blue !important;
+        }
+      }
+      background: var(--thead-background);
+
+      @include md {
+        padding: 0.5rem;
+      }
+      &:nth-child(5),
+      &:nth-child(6) {
+        text-align: center;
+      }
+    }
+  }
+
+  tr:nth-child(even) {
+    td {
+      background-color: var(--tr-td-background);
+    }
+  }
+
+  td {
+    border-width: 0;
+    border-bottom: none;
+    padding: 0.8rem 1.125rem;
+    font-weight: 700;
+
+    &:nth-child(2) {
+      cursor: pointer;
+    }
+
+    &:not(:last-child) {
+      min-width: 8rem;
+
+      @include md {
+        min-width: auto;
+      }
+    }
+
+    background: var(--td-background);
+    color: var(--text_primary);
+
+    @include md {
+      padding: 0.5rem;
+      min-width: auto;
+    }
+  }
+}
+
+.courseStructure_TableDropdown {
+  width: 192px;
+  height: 1.75rem;
+  border-radius: 0.3rem;
+  font-weight: 300;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+  }
+  box-shadow: var(--courseStructure-TableDropdown-box-shadow);
+
+  div {
+    height: inherit !important;
+    box-sizing: border-box;
+    border-radius: inherit;
+    box-shadow: var(--courseStructure-TableDropdown-box-shadow);
+  }
+
+  .MuiOutlinedInput-input {
+    padding: 0.25rem 1rem;
+    font-weight: 300;
+    color: $text_primary;
+    background-color: var(
+      --courseStructure-TableDropdown-MuiOutlinedInput-input-background
+    );
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  svg {
+    color: $text_primary;
+  }
+
+  outline: 1px solid var(--courseStructure-TableDropdown-outline);
+  border-color: var(--courseStructure-TableDropdown-border-color) !important;
+  background-color: var(--courseStructure-TableDropdown-background);
+}

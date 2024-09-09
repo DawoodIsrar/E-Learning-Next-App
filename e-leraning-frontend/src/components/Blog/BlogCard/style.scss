@@ -1,0 +1,67 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.blog-card {
+  width: 50%;
+  border-radius: 24px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  min-height: 618px;
+  height: 100%;
+  @include dflexwithjustify(space-between);
+  flex-direction: column;
+  @include respond-to(tablet-view) {
+    width: 100%;
+    min-height: 435px;
+  }
+  @include respond-to(mobile-view) {
+    min-height: 100%;
+  }
+  .blog-img {
+    border-radius: 14px;
+    padding-block: 32px;
+    @include dflexwithjustifyandalign(center, center);
+    @include respond-to(mobile-view) {
+      padding-block: 20px;
+      svg {
+        width: 194px;
+        height: 116px;
+      }
+      img {
+        width: 194px;
+        height: 116px;
+      }
+    }
+  }
+  .blog-card-content {
+    padding: 24px 14px 14px 14px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    @include dflexwithjustify(space-between);
+    gap: 10px;
+    flex-direction: column;
+    min-height: 292px;
+    height: 100%;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    @include respond-to(tablet-view) {
+      min-height: unset;
+      gap: 24px;
+    }
+    @include respond-to(mobile-view) {
+      margin-top: 10px;
+      padding: 10px;
+      justify-content: unset;
+      .blogcard-date {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .blogcard-date {
+      font-size: $body-extra-small;
+      @include dflexwithjustifyandalign(space-between, center);
+    }
+  }
+}

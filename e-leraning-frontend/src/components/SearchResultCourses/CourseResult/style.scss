@@ -1,0 +1,32 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.back-btn-wrapper {
+  max-width: 1600px;
+  @include dflexwithjustifyandalign(start, center);
+  width: 100%;
+  padding-block: 20px;
+  margin: auto;
+  .back-btn {
+    cursor: pointer;
+    margin-left: 40px;
+    @include dflexwithalign(center);
+    @include respond-to(mobile-view) {
+      margin-left: 8px;
+    }
+  }
+}
+.recently-viewed-result-courses {
+  @include max-alignment;
+  background-color: $background_primary;
+  padding-top: 0px;
+  padding-bottom: 16px;
+  margin-bottom: 100px;
+
+  h1 {
+    padding-top: 14px;
+  }
+  .recently-viewed-courses-result-container {
+    padding-top: 50px;
+  }
+}

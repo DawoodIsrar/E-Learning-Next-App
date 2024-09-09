@@ -1,0 +1,72 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include respond-to(tablet-view) {
+    gap: 12px;
+  }
+  .chapter-card {
+    // background-color: $background_primary;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    width: 295px;
+    height: 290px;
+
+    @include respond-to(tablet-view) {
+      min-height: fit-content;
+      margin-right: 10px;
+    }
+    @include respond-to(mobile-view) {
+      width: 250px;
+      height: fit-content;
+      // height: 255px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .chapter-card-img {
+        padding-top: 4px;
+      }
+    }
+  }
+
+  .recently-viewed-divider {
+    @include respond-to(mobile-view) {
+      display: none;
+    }
+  }
+  @include respond-to(mobile-view) {
+    margin-bottom: 0px;
+  }
+}
+.main-div {
+  display: flex;
+  justify-content: center;
+}
+
+.course-search-result-card-wrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+  h3 {
+    color: $text_tertiary;
+  }
+  .course-not-found {
+    text-align: center;
+  }
+
+  @include respond-to(tablet-view) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-content: center;
+    gap: 16px;
+  }
+
+  @include respond-to(mobile-view) {
+    grid-template-columns: repeat(auto-fill, minmax(154px, max-content));
+    gap: 16px;
+  }
+}

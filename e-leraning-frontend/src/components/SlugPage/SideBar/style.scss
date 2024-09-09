@@ -1,0 +1,140 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.modal-terms {
+  position: fixed;
+  top: 0px;
+  left: 75px;
+  z-index: 99999999;
+  background-color: $background_tertiary !important;
+  border: 1px solid $primary_border;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $background_primary;
+  .nav-menu-terms {
+    background-color: $background_tertiary;
+    position: absolute;
+    left: 0%;
+    width: 100% !important;
+    list-style-type: none;
+    z-index: 999;
+    border: $button_border;
+    border-bottom: 0px !important;
+
+    .menu-dropdown-wrapper-terms {
+      @include max-alignment;
+      padding: 0px 100px;
+      display: flex;
+
+      gap: 30px;
+      @include respond-to(tablet-view) {
+        padding: 0px 40px;
+      }
+      @include respond-to(tablet-view) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+      }
+      .menu-account-terms,
+      .menu-other-terms {
+        max-width: 400px;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        h5,
+        button {
+          padding-inline: 24px;
+        }
+        @include respond-to(tablet-view) {
+          max-width: 100%;
+          h5 {
+            padding-inline: 24px;
+          }
+          button {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-cross-icon-terms {
+  margin-top: 10px;
+  min-height: 46px;
+  border-bottom: 1px solid $primary_border;
+}
+
+.cross-button-terms {
+  position: absolute;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  padding-top: 4px;
+  margin-top: 4px;
+  background-color: $background_tertiary;
+  border: 1px solid $primary_border;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    background-color: $background_blue;
+    color: $text_primary;
+  }
+}
+.menu-dropdown-wrapper-terms {
+  height: 70px;
+  border-bottom: 1px solid $primary_border;
+}
+
+.list-style-side {
+  list-style: none;
+  background-color: $background_tertiary;
+  font-family: "__Inter_aaf875";
+  left: 100px;
+  border-radius: 16px;
+  height: 167px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  ul {
+    padding: 0px;
+  }
+}
+.list-item-side {
+  width: 100%;
+  height: 56px;
+  border: 0px 0px 1px 0px solid $text_tertiary;
+  padding: 16px 32px 16px 24px;
+  gap: 16px;
+  border-bottom: 1px solid $primary_border;
+  &.selected {
+    color: $brand_secondary;
+    font-weight: 700;
+    width: 250px !important;
+  }
+}
+
+.li-link-side {
+  all: unset;
+  width: 100%;
+  height: 45px;
+  padding: 10px 10px 10px 8px;
+  border-radius: 12px;
+  &:hover {
+    cursor: pointer;
+    color: $brand_secondary !important;
+  }
+  &.selected {
+    color: $brand_secondary !important;
+    font-weight: 700;
+    width: 250px !important;
+  }
+  &:visited {
+    color: $text_primary;
+  }
+}

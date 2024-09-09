@@ -1,0 +1,17 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.library-container {
+  padding-block: 0px;
+  background-color: $background_primary;
+}
+.library-banner {
+  @include max-alignment;
+  height: 40px;
+  padding-block: 10px !important;
+  @include dflexwithalign(center);
+  gap: 12px;
+  @include respond-to(mobile-view) {
+    display: none;
+  }
+}

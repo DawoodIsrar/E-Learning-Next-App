@@ -1,0 +1,88 @@
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/mixins.scss";
+@import "../../assets/scss/theme";
+
+.searchModal {
+  position: absolute;
+  top: 45px;
+  right: -200px;
+  transform: translateX(-50%);
+  width: 408px;
+  padding: 0.7rem 1.1rem 0.7rem 0.8rem;
+  box-sizing: border-box;
+  z-index: 1500;
+  border-radius: 0.65rem;
+  background-color: $background_tertiary;
+  color: $text_primary;
+  border: 1px solid $primary_border;
+  // @include themed() {
+  //   color: t("bodyText");
+  //   background-color: t("searchModalBg");
+  // }
+
+  @include xl {
+    left: unset;
+    transform: none;
+    right: 0;
+  }
+
+  @include sm {
+    max-width: 90vw;
+  }
+  @include respond-to(mobile-view) {
+    left: 5%;
+    transform: none;
+    right: 0;
+    top: 9%;
+  }
+
+  .searchModalFrom {
+    &:first-child {
+      margin-bottom: 0.4rem;
+    }
+
+    label {
+      font-size: 1.125rem;
+      font-family: "Roboto", sans-serif;
+    }
+  }
+
+  .searchModalFromInputContainer {
+    position: relative;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 0.25rem;
+    background-color: var(--searchModalFromInputContainer-background);
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0.4rem;
+      color: inherit;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    svg {
+      font-size: 1.75rem;
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      border-radius: inherit;
+      padding: 0 1.5rem;
+      padding-right: 2.5rem;
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: inherit;
+      border: 1px solid #e0e0e0;
+    }
+  }
+}

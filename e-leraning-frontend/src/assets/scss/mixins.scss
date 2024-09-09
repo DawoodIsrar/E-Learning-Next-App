@@ -1,0 +1,226 @@
+@import "./variables.scss";
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == desktop-view {
+    @media only screen and (min-width: 1000px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-view-max {
+    @media only screen and (max-width: 1150px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-view {
+    @media only screen and (max-width: 1000px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-view-min {
+    @media only screen and (max-width: 1000px) and (min-width: 501px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile-view-max {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile-view {
+    @media only screen and (max-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile-view-min {
+    @media only screen and (max-width: 350px) {
+      @content;
+    }
+  } @else if $breakpoint == large-height {
+    @media only screen and (min-height: 1200px) {
+      @content;
+    }
+  }
+}
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@mixin style-for-link {
+  :hover {
+    background-color: $background_blue;
+  }
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-center-important {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin nav-button {
+  width: 95px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: $nav_radius;
+  border: 1px solid $primary_border;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@mixin Card-desgin {
+  cursor: pointer;
+  max-height: 240px;
+  max-width: 295px;
+  width: 295px;
+  height: 240px;
+  border-radius: $course_radius;
+  padding: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  justify-content: space-between;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black overlay
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: $course_radius;
+    transition: opacity 0.3s ease; // Smooth transition for opacity
+  }
+
+  // Hover effect
+  &:hover {
+    border-color: green;
+    .overlay {
+      display: flex; // Show the overlay when the card is hovered over
+    }
+  }
+
+  @include respond-to(tablet-view) {
+    width: 154px;
+    height: 138px;
+    gap: 28px;
+    padding: 16px;
+  }
+}
+
+@mixin max-alignment {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
+
+// pulse animation
+@mixin pulse-animate {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+//mixin for new ui
+@mixin dflexwithjustifyandalign($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin dflexwithjustify($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+@mixin dflexwithalign($align) {
+  display: flex;
+  align-items: $align;
+}
+@mixin linkToP {
+  color: var(--text_primary);
+  text-decoration: none;
+  &:hover {
+    font-weight: 400;
+  }
+}
+
+@mixin outerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  @include respond-to(tablet-view) {
+    gap: 30px;
+  }
+}
+
+@function custom-web-padding($top, $bottom) {
+  $leftright: 100px; // Set left/right value to be static at 100px
+
+  // Return padding values
+  @return $top $leftright $bottom $leftright;
+}
+@function custom-web-padding-1300($top, $bottom) {
+  $leftright: 100px; // Set left/right value to be static at 100px
+
+  // Return padding values
+  @return $top $leftright $bottom $leftright;
+}
+@function custom-tablet-padding($top, $right, $bottom, $left) {
+  $leftright: 24px; // Set left/right value to be static at 100px
+
+  // Return padding values
+  @return $top $leftright $bottom $leftright;
+}
+@mixin listType($type) {
+  @if $type == "a" {
+    counter-reset: listStyle;
+    > li {
+      counter-increment: listStyle;
+    }
+    > li::before {
+      content: counter(listStyle, lower-alpha);
+    }
+  } @else if $type == "1" {
+    counter-reset: listStyle;
+    > li {
+      counter-increment: listStyle;
+    }
+    > li::before {
+      content: counter(listStyle, decimal);
+    }
+  } @else if $type == "i" {
+    counter-reset: listStyle;
+    > li {
+      counter-increment: listStyle;
+    }
+    > li::before {
+      content: counter(listStyle, lower-roman);
+    }
+  } @else {
+    counter-reset: listStyle;
+    > li {
+      counter-increment: listStyle;
+    }
+    > li::before {
+      content: counter(listStyle, decimal); // Default to decimal
+    }
+  }
+}

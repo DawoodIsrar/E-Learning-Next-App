@@ -1,0 +1,245 @@
+@import "@/assets/scss/mixins.scss";
+
+.topic-page-content {
+  overflow-wrap: break-word;
+  max-width: 700px;
+  width: 100%;
+  .topic-page-banner {
+    @include align-center;
+    gap: 8px;
+
+    @include respond-to(tablet-view) {
+      margin-bottom: 0px;
+    }
+    .p1,
+    .p2 {
+      @include linkToP();
+      cursor: pointer;
+    }
+    .p1,
+    .p2 {
+      font-size: 14px;
+
+      @include respond-to(tablet-view) {
+        font-size: 12px;
+      }
+      @include respond-to(mobile-view) {
+        line-height: 1.2;
+      }
+    }
+    a {
+      svg {
+        path {
+          stroke: var(--icon-color-banner);
+        }
+      }
+    }
+  }
+  .home-icon-course {
+    cursor: pointer !important;
+  }
+
+  @include respond-to(tablet-view) {
+    width: -webkit-fill-available;
+  }
+  .topic-image {
+    border-radius: 3%;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+  }
+  .main-title {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      border: none;
+      background: none;
+    }
+  }
+
+  .subcontainerdelete {
+    .detail-delete-btn {
+      text-align: center;
+      background-color: red;
+    }
+  }
+  .status-wrapper {
+    width: 100%;
+    @include dflexwithalign(center);
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 7px;
+
+    .status {
+      display: flex;
+      @include respond-to(mobile-view) {
+        align-items: center;
+      }
+      gap: 5px;
+    }
+    @include respond-to(mobile-view) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      .detail-delete-btn {
+        text-align: center;
+        width: 50px;
+        font-size: 12px;
+      }
+      .detail-edit-btn {
+        width: 50px;
+        font-size: 12px;
+      }
+      .status {
+        height: 15px;
+        p {
+          font-size: 12px;
+          white-space: no-wrap;
+        }
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+  .topic-tags {
+    max-width: 700px;
+    margin-top: 50px;
+    @include dflexwithalign(center);
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+    @include respond-to(mobile-view) {
+      row-gap: 10px;
+      column-gap: 16px;
+    }
+    .tag-body {
+      border: none;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      background-color: $brand_primary;
+
+      border-radius: 26px;
+      padding: 5px 24px;
+
+      @include respond-to(tablet-view) {
+        padding: 0px 24px 0px 24px;
+      }
+      p {
+        color: $text_tertiary;
+        font-weight: 600;
+        @include respond-to(tablet-view) {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  h2 {
+    background-color: var(--box-bg) !important;
+    // color: var(--gray_color);
+    background-size: auto 50%;
+    padding: 20px 60px 100px 20px;
+    border-radius: 10px;
+    margin-top: 1.5em;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5em;
+  }
+
+  @include respond-to(desktop-view) {
+    h1 {
+      margin-block: 20px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+    h2 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+  @include respond-to(tablet-view) {
+    h1 {
+      margin-block: 15px;
+      padding-bottom: 4px;
+      font-size: 28px;
+    }
+  }
+  @include respond-to(mobile-view) {
+    h1 {
+      margin-block: 10px;
+    }
+  }
+
+  li > img,
+  li > .topic-img-insert-container {
+    margin-block: 10px;
+  }
+
+  .topic-box,
+  .topic-gray-box,
+  .topic-red-box,
+  .blockquote,
+  .practice-bg {
+    margin-top: 16px;
+    h2 {
+      background: none !important;
+      padding: unset;
+      border-radius: 0px;
+      color: var(--text_primary);
+    }
+  }
+}
+
+.blur-container {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  margin-top: -12px;
+
+  @include respond-to(tablet-view) {
+    font-weight: 500;
+  }
+  box-shadow: 0px 0px 50px 50px $background_primary;
+  .login-continue-modal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: $background_tertiary;
+    padding: 40px;
+    width: 600px;
+    @include respond-to(mobile-view) {
+      padding: 20px;
+    }
+    p {
+      text-align: center;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 30px;
+    }
+  }
+  .auth-buttons-area {
+    .auth-buttons {
+      @include respond-to(mobile-view) {
+        max-width: 159px;
+        width: 100%;
+      }
+    }
+  }
+}

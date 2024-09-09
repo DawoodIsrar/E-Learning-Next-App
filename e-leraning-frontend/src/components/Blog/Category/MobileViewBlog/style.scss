@@ -1,0 +1,42 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.blog-wrapper {
+  .inner-wrapper {
+    margin-top: 14px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pionter;
+    .main-title-and-img {
+      @include dflexwithjustifyandalign(center, center);
+      gap: 10px;
+      margin-bottom: 12px;
+      .img-wrapper {
+        border-radius: 30px;
+        padding: 13px;
+      }
+      .main-title {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .main-text-div-and-auther-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .author-detail {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        div {
+          gap: 8px;
+          display: flex;
+        }
+      }
+    }
+  }
+}

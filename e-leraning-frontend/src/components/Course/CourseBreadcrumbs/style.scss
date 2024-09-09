@@ -1,0 +1,29 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.course-page-wrapper {
+  background-color: $background_primary;
+
+  .course-main-banner-container {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .course-main-banner {
+    padding-top: 21px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include max-alignment;
+    margin-inline: auto;
+    p {
+      padding-top: 0px !important;
+      user-select: none;
+    }
+
+    @include respond-to(tablet-view) {
+      display: none;
+    }
+    p {
+      padding-top: 16px;
+    }
+  }
+}

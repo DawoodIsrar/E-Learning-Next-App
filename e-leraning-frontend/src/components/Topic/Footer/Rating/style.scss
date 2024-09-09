@@ -1,0 +1,22 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+@import "../../mixins.scss";
+
+.icon {
+  @include footer-icon();
+  cursor: pointer;
+  background-color: $background_tertiary;
+}
+.no-border {
+  cursor: pointer;
+  border: none;
+}
+.disable {
+  border-radius: 50%;
+  padding: 0px;
+  height: 30px;
+  width: 30px;
+  @include dflexwithjustifyandalign(center, center);
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,19 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.recently-viewed-main-wrapper {
+  @include max-alignment;
+  background-color: $background_primary;
+  @include respond-to(mobile-view) {
+    padding-inline: 10px;
+  }
+  .recently-viewed-wrapper {
+    padding-top: 60px;
+    margin-bottom: 60px;
+    @include outerContainer();
+    @include respond-to(tablet-view) {
+      padding-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}

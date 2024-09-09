@@ -1,0 +1,60 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.recently-view-wrapper {
+  padding-block: 60px;
+  @include respond-to(tablet-view) {
+    padding-block: 10px;
+  }
+}
+.recently-courses-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include respond-to(tablet-view) {
+    gap: 10px;
+  }
+  .recently-course-header {
+    @include dflexwithalign(center);
+    gap: 3px;
+    font-size: $heading3_font;
+    @include respond-to(tablet-view) {
+      font-size: $course_card_font;
+    }
+
+    .recently-viewed-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 6px;
+
+      @include respond-to(tablet-view) {
+        width: $course_card_font;
+        height: $course_card_font;
+      }
+    }
+
+    .recent-course-header-h3 {
+      letter-spacing: 0.00054em;
+      @include respond-to(tablet-view) {
+        width: 100%;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+}
+
+.loading-wrapper {
+  @include dflexwithalign(center);
+  flex-direction: column;
+  margin: 32px 0px;
+}
+.helper-text {
+  font-size: 19px;
+  @include respond-to(tablet-view) {
+    font-size: 16px;
+  }
+}
+.topic-slider {
+  display: flex;
+  gap: 20px;
+}

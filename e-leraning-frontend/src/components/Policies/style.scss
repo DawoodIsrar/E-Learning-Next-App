@@ -1,0 +1,53 @@
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/mixins.scss";
+
+.slug-body {
+  background-color: $background_primary !important;
+  width: 80%;
+  @include respond-to(tablet-view) {
+    width: 100%;
+  }
+  > ul {
+    margin-left: 16px;
+  }
+}
+
+.slug-main {
+  display: flex;
+  gap: 130px;
+  max-width: 1600px;
+  margin: auto;
+  background-color: $background_primary;
+  min-height: 300px;
+  padding: 60px 50px 30px 50px;
+
+  @include respond-to(tablet-view) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include respond-to(mobile-view) {
+    padding: 24px 24px 45px 24px;
+  }
+  .editor-content {
+    max-width: unset;
+    h1 {
+      margin-top: 0px;
+    }
+  }
+}
+
+.slug-side {
+  @include respond-to(tablet-view) {
+    width: 100%;
+  }
+  .list-style-slug {
+    @include respond-to(tablet-view) {
+      width: 100%;
+    }
+  }
+
+  @include respond-to(mobile-view) {
+    display: none;
+  }
+}

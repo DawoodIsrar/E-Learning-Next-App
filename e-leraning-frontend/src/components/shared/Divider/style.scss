@@ -1,0 +1,11 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.divider-wrapper {
+  @include max-alignment;
+  .divider {
+    background-color: $border_light_secondary;
+    height: 1px;
+    width: 100%;
+  }
+}

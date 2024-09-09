@@ -1,0 +1,54 @@
+.main-footer-wrapper {
+  display: none;
+}
+.courseStructure_table {
+  .dropbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .dropdown {
+    position: relative;
+    border: none;
+    min-width: unset;
+    min-height: unset;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    top: 30px;
+    left: 0px;
+    border: none;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}

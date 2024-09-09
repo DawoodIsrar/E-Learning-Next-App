@@ -1,0 +1,45 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.dlibro-container-wrapper {
+  background-color: $background_primary;
+
+  .dlibro-container {
+    width: 100%;
+    gap: 25px;
+    @include dflexwithjustifyandalign(space-between, flex-start);
+    @include max-alignment;
+    @include respond-to(tablet-view) {
+      gap: 0px;
+      padding: 0px;
+      flex-direction: column;
+    }
+    @include respond-to(mobile-view) {
+      padding: 0px !important;
+    }
+
+    .dlibro-text {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding-block: 50px;
+
+      @include respond-to(tablet-view) {
+        padding: 0px;
+        gap: 16px;
+        padding: 24px;
+      }
+    }
+    .hero-media {
+      padding-block: 50px;
+      .video-player-container {
+        @include respond-to(tablet-view) {
+          border-radius: 0px;
+        }
+      }
+      @include respond-to(tablet-view) {
+        padding-block: 0px;
+      }
+    }
+  }
+}
