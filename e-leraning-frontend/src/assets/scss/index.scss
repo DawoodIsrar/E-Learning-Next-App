@@ -1,0 +1,659 @@
+@import "./theme";
+@import "./prism-vsc-dark-plus.scss";
+@import "@/assets/scss/variables.scss";
+.Theme {
+  // padding-top: 50px;
+  // min-height: 99.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include md {
+    min-height: auto; // Testing purpose on ipad
+  }
+}
+:root {
+  --box-bg: transparent;
+  --target-learner-bg: #def2ff;
+  --color: #363636;
+  --gray_color:#262c35;
+  --background-color: ##f3f6ff;
+  --brand_primary: #262c35;
+  --brand_secondary: #52aaff;
+  --background_primary: #f1f3f6;
+  --background_secondary: #fafafa;
+  --background_tertiary: #ffffff;
+  --background_blue: #418dfe;
+  --text_primary: #262c35;
+  --text_secondary: #393B35;
+  --text_tertiary: #ffffff;
+  --text_blue: #418dfe;
+  --text_code: #d63384;
+  --a_visited: #A300A7;
+  --primary_border: #e6e6e6;
+  --background_peek_contrast: #000000;
+  --background-error: #fcf5ef;
+  --logo_background_primary: #4e4e54;
+  --background_error: #fcf5ef;
+  --primary_white: #ffffff;
+  --primary_black: #000000;
+  --brancd_secondary: #91c7fa;
+  --rating-border: #0000001f
+  --border_light: #e0e0e0;
+  --border_light_secondary: #d4d5d8;
+  --bg-primary-dark: #262c35;
+  --icon-color-banner:rgb(84, 85, 85);
+  --topic-card-box-shadow:0px 32px 32px 0px #00000040;
+  --border_light_secondary_consistent: #d4d5d8;
+  --publication-bg : #ffffff;
+  --book-image-bg :#f1f3f6;
+  --menu-bg-color:#00000059;
+}
+
+[data-theme="dark"] {
+  --box-bg: transparent;
+  --border_light: #40464e;
+  --border_light_secondary: #40464e;
+  --brancd_secondary: #52aaff;
+  --background_error: #fcf5ef;
+  --logo_background_primary: #fafafa;
+  --background_peek_contrast: #ffffff;
+  --primary_border: #545555;
+  --brand_primary: #ffffff;
+  --brand_secondary: #52aaff;
+  --background_primary: #262c35;
+  --background_secondary: #4e4e54;
+  --background_tertiary: #000000;
+  --background_blue: #418dfe;
+  --text_primary: #ffffff;
+  --text_secondary: #818185;
+  --text_tertiary: #262c35;
+  --text_blue: #6ebaff;
+  --text_code: #ff6ac2;
+  --a_visited: #ff9283;
+  --rating-border: #c4c4c4;
+  --bg-primary-dark: black;
+  --icon-color-banner:white;
+  --topic-card-box-shadow:0 4px 8px rgb(255 244 244 / 60%);
+  --publication-bg : #262c35;
+  --book-image-bg :#202020;
+  --menu-bg-color:#ffffff59;
+
+}
+
+.light {
+  --course-guide-page-container-background: #{$Gray_100};
+  --course-guide-page-container-color: #{$Text_Body_Light};
+  --course-guide-page-container-color-strong: #{$Text_Body_Light};
+  --target-learner-bg: #{$Blue_50};
+  --key-point-card-background: #{$white-color};
+  --course-outline-container-summary-background: #{$white-color};
+  --details-open-background: #{$Blue_50};
+  --details-open-a-color: #{$Text_Body_Light};
+  --user-feedback-background: #{$Blue_700};
+  --callout-background: #{$Blue_50};
+  --courses-footerBtns2-border: #{$Text_Body_Light};
+  --courses-footerBtns2-background: #{$Code_Title_Light};
+  --courseStructure-TableHeader-color: #{$Text_Body_Light};
+  --courseStructure-TableHeader-border: #{$Text_Body_Light};
+  --courseStructure-table-background: #{$BG_Body_Light};
+  --thead-background: #{$Striped_Table_Header};
+  --tr-td-background: #{$Light_Table_Striped};
+  --td-nth-child-color: #{$Heading_Light};
+  --td-background: #{$BG_Body_Light};
+  --td-color: #{$Text_Body_Light};
+  --courseStructure-TableDropdown-box-shadow: #{$Recently_View_Shadow_Light};
+  --MuiOutlinedInput-input-color: #{$Text_Body_Light};
+  --MuiOutlinedInput-input-background: #{$BG_Body_Light};
+  --courseStructure-TableDropdown-svg-color: #{$Text_Body_Light};
+  --courseStructure-TableDropdown-outline: #{$Text_Body_Light};
+  --courseStructure-TableDropdown-border-color: #{$Light_Table_Striped};
+  --courseStructure-TableDropdown-border-color: #{$Dark_Striped_Table};
+  --courseStructure-TableDropdown-background: #{$Text_Body_Dark};
+  --courseStructure-TableDropdown-color: #{$Text_Body_Light};
+  --errorpage-color: #{$Font_Subtitle_Light};
+  --what-you-can-learn-container-color: #{$Font_Subtitle_Light};
+  --chalenges-bckground: #{$ChallengeColorCustom_Light};
+  --challenges-sub-container-background: #{$ChallengeColorCustom_Dark};
+  --navbar-background: #{$BG_Body_Light};
+  --navbar-searchContainer-background: #{$white-color};
+  --navbar-searchContainer-color: #{$Font_Body_Light};
+  --searchModal-background: #{$white-color};
+  --searchModal-color: #{$Text_Body_Light};
+  --searchModalFromInputContainer-background: #{$BG_Body_Light};
+  --topicBox-background: #{$Blue_50};
+  --topicBox-color: #{$Blue_700};
+  --topicBox-box-shadow: #{$Blue_100};
+  --topicBox-hover-box-shadow: #{$Blue_100};
+  --userFeedbacks-heading-border-bottom: #{$Text_Body_Light};
+  --membership-heading-color: #{$Font_Subtitle_Light};
+  --editContentContainer-select-option-background: #{$white-color};
+  --editContentContainer-select-option-color: #{$Text_Body_Light};
+  --editContent-editStatusContainer-select-border: #{$Practice_Bg_Heading_Light_2};
+  --editContent-editStatusContainer-select-color: #{$Practice_Bg_Heading_Light_2};
+  --addcategory_checkbox-input-box-shadow: #{$Box_Shadow-dark};
+  --addcategory_checkbox-input-border: #{$BG_Body_Light};
+  --drop-file-container-background: #{$white-color};
+  --drop-file-container-border: #{$Practice_Bg_Heading_Light_2};
+  --courseStructureHeader-HeadingLineLeft-background: #{$Linear_Gradient_Left_Line_Light};
+  --courseStructureHeader-HeadingLineRight-background: #{$Linear_Gradient_Right_Line_Light};
+  --courseStructureHeader-IconsUploaderIcon-span-color: #{$Heading_Light};
+  --courseStructureHeader-EditorsContainer-border: #{$Font_Body_Light};
+  --email-verify-heading-color: #{$Font_Subtitle_Light};
+  --user-feedback-bg-background: #{$Blue_700};
+  --subcoursename-color: #{$Font_Body_Light};
+  --chapternameclass-color: #{$Font_Subtitle_Light};
+  --chapternameclass-svg-fill: #{$Font_Subtitle_Light};
+  --detailpage-u-text-decoration-color: #{$Box_Blue};
+  --detailpage-strong-color: #{$Box_Blue};
+  --detailpage-code-color: #{$Code_Color_Light};
+  --detailpage-blockquote-color: #{$Topic_List_Item};
+  --detailpage-samp-color: #{$Samp_Light};
+  --detailpage-h-color: #{$Editor_Heading_Light};
+  --detailpage-h2-before-background: #{$Editor_H2_Gradient_Light};
+  --detailpage-h2-color: #{$Heading_Light};
+  --detailpage-h3-color: #{$Heading_Light};
+  --detailpage-h4-color: #{$Heading_Light};
+  --detailpage-h5-color: #{$Heading_Light};
+  --detailpage-h6-color: #{$Heading_Light};
+  --practice-bg-box-shadow: #{$Practice_Bg_Filter_Light};
+  --practice-bg-color: #{$Practice_Bg_Heading_Light_2};
+  --practice-bg-background-color: #{$Practice_Bg_Back_Light};
+  --practice-bg-heading-color: #{$Practice_Bg_Heading_Light};
+  --practicebg-h2-before-background: #{$Practice_Bg_Gradient_Light};
+  --practice-bg-body-color: #{$Practice_Bg_Heading_Light_1};
+  --practice-bg-samp: #{$Practice_Samp_Light};
+  --practice-bg-li-color: #{$Practice_UL_Light};
+  --box-blue-bg-color: #{$Box_Blue_BG_Light};
+  --box-blue-color: #{$Practice_Bg_Heading_Light_2};
+  --box-blue-body-color: #{$Body_Font_Light};
+  --practice-bg-body-color: #{$Practice_Bg_Heading_Light_1};
+  --box-red-color: #{$Box_Text_Light};
+  --box-red-border-color: #{$List_Red_Strong_Light};
+  --box-drop-shadow-background: #{$white-color};
+  --box-drop-shadow-color: #{$Box_Text_Light};
+  --box-drop-shadow-box-shadow: #{$Box_Shadow-dark};
+  --box-gray-strong: #{$List_Gray_Strong_Light};
+  --box-title-tab-gray-background: #{$List_Gray_Text_Light};
+  --user-buttons-container-color: #{$black-color};
+  --footerbuttoncontainer-background: #{$BG_Body_Light};
+  --userdetailpagefootertexttwo-color: #{$Font_Body_Light};
+  --contentWrapper-color: #{$Practice_Bg_Heading_Light_2};
+  --chapter-topic-list-background: #{$Blue_List_Item_Dot_Light};
+  --chapter-topic-list-color: #{$Chapter_Number_Blue};
+  --text-editor-title-border-color: #{$Code_Border_Color_Light};
+  --code-title-color: #{$Code_Title_Light};
+  --cl-output-border-color: #{$Code_Border_Color_Light};
+  --cl-output-webkit-scrollbar-track: #{$Code_Border_Color_Light};
+  --toc-topic-list: #{$Topic_List_Item};
+  --ul-checkbox-gray-li-color: #{$List_Gray_Only_Text_Light};
+  --ul-checkbox-gray-strong: #{$List_Gray_Strong_Light};
+  --ul-checkbox-red-li-color: #{$List_Red_Text_Light};
+  --ul-checkbox-red-strong: #{$List_Red_Strong_Light};
+  --ul-checkbox-blue-li-color: #{$List_Blue_Text_Light};
+  --ul-checkbox-blue-strong-color: #{$List_Blue_Strong_Light};
+  --ul-checkbox-blue-li-before-border-color: #{$List_Blue_Dot_Light};
+  --ul-checkbox-blue-li-before-background-color: transparent;
+  --li-body-font-color: #{$Body_Font_Light};
+  --detail-tag-text-color: #{$Text_Body_Light};
+  --ol-square-grey-background: #{$List_Gray_Text_Light};
+  --box-title-gray-color: #{$List_Gray_Text_Light};
+  --box-title-gray-drop-shadow-color: #{$Font_Body_Light};
+  --box-title-gray-drop-shadow-filter: #{$Box_Shadow-dark};
+  --box-title-tab-blue-background: #{$Box_Blue_BG_Light};
+  --rating-modal-background: #{$BG_Body_Light};
+  --rating-modal-box-shadow: #{$Box_Shadow-dark};
+  --rating-modal-color: #{$full-black};
+  --rating-modal-border: #{$full-black};
+  --rating-modal-feedback-number: #{$black-color};
+  --rating-modal-textarea-background: #{$white-color};
+  --rating-modal-textarea-color: #{$white-color};
+  --rating-modal-footer-main-background: #{$white-color};
+  --rating-modal-footer-main-box-shadow: #{$Box_Shadow-dark};
+  --rating-modal-footer-main-background-sm: transparent;
+  --member-only-modal-background: #{$BG_Body_Light};
+  --member-only-modal-color: #{$black-color};
+  --no-content-topic-color: #{$black-color};
+  --styled-box-background: #{$white-color};
+  --success-message-color: #{$Success_Message_Light};
+  --back-button-color: #{$Font_Body_Light};
+  --rating-text-color: #{$Font_Body_Light};
+  --main-map-background: #{$BG_Body_Light_1};
+  --seo-course-color: #{$Blue_Color_Light};
+  --seo-course-color-text: #{$Blue_Color_Dark};
+  --course-color-text: #{$Text_Body_Light};
+  --seo-course-color-text-strong: #{$Text_Body_Light};
+  --detailpage-button-container-background: #{$BG_Body_Light};
+  --member-content-skip-popup-color: #{$black-color};
+  --member-content-skip-popup-background: #{$BG_Body_Light};
+  --member-content-skip-popup-line-background: #{$black-color};
+  --navbar-button-background: #{$BG_Light_Mode};
+  --navbar-button-background-hover: #{$BG_Dark_Mode};
+  --menu-mui-background: #{$BG_Body_Light};
+  --menu-mui-color: #{$List_Gray_Only_Text_Light};
+  --usersettings-details-p: #{$full-black};
+
+  --color: #{$Text_Body_Light} !important;
+  --background-color: #{$BG_Body_Light} !important;
+  // background-color: $BG_Body_Light !important;
+  // color: $Text_Body_Light !important;
+}
+.dark {
+  --course-guide-page-container-background: #{$Gray_900};
+  --course-guide-page-container-color: #{$Text_Body_Dark};
+  --course-guide-page-container-color-strong: #{$Blue_Color_Light};
+  --target-learner-bg: #{$Gray_800};
+  --key-point-card-background: #{$Gray_900};
+  --course-outline-container-summary-background: #{$Gray_900};
+  --details-open-background: #{$Gray_800};
+  --details-open-a-color: #{$Text_Body_Dark};
+  --user-feedback-background: #{$Blue_900};
+  --callout-background: #{$Gray_800};
+  --courses-footerBtns2-border: #{$Text_Body_Dark};
+  --courses-footerBtns2-background: transparent;
+  --courseStructure-TableHeader-color: #{$Text_Body_Dark};
+  --courseStructure-TableHeader-border: #{$Text_Body_Dark};
+  --courseStructure-table-background: #{$BG_Body_Dark};
+  --thead-background: #{$Dark_Striped_Table};
+  --tr-td-background: #{$Dark_Striped_Table};
+  --td-nth-child-color: #{$Blue_Path};
+  --td-background: #{$BG_Body_Dark};
+  --td-color: #{$Text_Body_Dark};
+  --courseStructure-TableDropdown-box-shadow: #{$Recently_View_Shadow_Dark};
+  --courseStructure-TableDropdown-MuiOutlinedInput-input-color: #{$Text_Body_Dark};
+  --courseStructure-TableDropdown-MuiOutlinedInput-input-background: #{$BG_Input_Form_Dark};
+  --courseStructure-TableDropdown-svg-color: #{$Text_Body_Dark};
+  --courseStructure-TableDropdown-outline: #{$Text_Body_Dark};
+  --courseStructure-TableDropdown-background: #{$Text_Body_Light};
+  --courseStructure-TableDropdown-color: #{$Text_Body_Dark};
+  --errorpage-color: #{$white-color};
+  --what-you-can-learn-container-color: #{$white-color};
+  --chalenges-bckground: #{$ChallengeColorCustom_Dark};
+  --challenges-sub-container-background: #{$ChallengeColorCustom_Light};
+  --navbar-background: #{$BG_Body_Dark};
+  --navbar-searchContainer-background: #{$BG_Input_Form_Dark};
+  --navbar-searchContainer-color: #{$white-color};
+  --searchModal-background: #{$Font_Body_Light};
+  --searchModal-color: #{$Text_Body_Dark};
+  --searchModalFromInputContainer-background: #{$BG_Input_Form_Dark};
+  --topicBox-background: #{$Gray_900};
+  --topicBox-color: #{$white-color};
+  --topicBox-box-shadow: #{$Gray_700};
+  --topicBox-hover-box-shadow: #{$Gray_700};
+  --userFeedbacks-heading-border-bottom: #{$Text_Body_Dark};
+  --membership-heading-color: #{$white-color};
+  --editContentContainer-select-option-background: #{$BG_Input_Form_Dark};
+  --editContentContainer-select-option-color: #{$Text_Body_Dark};
+  --editContent-editStatusContainer-select-border: #{$white-color};
+  --editContent-editStatusContainer-select-color: #{$white-color};
+  --addcategory_checkbox-input-box-shadow: #{$white-color};
+  --addcategory_checkbox-input-border: #{$BG_Input_Form_Dark};
+  --drop-file-container-background: #{$BG_Input_Form_Dark};
+  --drop-file-container-border: #{$white-color};
+  --courseStructureHeader-HeadingLineLeft-background: #{$Linear_Gradient_Left_Line_Dark};
+  --courseStructureHeader-HeadingLineRight-background: #{$Linear_Gradient_Right_Line_Dark};
+  --courseStructureHeader-IconsUploaderIcon-span-color: #{$Blue_Path};
+  --courseStructureHeader-EditorsContainer-border: #{$Font_Body_Dark};
+  --email-verify-heading-color: #{$white-color};
+  --user-feedback-bg-background: #{$Blue_900};
+  --subcoursename-color: #{$white-color};
+  --chapternameclass-color: #{$white-color};
+  --chapternameclass-svg-fill: #{$Font_Body_Dark};
+  --detailpage-u-text-decoration-color: #{$Strong_Tag_Dark};
+  --detailpage-strong-color: #{$Strong_Tag_Dark};
+  --detailpage-code-color: #{$Code_Color_Dark};
+  --detailpage-blockquote-color: #{$white-color};
+  --detailpage-samp-color: #{$Samp_Dark};
+  --detailpage-h-color: #{$Editor_Heading_Dark};
+  --detailpage-h2-before-background: #{$Editor_H2_Gradient_Dark};
+  --detailpage-h2-color: #{$white-color};
+  --detailpage-h3-color: #{$white-color};
+  --detailpage-h4-color: #{$white-color};
+  --detailpage-h5-color: #{$white-color};
+  --detailpage-h6-color: #{$white-color};
+  --practice-bg-box-shadow: #{$Practice_Bg_Filter_Dark};
+  --practice-bg-color: #{$white-color};
+  --practice-bg-background-color: #{$Practice_Bg_Back_Dark};
+  --practice-bg-heading-color: #{$Practice_Bg_Heading_Dark};
+  --practicebg-h2-before-background: #{$Practice_Bg_Gradient_Dark};
+  --practice-bg-body-color: #{$white-color};
+  --practice-bg-samp: #{$Practice_Samp_Dark};
+  --practice-bg-li-color: #{$Practice_UL_Dark};
+  --box-blue-bg-color: #{$Box_Blue_BG_Dark};
+  --box-blue-color: #{$white-color};
+  --box-blue-li-color: #{$white-color};
+  --box-blue-body-color: #{$Text_Body_Dark};
+  --practice-bg-body-color: #{$white-color};
+  --box-red-color: #{$white-color};
+  --box-red-border-color: #{$List_Red_Strong_Dark};
+  --box-drop-shadow-background: #{$Box_Text_Light};
+  --box-drop-shadow-color: #{$Font_Body_Light};
+  --box-drop-shadow-box-shadow: #{$white-color};
+  --box-gray-strong: #{$List_Gray_Strong_Dark};
+  --box-title-tab-gray-background: #{$List_Gray_Text_Dark};
+  --user-buttons-container-color: #{$Grey_Border};
+  --footerbuttoncontainer-background: #{$BG_Body_Dark};
+  --userdetailpagefootertexttwo-color: #{$Font_Body_Dark};
+  --contentWrapper-color: #{$white-color};
+  --chapter-topic-list-background: #{$Blue_List_Item_Dot_Dark};
+  --chapter-topic-list-color: #{$white-color};
+  --text-editor-title-border-color: #{$Code_Border_Color_Dark};
+  --code-title-color: #{$white-color};
+  --cl-output-border-color: #{$Code_Border_Color_Dark};
+  --cl-output-webkit-scrollbar-track: #{$Code_Border_Color_Dark};
+  --toc-topic-list: #{$white-color};
+  --ul-checkbox-gray-li-color: #{$List_Gray_Only_Text_Dark};
+  --ul-checkbox-gray-strong: #{$List_Gray_Strong_Dark};
+  --ul-checkbox-red-li-color: #{$List_Red_Text_Dark};
+  --ul-checkbox-red-strong: #{$List_Red_Strong_Dark};
+  --ul-checkbox-blue-li-color: #{$List_Blue_Text_Dark};
+  --ul-checkbox-blue-strong-color: #{$List_Blue_Strong_Dark};
+  --ul-checkbox-blue-li-before-border-color: #{$List_Blue_Dot_Dark};
+  --ul-checkbox-blue-li-before-background-color: transparent;
+  --li-body-font-color: #{$Text_Body_Dark};
+  --detail-tag-text-color: #{$Text_Detail_Dark};
+  --ol-square-grey-background: #{$List_Gray_Text_Dark};
+  --ol-square-grey-color: #{$white-color};
+  --box-title-gray-color: #{$List_Gray_Text_Dark};
+  --box-title-gray-drop-shadow-color: #{$white-color};
+  --box-title-gray-drop-shadow-filter: #{$white-color};
+  --box-title-tab-blue-background: #{$Box_Blue_BG_Dark};
+  --rating-modal-color: #{$white-color};
+  --rating-modal-background: #{$black-color};
+  --rating-modal-box-shadow: #{$Box_Shadow-light};
+  --rating-modal-border: transparent;
+  --rating-modal-feedback-number: #{$white-color};
+  --rating-modal-textarea-background: #{$BG_Input_Form_Dark};
+  --rating-modal-textarea-color: #{$white-color};
+  --rating-modal-footer-main-background: #{$Font_Body_Light};
+  --rating-modal-footer-main-background-sm: #{$Font_Body_Light};
+  --rating-modal-footer-main-box-shadow: transparent;
+  --rating-modal-footer-main-background-sm: transparent;
+  --member-only-modal-background: #{$Font_Body_Light};
+  --member-only-modal-color: #{$white-color};
+  --no-content-topic-color: #{$white-color};
+  --styled-box-background: #{$grey-800};
+  --success-message-color: #{$Success_Message_Dark};
+  --back-button-color: #{$Font_Body_Dark};
+  --rating-text-color: #{$Font_Body_Dark};
+  --main-map-background: #{$BG_Input_Form_Dark};
+  --seo-course-color: #{$Blue_Color_Dark};
+  --seo-course-color-text: #{$Blue_Color_Light};
+  --course-color-text: #{$white-color};
+  --seo-course-color-text-strong: #{$Blue_Color_Light};
+  --detailpage-button-container-background: #{$BG_Body_Dark};
+  --member-content-skip-popup-color: #{$white-color};
+  --member-content-skip-popup-background: #{$black-color};
+  --member-content-skip-popup-line-background: #{$BG_Body_Light};
+  --navbar-button-background: #{$BG_Dark_Mode};
+  --navbar-button-background-hover: #{$BG_Light_Mode};
+  --menu-mui-background: #{$BG_Menu_Dark};
+  --menu-mui-color: #{$white-color};
+  --usersettings-details-p: #{$white-color};
+
+  --color: #{$Text_Body_Dark} !important;
+  --background-color: #{$BG_Body_Dark} !important;
+
+  // background-color: $BG_Body_Dark !important;
+  // color: $Text_Body_Dark !important;
+}
+
+.CreamyTheme {
+  color: $Text_Body_Light;
+  background-color: $BG_Body_Creamy !important;
+}
+
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.3;
+  letter-spacing: 0.02rem;
+  font-weight: 400;
+  color: var(--color);
+  background-color: var(--background_primary);
+  overflow-x: hidden; 
+}
+
+
+textarea,
+input {
+  font-family: "Roboto", sans-serif;
+}
+
+.customContainer {
+  width: 2000px;
+  margin: 0 auto;
+  max-width: 100vw;
+  // margin-bottom: 150px;
+  &.withComment,
+  &.non-editor-profile {
+    margin-bottom: 0;
+  }
+  &.customContainer_1 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    margin-bottom: 0;
+  }
+
+  @include sm {
+    margin-bottom: 0;
+  }
+
+  @include md {
+    margin-bottom: 0;
+  }
+
+  // @media (min-width: 576px) {
+  //   width: 540px;
+  // }
+
+  // @media (min-width: 768px) {
+  //   width: 720px;
+  // }
+
+  // @media (min-width: 992px) {
+  //   width: 960px;
+  // }
+
+  // @media (min-width: 1200px) {
+  //   width: 1140px;
+  // }
+
+  // @media (min-width: 1400px) {
+  //   width: 1320px;
+  // }
+
+  // @media (max-width: 576px) {
+  //   width: 100vw;
+  // }
+}
+
+.PrivateSwipeArea-root {
+  // width: 10px !important;
+  @media screen and (max-width: 491px) {
+    width: 0 !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .Theme {
+    /* padding: 40px 0px 0px 0px; */
+    // height: 0vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Theme {
+    // padding: 40px 0px 0px 0px;
+    /* height: 0vh; */
+  }
+}
+
+.successMessage {
+  color: var(--success-message-color);
+  // @include themed {
+  // color: t("successMessage");
+  border: 2px solid var(--success-message-color);
+  // }
+
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.back_button {
+  background: transparent;
+  border: none;
+  padding-left: 0.75rem;
+  padding-top: 0.5rem !important;
+  cursor: pointer;
+  font-style: normal;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  outline: none;
+  width: fit-content;
+  color: $text_primary;
+
+  @media screen and (max-width: 468px) {
+    padding-top: 0.6rem !important;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+  font-family: "Menlo Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Menlo-Regular.ttf") format("truetype");
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.user_buttons {
+  background: linear-gradient(
+    87.62deg,
+    #004cb6 -44.71%,
+    #009af9 100%
+  ) !important;
+  width: 200px !important;
+  height: 40px !important;
+  border-radius: 15px !important;
+  font-family: Helvetica !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 21px !important;
+  line-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  letter-spacing: -0.015em !important;
+  margin-left: 16px !important;
+  text-transform: none !important;
+  color: #ffffff !important;
+}
+
+@media screen and (max-width: 944px) {
+  .user_buttons {
+    width: 90px !important;
+    height: 29.26px !important;
+    margin-top: 10px !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    margin-left: 0px !important;
+  }
+}
+
+.logoutPage {
+  display: flex;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include sm {
+    padding: 2rem 1rem;
+  }
+}
+
+.user-feedback-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--user-feedback-bg-background);
+
+  // @include themed() {
+  //   background-color: t("userFeedbackBg");
+  // }
+  padding: 0px 20px;
+}
+
+.user-feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-feedback-image {
+  margin: 100px;
+}
+.user-feedback-container h2 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 50px 10px;
+  font-weight: 700;
+}
+
+.user-feedback-container-inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.rights-reserved {
+  font-size: 0.8rem;
+  color: white;
+}
+
+#nprogress {
+  .spinner {
+    display: none !important;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.mt-4 {
+  margin-top: 0.25rem;
+}
+
+.mt-16 {
+  margin-top: 1rem;
+}
+
+.hide_link_style {
+  text-decoration: none;
+  color: unset;
+}

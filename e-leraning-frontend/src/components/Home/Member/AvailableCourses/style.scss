@@ -1,0 +1,28 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-container-availablecourses {
+  padding: 60px 100px;
+  @include max-alignment;
+
+  @include respond-to(tablet-view) {
+    padding: 0px 24px 16px 24px;
+  }
+
+  .main-container-ourcourses-h2 {
+    font-weight: $primary_weight;
+    letter-spacing: 0.012em;
+    color: $primary_black;
+    @include respond-to(tablet-view) {
+      font-weight: $primary_weight;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .availablecourse-wrapper {
+    margin-top: 24px;
+    @include respond-to(tablet-view) {
+      margin-top: 16px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+@mixin flex-center($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin color-card() {
+  margin-top: 60px;
+  height: 268px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: -webkit-fill-available;
+  padding: 32px;
+  background-color: #91d5dd;
+  @include respond-to(tablet-view) {
+    margin-top: 24px;
+  }
+
+  .image {
+    @include flex-center(start, start);
+    flex-direction: column;
+    gap: 70px;
+  }
+  .image img {
+    height: 100%;
+    width: 100%;
+    max-width: 143px !important;
+    max-height: 97px !important;
+  }
+}
+
+@mixin footer-button($padding) {
+  max-width: 320px;
+  width: fit-content;
+  border: 1px solid #cccccc;
+  @include dflexwithjustifyandalign(space-between, center);
+  gap: 20px;
+  border-radius: 48px;
+  height: 48px;
+  padding: $padding;
+  @include respond-to(tablet-view) {
+    justify-content: center;
+  }
+}
+@mixin button-arror() {
+  min-width: 32px;
+  min-height: 32px;
+  border: none;
+  border-radius: 100%;
+  @include flex-center(center, center);
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@mixin footer-icon() {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 1px solid $primary_border;
+  @include flex-center(center, center);
+}
+@mixin arrow($justify, $align) {
+  @include flex-center($justify, $align);
+  gap: 20px;
+  .img-div {
+    background-color: #f1f3f6;
+    max-width: 28px;
+    max-height: 28px;
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: none;
+    @include flex-center(center, center);
+    button {
+      background: none;
+      @include flex-center(center, center);
+    }
+  }
+}

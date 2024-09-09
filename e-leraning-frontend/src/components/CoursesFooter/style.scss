@@ -1,0 +1,263 @@
+@import "../../assets/scss/theme";
+
+.courses_footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2.2rem;
+  a:first-child {
+    button {
+      background-color: #418dfe;
+      &:disabled {
+        background-color: #97ceff;
+      }
+    }
+  }
+
+  @include lg {
+    margin-top: 2rem;
+    height: auto;
+    min-height: 2.2rem;
+  }
+
+  a {
+    border: 1px solid $Light_Sky_Blue;
+    text-decoration: none;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+
+  button,
+  a {
+    border: none;
+    outline: none;
+    background-color: $Sky_Blue;
+    color: $white-color;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    cursor: pointer;
+
+    @include md {
+      gap: 0.1rem;
+      font-size: 14px;
+    }
+
+    @include sm {
+      flex-direction: column;
+      padding: 0.2rem 0.1rem;
+    }
+
+    span {
+      @include sm {
+        font-size: 10px;
+        font-weight: 300;
+      }
+    }
+
+    img,
+    svg {
+      height: 1.4rem;
+
+      @include md {
+        height: 1rem;
+      }
+
+      @include sm {
+        height: 1.4rem;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $Light_Sky_Blue;
+
+      img,
+      span {
+        opacity: 0.7;
+      }
+    }
+  }
+  .disable-link {
+    cursor: not-allowed;
+    background-color: $Light_Sky_Blue;
+    pointer-events: none;
+
+    button {
+      cursor: not-allowed;
+      background-color: #97ceff;
+      pointer-events: none;
+    }
+  }
+}
+
+.courses_footerBtns1 {
+  display: flex;
+  width: calc(100% - 16rem);
+  flex-wrap: wrap;
+  gap: max(3vw, 1rem);
+  row-gap: 0.5rem;
+
+  @include md {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  @include sm {
+    gap: 0.5rem;
+    row-gap: 0.25rem;
+  }
+
+  button {
+    height: 1.6rem;
+    width: 11.25rem;
+    border-radius: 1rem;
+    background-color: $Mustard_Color;
+    color: $Font_Body_Light;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    @include lg {
+      height: auto;
+      padding: 0.2rem 0.75rem;
+      width: fit-content;
+      font-size: 1rem;
+    }
+
+    @include md {
+      font-size: 14px;
+      padding: 0.1rem 0.3rem;
+    }
+
+    @include sm {
+      font-size: 12px;
+    }
+
+    @include xs {
+      font-size: 10px;
+    }
+
+    &:first-child {
+      background: linear-gradient(240.85deg, #96cd6a 0%, #3b7336 100%);
+      color: $white-color;
+    }
+
+    &:nth-child(2) {
+      background-color: $Blue_Btn;
+      color: $Font_Body_Light;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      background: linear-gradient(238.71deg, #ffb546 1.51%, #ff7a00 100%);
+      color: $Font_Body_Light;
+
+      &:disabled {
+        background: linear-gradient(
+          238.71deg,
+          rgba(255, 181, 70, 0.4) 1.51%,
+          rgba(255, 122, 0, 0.4) 100%
+        );
+        color: $Font_Body_Light;
+        cursor: not-allowed;
+      }
+    }
+
+    &:nth-child(5) {
+      background: linear-gradient(240.85deg, #faff00 0%, #e2be00 100%);
+      color: $Font_Body_Light;
+    }
+
+    img {
+      height: 1.25rem;
+
+      @include md {
+        height: 1rem;
+      }
+
+      @include sm {
+        height: 0.75rem;
+      }
+    }
+  }
+}
+
+.courses_footerBtns2 {
+  display: flex;
+  gap: 0.6rem;
+
+  button {
+    padding: 0 0.65rem;
+    border-radius: 0.65rem;
+    height: 1.6rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: $white-color;
+    border: 1px solid var(--courses-footerBtns2-border);
+    background-color: var(--courses-footerBtns2-background);
+
+    // @include themed() {
+    //   border: 1px solid t("bodyText");
+    //   background-color: t("courseFooterBtnBg");
+    // }
+
+    @include md {
+      height: auto;
+      padding: 0.2rem 0.75rem;
+    }
+  }
+}
+
+.courses_footerBtnBack {
+  height: 1.6rem;
+  width: 11.25rem;
+  border-radius: 1rem;
+  background: linear-gradient(240.85deg, #41b8ff 0%, #0055c2 100%);
+  color: $white-color;
+  border: none;
+  outline: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+
+  @include lg {
+    height: auto;
+    padding: 0.2rem 0.75rem;
+    width: fit-content;
+    font-size: 1rem;
+  }
+
+  @include md {
+    font-size: 14px;
+    padding: 0.1rem 0.3rem;
+  }
+
+  @include sm {
+    font-size: 12px;
+  }
+
+  @include xs {
+    font-size: 10px;
+  }
+}

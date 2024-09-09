@@ -1,0 +1,28 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-container-wrapper {
+  background-color: $background_primary;
+
+  border: none !important;
+}
+.main-container-ourcourses {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  padding-block: 64px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-block: 64px;
+
+  @include respond-to(tablet-view) {
+    padding: 24px;
+  }
+  .ourCourse-wrapper {
+    margin-top: 108px;
+
+    @include respond-to(tablet-view) {
+      margin-top: 25px;
+    }
+  }
+}

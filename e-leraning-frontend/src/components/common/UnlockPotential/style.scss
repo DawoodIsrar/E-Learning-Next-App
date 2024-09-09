@@ -1,0 +1,25 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.section-background {
+  background-color: $background_primary;
+}
+.semi-unlockpotential-container {
+  background-color: $background_primary;
+  @include dflexwithalign(center);
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 64px 0px;
+
+  @include respond-to(tablet-view) {
+    padding: 24px 0px;
+  }
+  .unlockpotential-h2 {
+    letter-spacing: 2px;
+    @include flex-center;
+  }
+
+  .section-background {
+    background-color: $background_primary;
+  }
+}

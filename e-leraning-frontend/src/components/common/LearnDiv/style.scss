@@ -1,0 +1,139 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.learn-div-wrapper {
+  background-color: $background_tertiary;
+  border-bottom: $button_border;
+}
+
+.main-wrapper {
+  @include max-alignment;
+  background-color: $background_tertiary;
+  @include dflexwithjustify(space-between);
+  padding-block: 64px;
+  gap: 20px;
+  @include respond-to(tablet-view) {
+    padding: 24px;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .text {
+    @include dflexwithjustify(center);
+    flex-direction: column;
+    gap: 24px;
+    width: 40%;
+
+    @include respond-to(tablet-view) {
+      width: 100%;
+    }
+    @include respond-to(mobile-view) {
+      width: 100%;
+      gap: 16px;
+    }
+
+    .text-header {
+      width: 162px;
+      @include respond-to(tablet-view) {
+        width: 100%;
+        letter-spacing: 0.013em;
+      }
+    }
+    .text-body2 {
+      display: none;
+      @include respond-to(tablet-view) {
+        display: block;
+        font-weight: $secondary_weight;
+        letter-spacing: -0.006em;
+      }
+    }
+    .text-body {
+      font-size: 16px;
+      @include respond-to(tablet-view) {
+        display: none;
+      }
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    .card {
+      @include dflexwithalign(center);
+      background-color: var(--background_secondary);
+      gap: 20px;
+      border: $button_border;
+      border-radius: $badge_radius;
+      padding: 12px 19px 12px 12px;
+      flex-grow: 1;
+      max-width: 378px;
+      min-width: 260px;
+      height: 72px;
+
+      @include respond-to(mobile-view) {
+        max-width: 327px;
+        max-height: 60px;
+        padding: 10px 24px 10px 10px;
+      }
+    }
+
+    .card-name {
+      font-weight: $tertiary_weight;
+    }
+    .card-image {
+      @include respond-to(mobile-view) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @include respond-to(tablet-view) {
+      .card:last-child {
+        flex-grow: 1;
+      }
+    }
+
+    @include respond-to(tablet-view) {
+      width: 100%;
+      gap: 12px;
+    }
+  }
+}
+
+.card {
+  @include dflexwithalign(center);
+  background-color: $background_secondary;
+  gap: 20px;
+  border: $button_border;
+  border-radius: $badge_radius;
+  padding: 12px 19px 12px 12px;
+  flex-grow: 1;
+  max-width: 291px;
+  min-width: 260px;
+  height: 72px;
+
+  @include respond-to(mobile-view) {
+    max-width: 327px;
+    max-height: 60px;
+    padding: 10px 24px 10px 10px;
+  }
+}
+
+.card-name {
+  font-weight: $tertiary_weight;
+}
+.card-image {
+  @include respond-to(mobile-view) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@include respond-to(tablet-view) {
+  .card:last-child {
+    flex-grow: 1;
+  }
+}

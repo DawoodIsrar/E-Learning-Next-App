@@ -1,0 +1,168 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-card-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: 100%;
+  cursor: pointer;
+  border-radius: $course_radius;
+  padding: 24px;
+
+  .course-card {
+    color: white;
+    @include dflexwithjustify(space-between);
+    flex-direction: column;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+  }
+  @include respond-to(mobile-view) {
+    aspect-ratio: 4/4;
+    padding: 16px;
+  }
+
+  .course-card-upperarea {
+    @include dflexwithjustify(space-between);
+    align-items: center;
+    .images-wrapper {
+      display: flex;
+      gap: 4px;
+    }
+    @include respond-to(mobile-view) {
+      font-size: $body2_font;
+    }
+
+    .course-card-upperarea-images {
+      @include dflexwithjustifyandalign(center, center);
+      gap: 15px;
+      width: 48px;
+      height: 48px;
+      background-color: white;
+      border-radius: 100%;
+      gap: 15px;
+      @include respond-to(tablet-view) {
+        gap: 4px;
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  .course-card-title {
+    font-weight: $primary_weight;
+    color: $primary_white;
+    @include respond-to(tablet-view) {
+      width: 100%;
+    }
+    @include respond-to(mobile-view) {
+      width: 100%;
+    }
+  }
+
+  .course-card-image1,
+  .course-card-image2 {
+    width: 32px;
+    height: 32px;
+    @include respond-to(tablet-view) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .hover-card-wrapper {
+    box-shadow: 0px 16px 36px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 16px;
+    z-index: 1;
+    border: 1px solid $primary_border;
+    position: absolute;
+    top: -20px;
+    left: 100%;
+    max-width: 292px;
+    background-color: $background_tertiary;
+    display: none;
+    box-sizing: border-box;
+
+    .hover-card-header {
+      max-width: 70%;
+      font-weight: 600;
+    }
+    .hover-card-description {
+      padding: 16px 0px;
+      min-height: 50px;
+      ul {
+        height: 100%;
+        margin-top: 10px;
+        li {
+          font-size: 18px;
+          color: $text_primary;
+        }
+      }
+    }
+
+    .hover-card-detail {
+      ul {
+        padding: 0px 16px;
+        li {
+          padding: 16px 0px;
+        }
+      }
+    }
+    .chapter-button {
+      width: 252px;
+      height: 48px;
+      border-radius: 16px;
+      border: none;
+      cursor: pointer;
+      background-color: $background_peek_contrast;
+      color: $text_tertiary;
+      @include dflexwithjustifyandalign(center, center);
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      z-index: -99;
+      border-bottom: 1px solid $primary_border;
+      border-left: 1px solid $primary_border;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 25px;
+      height: 25px;
+      background-color: $background_tertiary;
+    }
+  }
+  .reverse {
+    left: -79%;
+    top: -12%;
+    &::after {
+      left: 100%;
+      background-color: $background_tertiary;
+      border-top: 1px solid $primary_border;
+      border-bottom: none;
+      border-left: none;
+      border-right: 1px solid $primary_border;
+    }
+  }
+  .reverse-height {
+    top: -10%;
+    &::after {
+      top: 50%;
+      background-color: $background_tertiary;
+    }
+  }
+
+  &:hover {
+    .hover-card-wrapper {
+      @include respond-to(tablet-view) {
+        display: none;
+      }
+    }
+  }
+}

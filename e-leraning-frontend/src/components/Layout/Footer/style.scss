@@ -1,0 +1,166 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-footer-container {
+  // applied postiion relative for zindex
+  position: relative;
+  // height: 378px;
+  // @include respond-to(tablet-view) {
+  //   height: 507px;
+  // }
+  // @include respond-to(mobile-view) {
+  //   height: 100%;
+  // }
+}
+
+.main-footer-wrapper {
+  background-color: var(--bg-primary-dark);
+  // position: relative;
+  .main-container-footer {
+    .logo-links {
+      @include dflexwithjustify(space-between);
+      @include respond-to(tablet-view) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    .footer-logo {
+      @include dflexwithjustifyandalign(space-between, start);
+      flex-direction: column;
+      p {
+        font-size: 14px;
+        max-width: 400px;
+        padding-top: 36px;
+        color: $primary_white;
+
+        @include respond-to(tablet-view) {
+          max-width: 327px;
+          width: 100%;
+        }
+      }
+      .logos-wrapper {
+        .logos {
+          @include dflexwithjustifyandalign(space-between, center);
+          .mob-logo {
+            display: none;
+            @include respond-to(tablet-view) {
+              display: flex;
+              width: 100%;
+            }
+          }
+        }
+        @include respond-to(tablet-view) {
+          width: 100%;
+        }
+      }
+    }
+
+    @include respond-to(tablet-view) {
+      padding: 20px 40px;
+      @include respond-to(tablet-view) {
+        padding: 36px 24px;
+      }
+    }
+
+    .footer-links {
+      .course-links {
+        list-style: none;
+        margin-bottom: 0px;
+        list-item {
+          border-bottom: none;
+        }
+      }
+      display: flex;
+      @include respond-to(tablet-view) {
+        gap: 76px;
+        margin: auto;
+        @include respond-to(mobile-view) {
+          margin: 0px;
+          gap: 40px;
+        }
+      }
+
+      .company-link {
+        width: 220px;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          &:first-child {
+            color: #818185;
+          }
+          a {
+            text-decoration: none;
+            color: $primary_white;
+          }
+          position: unset;
+          cursor: pointer;
+          padding-top: 16px;
+          font-size: 14px;
+          line-height: 22px;
+          color: $text_tertiary;
+          @include respond-to(tablet-view) {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+        .heading {
+          color: $text_secondary;
+          font-weight: 400;
+          padding-top: 0px;
+          @include respond-to(tablet-view) {
+            padding-top: 24px;
+          }
+        }
+        @include respond-to(tablet-view) {
+          padding: 0px;
+        }
+      }
+    }
+    .footer-logo-btn {
+      margin-top: 24px;
+      padding-top: 32px;
+      @include dflexwithjustify(space-between);
+      border-top: 1px solid #545555;
+      @include respond-to(tablet-view) {
+        padding-top: 24px;
+      }
+      .footer-btn {
+        padding: 0px 16px 0px 16px;
+        border: 1px solid #ffffff1f;
+        border-radius: 26px;
+        height: 44px;
+        @include dflexwithjustifyandalign(center, center);
+        gap: 8px;
+        @include respond-to(tablet-view) {
+          display: none;
+        }
+      }
+    }
+
+    .footer-text {
+      text-align: left;
+      color: $primary_white;
+      font-size: 14px;
+      @include respond-to(tablet-view) {
+        text-align: start;
+        letter-spacing: -0.006em;
+      }
+    }
+    .large-screen-logos {
+      @include respond-to(tablet-view) {
+        display: none;
+      }
+    }
+    .footer-social-icons {
+      cursor: pointer;
+      @include dflexwithjustifyandalign(flex-end, center);
+      gap: 1.2rem;
+      @include respond-to(tablet-view) {
+        width: 100%;
+      }
+    }
+  }
+}

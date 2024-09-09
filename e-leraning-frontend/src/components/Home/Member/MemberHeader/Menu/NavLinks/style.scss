@@ -1,0 +1,65 @@
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/global.scss";
+.nav-buttons {
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  color: #545555;
+  padding: 5px 0px;
+  background-color: transparent;
+  border-radius: 5px;
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.active-button {
+  color: black;
+  font-weight: 600;
+}
+.g-10 {
+  @include dflexwithalign(center);
+  gap: 10px;
+  &:hover {
+    background-color: #52aaff;
+    border-radius: 8px;
+    p {
+      color: white;
+    }
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  }
+}
+.log-out {
+  @extend .nav-buttons;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  p {
+    color: #de4040;
+
+    &:hover {
+      color: #de4040;
+    }
+  }
+  svg {
+    path {
+      stroke: #de4040;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        stroke: #de4040;
+      }
+    }
+  }
+}

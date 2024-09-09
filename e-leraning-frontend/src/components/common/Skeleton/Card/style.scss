@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  height: 100%;
+  .skeleton-card {
+    max-width: 295px;
+    width: 100%;
+    height: 100%;
+    max-height: 285px;
+    border-radius: 10px;
+
+    .skeleton-card-img {
+      padding-bottom: 56.25%;
+      position: relative;
+    }
+
+    .skeleton-card-title {
+      font-size: 1.25rem;
+      line-height: 1.33;
+      margin: 0;
+      margin-top: 16px;
+      font-weight: 700;
+
+      &.skeleton {
+        min-height: 28px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .skeleton {
+    background-color: #e2e5e7;
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0)
+    );
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1s ease infinite;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: right -40px top 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .skeleton-card {
+    max-width: 240px;
+    max-height: 240px;
+    width: 100%;
+    height: 100%;
+  }
+}

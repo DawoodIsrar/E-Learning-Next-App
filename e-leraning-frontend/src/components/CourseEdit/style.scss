@@ -1,0 +1,167 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.main-footer-container {
+  display: none;
+}
+.back_button {
+  padding-left: 0px;
+}
+.course-edit-wrapper {
+  .main-heading {
+    @include dflexwithjustifyandalign(center, center);
+  }
+  padding-left: 20px;
+  .required-label {
+    color: red; /* Highlight labels for required fields */
+  }
+
+  .required-field {
+    border: 1px solid red; /* Highlight fields with a red border */
+  }
+
+  .error-message {
+    color: red; /* Display error message in red */
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  .form-body {
+    margin-bottom: 120px;
+    .form-input {
+      .editor-wrapper {
+        width: 50%;
+        .main-container {
+          margin-left: unset;
+          margin-right: unset;
+        }
+      }
+
+      @include dflexwithjustify(start);
+      flex-direction: column;
+      border-bottom: 1px solid #e8e8e8;
+      gap: 10px;
+      padding-block: 10px;
+      label {
+        color: $text_primary;
+        font-weight: 600;
+      }
+      input {
+        padding: 0px;
+        height: unset;
+        width: 280px;
+        height: 30px;
+        border-radius: 5px;
+        padding-inline: 5px;
+        @include dflexwithjustifyandalign(start, center);
+        background-color: white;
+        color: black;
+      }
+      input[type="file"] {
+        background-color: unset;
+        border: none;
+        color: $text_primary;
+      }
+
+      select {
+        padding: 0px;
+        height: unset;
+        width: 280px;
+        height: 30px;
+        border-radius: 5px;
+        padding-inline: 5px;
+      }
+      textarea {
+        padding: 0px;
+        padding: 10px;
+        height: unset;
+        width: 50%;
+        @include respond-to(mobile-view) {
+          width: 100%;
+        }
+        height: 200px;
+        border-radius: 5px;
+      }
+      .color-div {
+        @include dflexwithjustifyandalign(start, center);
+        width: 200px;
+        padding: 0px;
+        height: 40px;
+
+        .color-input,
+        .color-input-text {
+          height: 100%;
+          border: none;
+          background-color: unset;
+          padding: 0px;
+        }
+
+        .color-input {
+          width: 20%;
+          border-left: 1px solid #b3b3b3;
+          border-top: 1px solid #b3b3b3;
+          border-bottom: 1px solid #b3b3b3;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+
+        .color-input-text {
+          width: 80%;
+          border-top: 1px solid #b3b3b3;
+          border-bottom: 1px solid #b3b3b3;
+          border-right: 1px solid #b3b3b3;
+          border-left: 1px solid #b3b3b3;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 0px;
+          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 0px;
+          color: $text_primary;
+        }
+
+        input {
+          border: none;
+          background-color: unset;
+        }
+      }
+      // .ckeditor-tab {
+      //   max-width: 50%;
+      //   width: 100%;
+      // }
+      // .ck.ck-editor {
+      //   width: 50%;
+      // }
+      .ck .ck-content {
+        p {
+          color: black;
+        }
+      }
+      a {
+        font-size: 12px;
+        max-width: 50%;
+      }
+    }
+    .submit-btn {
+      background: linear-gradient(
+        87.62deg,
+        #004cb6 -44.71%,
+        #009af9 100%
+      ) !important;
+      border-radius: 15px;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      border: none;
+      height: 40px;
+      width: 200px;
+      margin-top: 21px;
+      padding: 6px 10px;
+      justify-content: center;
+      letter-spacing: -0.015em;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+}

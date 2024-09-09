@@ -1,0 +1,334 @@
+// ********* Old Colors **********
+
+$BG_Input_Form_Dark: #4f4f4f;
+$white-color: #ffffff;
+$Editor_BG_Dark: #1b1f22;
+$Code_Title_Light: #2d2d2d;
+$Dark_Blue_Highlighter: #22007e;
+$Dark_Purple_Highlighter: #3746c9;
+$Scrollbar_BG_Dark: #424242;
+$Scrollbar_Thumb_Dark: #686868;
+
+:root {
+  --cl-output-border-color: #495057;
+  --cl-output-webkit-scrollbar-track: #495057;
+  --text-editor-title-border-color: #495057;
+}
+
+// ******** Primjs related classes **********
+
+.detailpage {
+  .command-line span.token.output {
+    opacity: 1;
+  }
+
+  .remote .command-line-prompt {
+    color: #00ff47;
+  }
+
+  .detailpage_root_container {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+  }
+
+  pre {
+    width: 100%;
+    overflow: auto !important;
+    white-space: revert;
+    margin-top: 0px !important;
+    border-radius: 5px !important;
+    background: #4f4f4f !important;
+    line-height: 1.2rem !important;
+    padding: 0.8rem;
+
+    &.text-editor,
+    &.custom-editor-template,
+    &.custom-editor-template code {
+      background: #1b1f22 !important;
+    }
+  }
+
+  div {
+    .cl-title {
+      @extend .text-editor-title;
+      padding-left: 28px !important;
+
+      &::before {
+        background: url("../images/CLIcon.svg") no-repeat center center !important;
+        height: 12px !important;
+        width: 14px !important;
+        top: 6px !important;
+      }
+    }
+
+    .console-title {
+      @extend .text-editor-title;
+      padding-left: 30px !important;
+
+      &::before {
+        background: url("../images/GoogleChrome.svg") no-repeat center center !important;
+        height: 15px !important;
+        width: 15px !important;
+        top: 6px !important;
+      }
+    }
+
+    .cl-output {
+      display: flex;
+      padding: 0.875rem;
+      border: 1px solid;
+      border-radius: 0.3rem;
+      background-color: $BG_Input_Form_Dark;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: $white-color;
+      font-size: 1.25rem;
+      position: relative;
+      margin: 0;
+      margin-bottom: 1em;
+      border-color: var(--cl-output-border-color);
+
+      &::-webkit-scrollbar-track {
+        background: var(--cl-output-webkit-scrollbar-track);
+      }
+    }
+
+    .cl-output + .toolbar {
+      .toolbar-item {
+        button {
+          background: $BG_Input_Form_Dark;
+        }
+      }
+    }
+
+    .n-usr-input {
+      @extend .cl-output;
+
+      .line {
+        &::before {
+          content: "$ ";
+        }
+      }
+    }
+
+    .s-usr-input {
+      @extend .cl-output;
+
+      .line {
+        &::before {
+          content: "# ";
+        }
+      }
+    }
+  }
+  .console {
+    @extend .cl-output;
+    padding-left: 35px !important;
+
+    code {
+      font-size: 18px !important;
+    }
+
+    .line-numbers-rows {
+      border: none !important;
+      left: -24px;
+
+      span {
+        height: 28px;
+        &:nth-child(even) {
+          &::before {
+            background: url("../images/AngleLeft.svg") no-repeat center center;
+          }
+        }
+
+        &:nth-child(odd) {
+          &::before {
+            background: url("../images/AngleRight.svg") no-repeat center center;
+          }
+        }
+        &::before {
+          font-size: 18px;
+          line-height: 1.5;
+          content: "";
+          height: 18px;
+          width: 18px;
+          background-size: cover;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .code-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin: 0;
+    transform: translateY(100%);
+    font-family: "Roboto", sans-serif;
+    height: 0;
+    padding-left: 0.5rem;
+    color: var(--code-title-color);
+  }
+
+  .text-editor {
+    overflow: auto;
+    margin: 0 0 1em;
+    border: 1px solid;
+    border-radius: 0.3rem;
+    position: relative;
+    display: inline-flex;
+    background: $Editor_BG_Dark;
+    border-color: var(--text-editor-title-border-color);
+
+    .line-numbers-rows {
+      border: none !important;
+
+      span {
+        line-height: inherit;
+        display: block;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .topic-box,
+  .topic-blue-box,
+  .practice-bg,
+  .topic-red-box,
+  .topic-gray-box,
+  blockquote {
+    pre {
+      border: 1px solid lightgray;
+    }
+  }
+
+  .code-toolbar pre {
+    z-index: 0;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track:hover {
+      border: 1px solid $Scrollbar_Thumb_Dark;
+      background-color: $Scrollbar_BG_Dark;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: $Scrollbar_Thumb_Dark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 1rem;
+    }
+  }
+
+  .text-editor-title {
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid;
+    background: $Code_Title_Light;
+    width: fit-content;
+    color: $white-color;
+    padding: 2px 10px;
+    border-bottom: none;
+    padding-left: 24px;
+    position: relative;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    border-color: var(--text-editor-title-border-color);
+
+    &::before {
+      content: "";
+      height: 16px;
+      width: 10px;
+      background: url("../images/Document.svg") no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      left: 10px;
+      top: 4px;
+    }
+  }
+
+  .line-highlight.line-highlight {
+    background: $Dark_Blue_Highlighter;
+    box-shadow: inset 5px 0 0 $Dark_Purple_Highlighter;
+  }
+
+  .code-toolbar > .toolbar {
+    top: 10px;
+    right: 10px;
+    z-index: 0;
+  }
+
+  .code-toolbar > .toolbar > .toolbar-item > button {
+    font-size: 0px;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1rem;
+    background: transparent;
+    box-shadow: none;
+    z-index: 0;
+    &::before {
+      content: "";
+      height: 20px;
+      width: 14px;
+      background: url("../images/CopyCodeIcon.svg") no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: -8px;
+    }
+  }
+
+  .code-toolbar
+    > .toolbar
+    > .toolbar-item
+    > button[data-copy-state="copy-success"] {
+    &::before {
+      content: "";
+      height: 20px;
+      width: 14px;
+      background: url("../images/Check.svg") no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: -8px;
+    }
+  }
+
+  .text-editor code,
+  .text-editor .line-number {
+    display: block;
+    width: max-content;
+
+    span {
+      line-height: inherit;
+    }
+
+    span {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .code-toolbar .cl {
+    display: block;
+    clear: both;
+  }
+}

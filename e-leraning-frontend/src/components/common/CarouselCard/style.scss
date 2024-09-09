@@ -1,0 +1,64 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.course-card {
+  @include Card-desgin;
+  // TODO: remove this background-color and set it dynamically.(when it come from backend)
+  // background-color: rgb(11, 115, 164);
+  text-decoration: none;
+}
+
+.course-card-upperarea {
+  @include dflexwithjustifyandalign(space-between, center);
+  .images-wrapper {
+    display: flex;
+    gap: 4px;
+  }
+
+  .course-card-upperarea-images {
+    @include dflexwithjustifyandalign(center, center);
+    gap: 15px;
+    width: 48px;
+    height: 48px;
+    background-color: $primary_white;
+    border-radius: 100%;
+    gap: 15px;
+    @include respond-to(tablet-view) {
+      gap: 4px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .course-card-image1,
+  .course-card-image2 {
+    width: 32px;
+    height: 32px;
+    @include respond-to(tablet-view) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.course-card-title {
+  color: $primary_white;
+  font-weight: $primary_weight;
+  font-size: 20px;
+  line-height: 26px;
+  width: 80%;
+  @include respond-to(tablet-view) {
+    font-size: $body2_font;
+    width: 100%;
+    line-height: 20px;
+  }
+  @include respond-to(mobile-view) {
+    width: 100%;
+  }
+}
+
+.course-card-image1,
+.course-card-image2 {
+  width: 48px;
+  @include respond-to(tablet-view) {
+    width: 36px;
+  }
+}

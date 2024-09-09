@@ -1,0 +1,24 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.course-name-logo-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  @include dflexwithjustify(start);
+  flex-direction: column;
+  gap: 21px;
+  padding: 24px 0px 17px 24px;
+  max-height: 245px;
+}
+.course-guide-wrapper {
+  margin-top: 47px;
+  background-color: $background_tertiary;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include respond-to(tablet-view) {
+    margin-top: 25px;
+    padding-inline: 10px;
+  }
+}

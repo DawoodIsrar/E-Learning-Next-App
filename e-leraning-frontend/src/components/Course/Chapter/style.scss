@@ -1,0 +1,62 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.chapters-section-most-outer-wrapper {
+  background-color: $background_primary;
+  margin: auto;
+  width: 100vw;
+  padding-top: 30px;
+  margin-bottom: 60px;
+  @include respond-to(tablet-view) {
+    margin-bottom: 30px;
+  }
+
+  .chapters-section-outer-container {
+    padding-top: 0px;
+    background-color: $background_primary;
+
+    @include max-alignment;
+    width: 100%;
+    margin-inline: auto;
+    @include outerContainer();
+    @include respond-to(mobile-view) {
+      padding-inline: 10px;
+    }
+  }
+  .chapter-row-container {
+    @include outerContainer();
+  }
+}
+.accordion-trigger {
+  padding: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  .accordion-trigger-container {
+    @include dflexwithjustifyandalign(space-between, center);
+    gap: 20px;
+    @include respond-to(mobile-view) {
+      align-items: flex-start;
+    }
+  }
+}
+.chapter-container {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  .chapter-carusal {
+    background-color: $background_primary;
+  }
+  @include respond-to(tablet-view) {
+    margin-bottom: 0px;
+  }
+  .title {
+    margin: 0;
+    font-weight: 700;
+    line-height: 38px;
+    @include respond-to(tablet-view) {
+      text-align: start;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+@import "../mixins.scss";
+
+.topic-page-footer {
+  background-color: $background_tertiary;
+  border: 0.01px solid $background_tertiary;
+  height: 64px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+
+  z-index: 1;
+
+  .topic-page-footer-wrapper {
+    @include flex-center(space-between, center);
+    gap: 12px;
+    z-index: 1;
+    height: 64px;
+    padding-block: 8px;
+    padding-inline: 38px;
+    @include max-alignment;
+    width: 100%;
+    margin-inline: auto;
+
+    .dot-menu {
+      display: none;
+    }
+    @include respond-to(tablet-view) {
+      margin-top: 0px;
+
+      .dot-menu {
+        display: inline;
+        cursor: pointer;
+        position: relative;
+        button {
+          cursor: pointer;
+        }
+
+        .dot-menu-button {
+          background: none;
+          border: none;
+          @include dflexwithjustifyandalign(center, center);
+          padding: 0px;
+          padding-inline: 0px;
+          padding-inline: 0px;
+        }
+        .three-dot-button {
+          @include footer-icon();
+        }
+        .icon {
+          @include footer-icon();
+          background-color: $background_tertiary;
+          border-radius: 50%;
+          .dot-horizantal-icon {
+            padding-top: 0px;
+            padding: 0px;
+            @include dflexwithjustifyandalign(center, center);
+            padding-inline: 0px;
+            border: none;
+            background-color: unset;
+            @include dflexwithjustifyandalign(center, center);
+          }
+        }
+        .dropdown-content {
+          display: flex;
+          top: -74px;
+          border-radius: 39px;
+          border: 1px solid #0000001f;
+          position: absolute;
+          background-color: $background_primary;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          @include dflexwithjustifyandalign(center, center);
+          gap: 10px;
+        }
+      }
+    }
+    .icons {
+      @include flex-center(start, center);
+      gap: 8px;
+      .icon {
+        @include footer-icon();
+      }
+    }
+    .courses {
+      @include flex-center(space-between, center);
+      gap: 8px;
+      max-width: 940px;
+      width: 100%;
+      @include respond-to(tablet-view) {
+        max-width: 100px;
+        @include flex-center(flex-end, center);
+      }
+
+      .footer-disabled {
+        pointer-events: none;
+
+        color: #545555;
+      }
+      .footer-button-1 {
+        #previous-button {
+          h5 {
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        &:disabled {
+          opacity: 0.5;
+        }
+        cursor: pointer;
+
+        text-decoration: none;
+        background-color: $background_tertiary;
+        span {
+          display: block;
+        }
+        @include footer-button(8px 36px 8px 8px);
+        .footer-arrow-div {
+          background-color: $background_secondary;
+
+          @include button-arror();
+        }
+        @include respond-to(tablet-view) {
+          width: 48px;
+          padding: 0px;
+          span {
+            display: none;
+          }
+          &:disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .footer-button-2 {
+        #next-button {
+          h5 {
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        &:disabled {
+          opacity: 0.5;
+        }
+        cursor: pointer;
+        text-decoration: none;
+        background-color: $background_tertiary;
+        @include footer-button(8px 8px 8px 36px);
+        .footer-arrow-div {
+          background-color: $background_secondary;
+
+          @include button-arror();
+        }
+        span {
+          display: block;
+        }
+        @include respond-to(tablet-view) {
+          width: 48px;
+          padding: 0px;
+          span {
+            display: none;
+          }
+          &:disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+      .list-icon {
+        display: none;
+      }
+      p {
+        max-width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.width_handle_basic {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 32px;
+  padding-inline: 48px;
+  @include respond-to(tablet-view) {
+    padding-inline: 32px;
+  }
+}

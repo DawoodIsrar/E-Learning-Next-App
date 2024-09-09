@@ -1,0 +1,452 @@
+// colors
+
+$BG_Body_Light: #f3f6ff;
+$BG_Menu_Dark: #1c1c1c;
+$BG_Dark_Mode: #00084d;
+$BG_Light_Mode: #00d1ff;
+$BG_Body_Light_1: #fafbff;
+$BG_Body_Dark: #111111;
+$BG_Body_Creamy: #eeeeee;
+$Text_Body_Dark: white;
+$Blue_Color_Dark: #2e93b3;
+$Blue_Color_Light: #70deff;
+$Text_Body_Light: #363636;
+$Text_Detail_Dark: #c8c8c8;
+$Striped_Table_Header: #007add;
+$white-color: #ffffff;
+$grey-800: rgb(54, 54, 54);
+$black-color: #363636;
+$full-black: black;
+$Box_Shadow-light: #7d7d7d;
+$Box_Shadow-dark: rgba(0, 0, 0, 0.25);
+$Font_Subtitle_Light: #008eec;
+$Font_Body_Light: #363636;
+$Font_Body_Dark: #c8c8c8;
+$Recently_View_Shadow_Light: 0px 4px 4px rgba(214, 230, 255, 0.25);
+$Recently_View_Shadow_Dark: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$BG_Input_Form_Dark: #4f4f4f;
+$Success_Message_Light: green;
+$Success_Message_Dark: white;
+$Heading_Light: #3b68d7;
+$H2_Background: linear-gradient(87.62deg, #94c0ff -44.71%, #cbebff 100%);
+$Box_Blue: #3f7aea;
+$Box_Blue_Dark: #52aaff;
+$transparent: transparent;
+$Box_Text_Light: #cbcbcb;
+$Box_Red: #ff0000;
+$Box_Gray: #6f6f6f;
+$Box_Title_Gray: #848484;
+$List_Text_Light: #c4c4c4;
+$Chapter_Number_Blue: #006ae1;
+$Topic_List_Item: #3f7aea;
+$Code_Title_Light: #2d2d2d;
+$Linear_Gradient_Left_Line_Dark: linear-gradient(
+  -90deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 0.25) 100%
+);
+$Linear_Gradient_Left_Line_Light: linear-gradient(
+  -90deg,
+  rgba(0, 76, 182, 1) 0%,
+  rgba(0, 154, 249, 1) 100%
+);
+$Linear_Gradient_Right_Line_Dark: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(255, 255, 255, 0.25) 100%
+);
+$Linear_Gradient_Right_Line_Light: linear-gradient(
+  90deg,
+  rgba(0, 76, 182, 1) 0%,
+  rgba(0, 154, 249, 1) 100%
+);
+$Blue_Path: #70cdf0;
+$Blue_Upload: #119abd;
+$Dark_Striped_Table: #212121;
+$Mustard_Color: #ffaa1d;
+$Green_Img_Text: #4bbfa3;
+$Blue_Btn: #26bcce;
+$Rating-Bg: #828282;
+$Light_Table_Striped: #e5f3ff;
+$User_Settings_Blue: #16d2df;
+$Grey_Border: #aeaeae;
+$Sky_Blue: #52aaff;
+$Light_Sky_Blue: #97ceff;
+$Editor_Heading_Light: #3f7aea;
+$Editor_Heading_Dark: #97ceff;
+$Editor_H2_Gradient_Light: linear-gradient(
+  90deg,
+  rgba(63, 122, 234, 1) 0%,
+  rgba(63, 122, 234, 0) 100%
+);
+$Editor_H2_Gradient_Dark: linear-gradient(
+  90deg,
+  rgba(151, 206, 255, 1) 0%,
+  rgba(151, 206, 255, 0) 100%
+);
+$Blue_List_Item_Dot_Light: rgba(0, 106, 225, 0.8);
+$Blue_List_Item_Dot_Dark: rgba(255, 255, 255, 0.8);
+$Practice_Bg_Filter_Light: 0px 0px 5px lightgray;
+$Practice_Bg_Filter_Dark: none;
+$Practice_Bg_Back_Light: #e0f7f9;
+$Practice_Bg_Back_Dark: #0f2427;
+$Practice_Bg_Heading_Light: #1e838a;
+$Practice_Bg_Heading_Light_1: #002628;
+$Practice_Bg_Heading_Light_2: #00125a;
+$Practice_Bg_Heading_Dark: #84dee6;
+$Practice_Bg_Gradient_Light: linear-gradient(
+  90deg,
+  rgba(30, 131, 138, 1) 0%,
+  rgba(30, 131, 138, 0) 100%
+);
+$Practice_Bg_Gradient_Dark: linear-gradient(
+  90deg,
+  rgba(132, 222, 230, 1) 0%,
+  rgba(132, 222, 230, 0) 100%
+);
+$Strong_Tag_Dark: #97ceff;
+$LightRed: #fdebef;
+$ErrorRed: #de4040;
+$ErrorText: #ed4942;
+$Code_Color_Light: #d63384;
+$Code_Color_Dark: #e685b5;
+$Code_Border_Color_Dark: #495057;
+$Code_Border_Color_Light: #495057;
+$Dark_Blue_Highlighter: #22007e;
+$Dark_Purple_Highlighter: #3746c9;
+$Editor_BG_Dark: #1b1f22;
+$Editor_BG_Light: #f8f9fa;
+$Scrollbar_BG_Dark: #424242;
+$Scrollbar_BG_Light: #fff;
+$Scrollbar_Thumb_Dark: #686868;
+$Scrollbar_Thumb_Light: #c5c5c5;
+$List_Blue_Strong_Dark: #97ceff;
+$List_Blue_Strong_Light: #3f7aea;
+$List_Blue_Dot_Dark: #97ceff;
+$List_Blue_Dot_Light: #418dfe;
+$List_Blue_Text_Dark: #ffffff;
+$List_Blue_Text_Light: #000000;
+$List_Red_Strong_Dark: #ff6666;
+$List_Red_Strong_Light: #ff6666;
+$List_Red_Text_Dark: #ffffff;
+$List_Red_Text_Light: #000000;
+$List_Gray_Strong_Dark: #cccccc;
+$List_Gray_Strong_Light: #848484;
+$List_Gray_Text_Dark: #cccccc;
+$List_Gray_Text_Light: #848484;
+$List_Gray_Only_Text_Dark: #cccccc;
+$List_Gray_Only_Text_Light: #000000;
+$Box_Blue_BG_Dark: #418dfe;
+$Box_Blue_BG_Light: #418dfe;
+$Red_Heading_Color: #ff6666;
+$Practice_Samp_Dark: #84dee6;
+$Practice_Samp_Light: #1e838a;
+$Samp_Dark: #97ceff;
+$Samp_Light: #3f7aea;
+$Practice_UL_Light: #1e838a;
+$Practice_UL_Dark: #84dee6;
+$Body_Font_Light: #00125a;
+$CallOutBorderColor_Light: #f1faff;
+$CallOutBorderColor_Dark: #363636;
+$Gray_900: #2d2d2d;
+$Gray_800: #4f4f4f;
+$Gray_700: #6f6f6f;
+$Gray_600: #848484;
+$Gray_500: #aeaeae;
+$Gray_400: #cbcbcb;
+$Gray_300: #ededed;
+$Gray_200: #f2f2f2;
+$Gray_100: #f7f7f7;
+$Gray_50: #fcfcfc;
+$Blue_900: #3947b7;
+$Blue_800: #3b68d7;
+$Blue_700: #3f7aea;
+$Blue_600: #418dfe;
+$Blue_500: #419bff;
+$Blue_400: #52aaff;
+$Blue_300: #6ebaff;
+$Blue_200: #97ceff;
+$Blue_100: #bfe0ff;
+$Blue_50: #e5f3ff;
+$Blue_Gradient_1: linear-gradient(87.62deg, #000711 -44.71%, #cbebff 100%);
+$Blue_Gradient_2: inear-gradient(
+  -90deg,
+  rgba(0, 76, 182, 1) 0%,
+  rgba(0, 154, 249, 1) 100%
+);
+$ChallengeColorCustom_Dark: rgb(34, 48, 74);
+$ChallengeColorCustom_Light: rgb(51, 84, 145);
+
+//linear-gradient(122deg, #11003d 0%, #001255 85.38%);
+
+$themes: (
+  light: (
+    bodyFontColor: $Body_Font_Light,
+    bodyBg: $BG_Body_Light,
+    bodyBgCreamy: $BG_Body_Creamy,
+    bodyText: $Text_Body_Light,
+    fontSubtitle: $Font_Subtitle_Light,
+    courseName: $Font_Body_Light,
+    authorName: $Font_Body_Light,
+    recentlyViewShadow: $Recently_View_Shadow_Light,
+    bgInputFrom: $BG_Body_Light,
+    bgInputFrom_1: $BG_Body_Light_1,
+    successMessage: $Success_Message_Light,
+    heading: $Heading_Light,
+    h2Background: $H2_Background,
+    boxBackground: $white-color,
+    boxText: $Box_Text_Light,
+    shadowBoxBg: $white-color,
+    shadowBoxText: $Box_Text_Light,
+    shadowBoxShadow: 0px 0px 10px rgba(0, 0, 0, 0.25),
+    shadowBoxTitleShadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25)),
+    blueBoxTitle: $Box_Blue,
+    blueBoxTopicColor: $Box_Blue,
+    redBoxTitle: $Box_Red,
+    greyBoxTitle: $Font_Body_Light,
+    listText: $Font_Body_Light,
+    greyOlText: $Box_Gray,
+    ulGrayDot: $Box_Gray,
+    topicListItem: $Topic_List_Item,
+    codeTitle: $Code_Title_Light,
+    linearGradientLeftLine: $Linear_Gradient_Left_Line_Light,
+    linearGradientRightLine: $Linear_Gradient_Right_Line_Light,
+    stripedTable: $Light_Table_Striped,
+    stripedTableHeader: #007add,
+    formInputBg: $white-color,
+    formInputShadow: 0px 0px 1px rgba(0, 0, 0, 0.25),
+    whiteBlack: $Practice_Bg_Heading_Light_2,
+    fileUploader: $white-color,
+    pathColor: $Heading_Light,
+    courseFooterBtnBg: $Code_Title_Light,
+    searchModalBg: $white-color,
+    greyBlack: $black-color,
+    bookmarkColor: $Font_Subtitle_Light,
+    editorHeading: $Editor_Heading_Light,
+    editorH2Gradient: $Editor_H2_Gradient_Light,
+    boxTitleTab: $Box_Blue,
+    listItemBlue: $Chapter_Number_Blue,
+    listItemBlueBg: $Blue_List_Item_Dot_Light,
+    practiceBgFilter: $Practice_Bg_Filter_Light,
+    practiceBgBack: $Practice_Bg_Back_Light,
+    practiceBgHeading: $Practice_Bg_Heading_Light,
+    practiceBgHeading_1: $Practice_Bg_Heading_Light_2,
+    practiceBgGradient: $Practice_Bg_Gradient_Light,
+    strongTagColor: $Box_Blue,
+    boxRed: $Box_Red,
+    boxTitleGray: $Box_Title_Gray,
+    inherit: inherit,
+    boxGray: $Box_Gray,
+    whiteLightBlack: rgba(0, 0, 0, 0.25),
+    codeColor: $Code_Color_Light,
+    sampColor: $Samp_Light,
+    codeBorderColor: $Code_Border_Color_Light,
+    editorBG: $Editor_BG_Light,
+    scrollbarBG: $Scrollbar_BG_Light,
+    scrollbarThumb: $Scrollbar_Thumb_Light,
+    listBlueStrong: $List_Blue_Strong_Light,
+    listBlueText: $List_Blue_Text_Light,
+    listRedStrong: $List_Red_Strong_Light,
+    listRedText: $List_Red_Text_Light,
+    listGrayStrong: $List_Gray_Strong_Light,
+    listGrayText: $List_Gray_Text_Light,
+    boxBlueBG: $Box_Blue_BG_Light,
+    listBlueDot: $List_Blue_Dot_Light,
+    practiceSamp: $Practice_Samp_Light,
+    practiceUL: $Practice_UL_Light,
+    listGrayTextOnly: $List_Gray_Only_Text_Light,
+    practiceBodyContent: $Practice_Bg_Heading_Light_1,
+    calloutBorderTop: $CallOutBorderColor_Light,
+    cardBackground: $Blue_50,
+    cardBoxShadow: $Blue_100,
+    cardText: $Blue_700,
+    courseGuideBG: $Gray_100,
+    courseGuideCardBG: $white-color,
+    courseGuideOutliineSectionBG: $Blue_50,
+    userFeedbackBg: $Blue_700,
+    challengeSectionBg: $ChallengeColorCustom_Light,
+    challengeCardBg: $ChallengeColorCustom_Dark,
+  ),
+
+  dark: (
+    bodyFontColor: $Text_Body_Dark,
+    bodyBg: $BG_Body_Dark,
+    bodyBgCreamy: $BG_Body_Dark,
+    bodyText: $Text_Body_Dark,
+    fontSubtitle: $white-color,
+    courseName: $white-color,
+    authorName: $Font_Body_Dark,
+    recentlyViewShadow: $Recently_View_Shadow_Dark,
+    bgInputFrom: $BG_Input_Form_Dark,
+    successMessage: $Success_Message_Dark,
+    bgInputFrom_1: $BG_Input_Form_Dark,
+    blueBoxTopicColor: $Light_Sky_Blue,
+    heading: $white-color,
+    h2Background: $white-color,
+    boxBackground: $transparent,
+    boxText: $white-color,
+    shadowBoxBg: $Box_Text_Light,
+    shadowBoxText: $Font_Body_Light,
+    shadowBoxShadow: 0px 0px 10px #ffffff,
+    shadowBoxTitleShadow: boxBlueBG,
+    blueBoxTitle: $white-color,
+    redBoxTitle: $white-color,
+    greyBoxTitle: $white-color,
+    listText: $white-color,
+    greyOlText: $white-color,
+    ulGrayDot: $Box_Text_Light,
+    topicListItem: $white-color,
+    codeTitle: $white-color,
+    linearGradientLeftLine: $Linear_Gradient_Left_Line_Dark,
+    linearGradientRightLine: $Linear_Gradient_Right_Line_Dark,
+    stripedTable: $Dark_Striped_Table,
+    stripedTableHeader: $Dark_Striped_Table,
+    formInputBg: $BG_Input_Form_Dark,
+    formInputShadow: 0px 0px 1px #ffffff,
+    whiteBlack: $white-color,
+    fileUploader: $BG_Input_Form_Dark,
+    pathColor: $Blue_Path,
+    courseFooterBtnBg: transparent,
+    searchModalBg: $Font_Body_Light,
+    greyBlack: $Grey_Border,
+    bookmarkColor: $Font_Body_Dark,
+    editorHeading: $Editor_Heading_Dark,
+    editorH2Gradient: $Editor_H2_Gradient_Dark,
+    boxTitleTab: $Box_Blue_Dark,
+    listItemBlue: $white-color,
+    listItemBlueBg: $Blue_List_Item_Dot_Dark,
+    practiceBgFilter: $Practice_Bg_Filter_Dark,
+    practiceBgBack: $Practice_Bg_Back_Dark,
+    practiceBgHeading: $Practice_Bg_Heading_Dark,
+    practiceBgGradient: $Practice_Bg_Gradient_Dark,
+    strongTagColor: $Strong_Tag_Dark,
+    boxRed: $Box_Red,
+    boxTitleGray: $Box_Title_Gray,
+    inherit: inherit,
+    boxGray: $Box_Gray,
+    whiteLightBlack: $white-color,
+    codeColor: $Code_Color_Dark,
+    sampColor: $Samp_Dark,
+    codeBorderColor: $Code_Border_Color_Dark,
+    editorBG: $Editor_BG_Dark,
+    scrollbarBG: $Scrollbar_BG_Dark,
+    scrollbarThumb: $Scrollbar_Thumb_Dark,
+    listBlueStrong: $List_Blue_Strong_Dark,
+    listBlueText: $List_Blue_Text_Dark,
+    listRedStrong: $List_Red_Strong_Dark,
+    listRedText: $List_Red_Text_Dark,
+    listGrayStrong: $List_Gray_Strong_Dark,
+    listGrayText: $List_Gray_Text_Dark,
+    boxBlueBG: $Box_Blue_BG_Dark,
+    listBlueDot: $List_Blue_Dot_Dark,
+    practiceSamp: $Practice_Samp_Dark,
+    practiceUL: $Practice_UL_Dark,
+    listGrayTextOnly: $List_Gray_Only_Text_Dark,
+    practiceBodyContent: $white-color,
+    calloutBorderTop: $CallOutBorderColor_Dark,
+    cardBackground: $Gray_900,
+    cardBoxShadow: $Gray_700,
+    cardText: $white-color,
+    courseGuideBG: $Gray_900,
+    courseGuideCardBG: $Gray_900,
+    courseGuideOutliineSectionBG: $Gray_800,
+    userFeedbackBg: $Blue_900,
+    challengeSectionBg: $ChallengeColorCustom_Dark,
+    challengeCardBg: $ChallengeColorCustom_Light,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin rating-colors {
+  background-color: #ed4942;
+
+  &:nth-child(2) {
+    background-color: #ed8042;
+  }
+
+  &:nth-child(3) {
+    background-color: #fcc502;
+  }
+
+  &:nth-child(4) {
+    background-color: #b2cf00;
+  }
+
+  &:nth-child(5) {
+    background-color: #36cf00;
+  }
+}
+
+// media queries
+
+// extra small
+
+$screen-xs-min: 425px;
+
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 767px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@mixin xs {
+  @media (max-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

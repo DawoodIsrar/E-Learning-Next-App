@@ -1,0 +1,18 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.search-courses-container {
+  padding-block: 0px;
+  padding-inline: 0px;
+  background-color: $background_primary;
+}
+.search-courses-banner {
+  height: 40px;
+  padding-block: 0px !important;
+  padding-inline: 48px;
+  @include dflexwithalign(center);
+  gap: 12px;
+  @include respond-to(mobile-view) {
+    display: none;
+  }
+}

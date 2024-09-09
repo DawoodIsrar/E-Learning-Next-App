@@ -1,0 +1,33 @@
+@import "@/assets/scss/variables.scss";
+
+.mobile-button-wrapper {
+  display: none;
+  user-select: none;
+  height: 64px;
+  width: 100%;
+  background-color: $background_tertiary;
+  padding-left: 30px;
+}
+
+.mobile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: $background_primary;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-button-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-sidebar-wrapper {
+    display: inline;
+  }
+}

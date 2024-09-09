@@ -1,0 +1,55 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.list-style-slug {
+  list-style: none;
+  background-color: $background_tertiary;
+  font-family: "__Inter_aaf875";
+  left: 100px;
+  border-radius: 16px;
+  width: 295px;
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  padding: 0px;
+}
+.list-item-slug {
+  width: 100%;
+  height: 56px;
+  border: 0px 0px 1px 0px solid $text_tertiary;
+  padding: 16px 16px 16px 24px;
+  gap: 16px;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: $brand_secondary;
+    font-weight: 700;
+  }
+  &.selected {
+    background-color: $brand_secondary;
+    color: $primary_white;
+    font-weight: 700;
+  }
+  &:not(:last-child) {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom: 1px solid $primary_border;
+  }
+  &:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+.li-link-slug {
+  all: unset;
+  width: 250px;
+  height: 45px;
+  padding: 10px 10px 10px 8px;
+  border-radius: 12px;
+  width: 100%;
+  &:visited {
+    color: unset;
+  }
+}

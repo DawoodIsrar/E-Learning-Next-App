@@ -1,0 +1,199 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.blog-page-main-wrapper {
+  .blog-wrapper {
+    background-color: $background_tertiary;
+    .seo-h1-title {
+      position: absolute;
+      clip: rect(0px, 0px, 0px, 0px);
+    }
+    .width_handle_basic {
+      padding-top: 0px;
+      @include respond-to(mobile-view) {
+        padding-inline: 24px;
+        padding-top: 0px;
+      }
+    }
+    .reverse {
+      flex-direction: row-reverse;
+      @include respond-to(tablet-view) {
+        flex-direction: column;
+      }
+      @include respond-to(mobile-view) {
+        flex-direction: column-reverse;
+      }
+    }
+    @include respond-to(tablet-view) {
+      flex-direction: column;
+    }
+
+    .CardandFeature {
+      margin-top: 40px;
+      .heading {
+        display: none;
+        @include respond-to(tablet-view) {
+          display: inline-block;
+          margin-top: 24px;
+          margin-bottom: 34px;
+        }
+      }
+      @include dflexwithjustifyandalign(space-between, center);
+
+      gap: 34px;
+      @include respond-to(tablet-view) {
+        gap: 0px;
+      }
+      @include respond-to(mobile-view) {
+        gap: 0px;
+      }
+      @include respond-to(tablet-view) {
+        margin-top: 0px;
+        flex-direction: column;
+        @include dflexwithjustifyandalign(space-between, start);
+      }
+    }
+  }
+  .blog-start-chapter {
+    .width_handle_basic {
+      padding-top: 0px;
+      margin-top: 60px;
+      margin-bottom: 0px;
+      padding-bottom: 36px;
+
+      @include respond-to(tablet-view) {
+        padding-top: 5px;
+        margin-top: 0px;
+        padding-inline: 5px;
+      }
+    }
+    .course-banner-content-wrapper {
+      // max-width: 276px;
+      @include respond-to(tablet-view) {
+        align-items: center;
+      }
+      @include dflexwithjustify(center);
+      flex-direction: column;
+    }
+  }
+  .library-carusal {
+    @include respond-to(mobile-view-max) {
+      h2 {
+        max-width: 250px;
+      }
+    }
+
+    .slick-slider {
+      .slick-next {
+        right: 0;
+        top: -76px;
+        left: unset;
+        @include respond-to(mobile-view) {
+          top: -90px;
+        }
+      }
+      .slick-prev {
+        left: unset;
+        top: -76px;
+        right: 77px;
+        @include respond-to(mobile-view) {
+          right: 40px;
+          top: -90px;
+        }
+      }
+      .slick-prev:before,
+      .slick-next:before {
+        display: none !important;
+      }
+    }
+  }
+  .course-main-content-wrapper {
+    background-color: $background_tertiary;
+  }
+
+  h1,
+  p {
+    color: $text_primary;
+  }
+
+  .course-p-banner {
+    margin-bottom: 0px;
+    min-height: 420px;
+    justify-content: center;
+    gap: 90px;
+    .supporting-text {
+      display: none;
+      margin-top: 0px;
+    }
+    .banner-content-btn {
+      margin-top: 0px;
+    }
+    .heading {
+      margin-top: 20px;
+    }
+    .cover-image {
+      min-width: 610px;
+      min-height: 355px;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+
+      @media (max-width: 1310px) {
+        min-width: 400px;
+      }
+      @media (max-width: 1160px) {
+        max-width: 300px;
+      }
+      @include respond-to(tablet-view) {
+        min-width: 250px;
+        min-height: 146px;
+      }
+    }
+    .caption {
+      font-weight: 400;
+      @include respond-to(mobile-view) {
+        margin-bottom: 18px;
+      }
+    }
+    .course-banner-internal-wrapper {
+      margin-inline: 100px;
+      @media (max-width: 1310px) {
+        margin-inline: 80px;
+      }
+      @media (max-width: 1160px) {
+        margin-inline: 50px;
+      }
+      @include respond-to(tablet-view) {
+        min-height: 146px;
+      }
+
+      .start-chapter-btn {
+        width: 327px;
+        margin-top: 36px;
+        @include respond-to(mobile-view) {
+          width: 295px;
+        }
+      }
+    }
+
+    @include respond-to(tablet-view) {
+      .supporting-text {
+        display: none;
+      }
+      .start-chapter-btn {
+        width: 327px;
+        @include respond-to(mobile-view) {
+          width: 295px;
+        }
+        margin-top: 15px;
+      }
+      padding: 36px;
+    }
+  }
+  .course-title-image {
+    h1,
+    p {
+      color: black;
+    }
+  }
+}

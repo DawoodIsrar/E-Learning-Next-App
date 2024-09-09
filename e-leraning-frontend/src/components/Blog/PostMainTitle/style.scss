@@ -1,0 +1,87 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.main-wrapper-blog-category {
+  @include respond-to(mobile-view) {
+    border-radius: 15px;
+  }
+}
+.title-divider {
+  .title-main-divider {
+    display: block;
+    height: 1px;
+    background-color: #e0e0e0;
+    @include respond-to(mobile-view) {
+      display: none;
+    }
+  }
+}
+.main-title-blog-category-wrapper {
+  margin-top: 64px;
+  display: flex;
+
+  @include respond-to(mobile-view) {
+    padding: 15px 16px 13px 17px;
+    border-radius: 15px;
+  }
+  flex-direction: column;
+  border-radius: 15px;
+  @include respond-to(tablet-view) {
+    margin-top: 36px;
+  }
+  &:first-of-type {
+    @include respond-to(mobile-view) {
+      margin-top: 24px;
+    }
+  }
+
+  .main-title {
+    @include dflexwithjustifyandalign(space-between, center);
+    margin-bottom: 20px;
+    @include respond-to(mobile-view) {
+      margin-bottom: 0px;
+    }
+    h2 {
+      color: $text_primary;
+      @include respond-to(mobile-view) {
+        color: black;
+      }
+    }
+    .text-link {
+      @include respond-to(mobile-view) {
+        display: none;
+      }
+    }
+    .blog-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: $background_tertiary;
+
+      display: none;
+      @include respond-to(mobile-view) {
+        display: none;
+
+        @include dflexwithjustifyandalign(center, center);
+      }
+    }
+    .link-text {
+      @include dflexwithjustifyandalign(center, center);
+      text-decoration: none;
+      color: $text_primary;
+      cursor: pointer;
+      gap: 18px;
+      @include respond-to(mobile-view) {
+        p {
+          display: none;
+        }
+      }
+      .arrow {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $background_primary;
+        @include dflexwithjustifyandalign(center, center);
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import "@/assets/scss/variables.scss";
+
+.not-found-div {
+  padding: 20px;
+  background-color: $background_primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 450px);
+  margin-block: 100px;
+
+  img {
+    width: 424px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  p {
+    font-weight: 100;
+    font-size: 1rem;
+    text-align: center;
+  }
+  button {
+    color: $text_tertiary;
+    border: 1px solid $brand_primary;
+    border-radius: 12px;
+    padding: 12px 32px;
+    font-size: 16px;
+    margin-top: 20px;
+    background: $brand_primary;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      background: $background_blue;
+      border: 1px solid $background_blue;
+      color: $text_tertiary;
+    }
+
+    &:disabled {
+      background: $background_primary;
+      border: 1px solid $background_primary;
+      color: $text_secondary;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.button-wrapper {
+  width: 30%;
+  padding: 50px 0 0 0;
+  margin-bottom: 50px;
+}
+
+.image404 {
+  height: auto;
+  width: 424px;
+}
+
+@media only screen and (max-width: 500px) {
+  .not-found-div {
+    width: 100%;
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 14px;
+      margin-block: 25px;
+    }
+  }
+  .button-wrapper {
+    width: 50%;
+    padding: 10px;
+  }
+  .not-found-div .image404 {
+    height: auto;
+    width: 285px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .not-found-div {
+    width: 100%;
+    img {
+      transform: scale(0.6);
+    }
+  }
+}
+
+.button_contained {
+  @extend button;
+  color: white;
+}

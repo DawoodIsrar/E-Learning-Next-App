@@ -1,0 +1,37 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.list {
+  list-style: none;
+  :first-child {
+    padding-top: 0px !important;
+  }
+  li {
+    cursor: pointer;
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    color: $primary_white;
+    @include respond-to(tablet-view) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .pages-heading {
+    font-weight: 400;
+    @include respond-to(tablet-view) {
+      padding-top: 24px !important;
+    }
+  }
+  .pages-links {
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    padding-top: 16px;
+    @include respond-to(tablet-view) {
+      font-size: 12px;
+    }
+  }
+}

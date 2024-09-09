@@ -1,0 +1,98 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.main-table-of-content-wrapper {
+  position: relative;
+  width: 295px;
+
+  @include respond-to(tablet-view) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include respond-to(tablet-view) {
+    display: none;
+  }
+  .table-of-content-wrapper {
+    position: sticky;
+    top: 105px;
+    z-index: 1;
+    width: 295px;
+    .table-body {
+      padding: 16px 32px 16px 24px;
+      background-color: $background_tertiary;
+      border: 1px solid $border_light;
+      border-radius: 12px;
+      height: max-content;
+    }
+    .share-button {
+      // position: sticky;
+      // top: 520px;
+      // z-index: 1;
+      height: max-content;
+      margin-top: 26px;
+      width: 295px;
+      @include dflexwithalign(flex-start);
+      flex-direction: column;
+      p {
+        color: $text_primary;
+        font-size: 12px;
+        line-height: 32px;
+        font-weight: 300;
+      }
+      .share-btns {
+        @include dflexwithalign(center);
+        gap: 10px;
+        a {
+          background-color: transparent;
+          border: 1px solid $brand_primary;
+          border-radius: 6px;
+          background-color: transparent;
+          width: 36px;
+          height: 36px;
+          @include dflexwithjustifyandalign(center, center);
+        }
+      }
+    }
+    .active-content {
+      background-color: $text_blue;
+      border-radius: 6px;
+      color: $text_tertiary;
+    }
+    .table-heading {
+      color: $text_blue;
+      font-size: 18px;
+    }
+
+    p {
+      color: $text_secondary;
+      font-size: 14px;
+      margin-top: 6px;
+      line-height: 22px;
+      padding: 10px;
+      margin-inline: -10px;
+      cursor: pointer;
+      text-decoration: none;
+      // &:first-of-type {
+      font-size: 18px;
+      // }
+      &:hover {
+        background-color: $text_blue;
+        border-radius: 6px;
+        color: $text_tertiary;
+      }
+      &:hover:disabled {
+        color: $text_secondary;
+        background-color: unset;
+      }
+      &:first-of-type {
+        &:hover {
+          background-color: unset;
+          border-radius: unset;
+          color: $text_blue;
+        }
+      }
+    }
+  }
+}

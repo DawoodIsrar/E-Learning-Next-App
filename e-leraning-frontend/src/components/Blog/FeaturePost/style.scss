@@ -1,0 +1,40 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.feature-posts {
+  width: 50%;
+  min-height: 618px;
+  height: 100%;
+  @include respond-to(tablet-view) {
+    width: 100%;
+    min-height: unset;
+    margin-top: 10px;
+  }
+
+  .post-wrapper {
+    .divider {
+      display: none;
+    }
+    .main-title {
+      @include respond-to(mobile-view) {
+        display: none;
+      }
+    }
+    .posts-div {
+      .posts-chunk-div {
+        .divider {
+          display: inline-block;
+        }
+        .single-post-div {
+          gap: 16px;
+          margin-top: 15px;
+          min-height: 87px;
+          height: 100%;
+          @include respond-to(tablet-view) {
+            min-height: unset;
+          }
+        }
+      }
+    }
+  }
+}

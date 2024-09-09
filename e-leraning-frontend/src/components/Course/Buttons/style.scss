@@ -1,0 +1,64 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+@import "../../Topic/mixins.scss";
+
+.dot-menu {
+  display: none;
+
+  @include respond-to(tablet-view) {
+    display: inline;
+  }
+
+  position: relative;
+
+  .dot-menu-button {
+    background: none;
+    border: none;
+  }
+  .icon {
+    position: sticky;
+    bottom: 0;
+    left: 10px;
+    @include footer-icon();
+    border-radius: 50%;
+
+    background-color: $background_tertiary;
+    .dot-horizantal-icon {
+      padding: 0px;
+      padding-inline: 0px;
+      border: none;
+      background-color: unset;
+      border-radius: 50%;
+      @include dflexwithjustifyandalign(center, center);
+    }
+  }
+}
+.dropdown-content {
+  top: -74px;
+  left: 10px;
+  border-radius: 39px;
+  border: 1px solid var(--rating-border);
+  position: absolute;
+  background-color: $background_primary;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  @include dflexwithjustifyandalign(center, center);
+  gap: 10px;
+}
+.course-buttons-for-share-rating {
+  margin-left: 20px;
+  display: flex;
+  @include respond-to(tablet-view) {
+    display: none;
+  }
+}
+.course-rating-wrapper {
+  width: fit-content;
+  position: sticky;
+  bottom: 10px;
+  z-index: 1;
+}

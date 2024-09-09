@@ -1,0 +1,37 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.course-show-guide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 171px;
+  min-height: 44px;
+  border: 1px solid #0000001f;
+  padding-inline: 13px;
+  padding-block: 24px;
+  border-radius: 24px;
+  background-color: $background_tertiary;
+  @include respond-to(mobile-view) {
+    padding-inline: 0px;
+    padding-block: 5px;
+  }
+
+  cursor: pointer;
+  p {
+    padding: 0px;
+    font-weight: 600;
+  }
+
+  img {
+    padding-bottom: 3px;
+  }
+  .rotate {
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+  }
+  .rotate-reverse {
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+  }
+}

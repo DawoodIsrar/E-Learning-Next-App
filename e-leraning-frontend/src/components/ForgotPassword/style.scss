@@ -1,0 +1,110 @@
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/mixins.scss";
+
+.forgot-password-main {
+  height: calc(100vh - 400px);
+
+  @include respond-to(tablet-view) {
+    height: calc(100vh - 540px);
+  }
+  @include respond-to(mobile-view) {
+    height: 100%;
+  }
+  .editormainpage_root_contianer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100% - 30px);
+  }
+}
+
+.otpContainer-forgot {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+
+  input {
+    width: 90px !important;
+    height: 70px;
+    border: none;
+
+    @media screen and (max-width: 500px) {
+      width: 70px !important;
+    }
+    @media screen and (max-width: 300px) {
+      width: 65px !important;
+      height: 50px;
+    }
+  }
+}
+.forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.forgot-password-text-container {
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.forgot-password-input {
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
+}
+.back_button {
+  color: $text_primary;
+}
+.button-forgot {
+  margin-top: 20px;
+  color: $text_tertiary;
+  border: 1px solid $brand_primary;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin-top: 20px;
+  background: $brand_primary;
+  width: 300px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: $background_blue;
+    border: 1px solid $background_blue;
+    color: $primary_white;
+  }
+
+  &:disabled {
+    background: $background_primary;
+    border: 1px solid $background_primary;
+    color: $text_secondary;
+    cursor: not-allowed;
+  }
+}
+
+.button_contained {
+  @extend .button-forgot;
+  color: white;
+}
+.forgot-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.verify-loading {
+  display: flex;
+  justify-content: center;
+}
+.forgetPasswordUserMsg {
+  color: $text_primary;
+  width: 400px;
+  max-width: 90vw;
+}
+.forgot-password-email {
+  color: $brand_secondary;
+  text-align: center;
+}

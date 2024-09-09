@@ -1,0 +1,83 @@
+//paddings
+$base_padding: 10px 100px;
+$secondary_padding: 64px 100px;
+
+//Border-Radius
+
+$nav_radius: 26px;
+$badge_radius: 46px;
+$course_radius: 10px;
+$social_buttons_radius: 16px;
+$dropdown_radius: 46px;
+
+//fonts sizes
+$heading_font: 42px;
+$heading2_font: 40px;
+$heading3_font: 32px;
+$course_card_font: 20px;
+$card_font: 24px;
+$body_font: 18px;
+$body2_font: 16px;
+$body-m-font: 15px;
+$body-responsive: 14px;
+$body-extra-small: 14px;
+
+//font weights
+$primary_weight: 700;
+$secondary_weight: 400;
+$tertiary_weight: 600;
+
+//border
+$button_border: 1px solid rgba(0, 0, 0, 0.12);
+
+// old colors
+$primary_black: black;
+$background: #f1f3f6;
+$primary_white: white;
+$html_css_card: #e96755;
+$git_github_card: #0081a9;
+$Djnago_card: #3c8b01;
+$linux_card: #91c867;
+$seo_card: #27afbe;
+$topic_tag: #211f89;
+$delete_btn: #de4040;
+$edit_btn: #ffaa1d;
+$open_accordion_color: #52aaff;
+$divider_color: rgba(0, 0, 0, 0.12);
+$background_banner: rgba(35, 172, 187, 0.25);
+
+// Define variables
+
+$brancd_secondary: var(--brancd_secondary);
+$backgorund_error: var(--background_error);
+$logo_background_primary: var(--logo_background_primary);
+$background_error: var(--background-error);
+$primary_border: var(--primary_border);
+$background_peek_contrast: var(--background_peek_contrast);
+$brand_primary: var(--brand_primary);
+$brand_secondary: var(--brand_secondary);
+$background_primary: var(--background_primary);
+$background_secondary: var(--background_secondary);
+$background_tertiary: var(--background_tertiary);
+$publication-bg: var(--publication-bg);
+$book-image-bg: var(--book-image-bg);
+$background_blue: var(--background_blue);
+$text_primary: var(--text_primary);
+$text_secondary: var(--text_secondary);
+$text_tertiary: var(--text_tertiary);
+$text_blue: var(--text_blue);
+$text_code: var(--text_code);
+$a_visited: var(--a_visited);
+$status_error: var(--status_error);
+$border_light: var(--border_light);
+$border_light_secondary: var(--border_light_secondary);
+$menu-bg-color: var(--menu-bg-color);
+
+$status_error: #e71d32;
+$status_success: #26d24c;
+$status_warning: #feb62b;
+$status_oragne: #dd8823;
+$status_green: #9bd323;
+// nav height
+
+$nav_height: 44px;

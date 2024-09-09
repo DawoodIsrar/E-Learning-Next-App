@@ -1,0 +1,378 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.login_main {
+  background-color: $background_primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 24px;
+  @include respond-to(large-height) {
+    height: calc(100vh - 392px);
+    @include respond-to(tablet-view) {
+      height: calc(100vh - 550px);
+    }
+    @include respond-to(mobile-view) {
+      height: 100%;
+    }
+  }
+}
+.login_container {
+  width: 300px;
+}
+
+@mixin font($font-family, $weight, $size) {
+  font-family: $font-family;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin margin($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin padding($top, $bottom, $left, $right) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin text($line-height, $letter-spacing, $text-align) {
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+}
+
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+.login_intro {
+  margin-bottom: 30px;
+  @include text(36px, null, 1.3%);
+  color: $brand_primary;
+}
+
+.email-label {
+  text-align: start;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.forgot-password {
+  font: Inter;
+  margin-top: 30px;
+  @include flex(space-between, center);
+}
+
+.password-label {
+  display: block;
+  margin-bottom: 15px;
+}
+.forgot {
+  font: Inter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 11px;
+  color: $text_blue !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.input-password {
+  @include margin(10px, null);
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+
+  input[type="password"] {
+    @include padding(null, null, null, 30px);
+  }
+
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-family: "Font Awesome";
+    font-size: 1.2em;
+    path: {
+      fill: red !important;
+    }
+  }
+}
+
+.social-div {
+  color: $text_secondary;
+  margin-top: 50px;
+  position: relative;
+
+  .social-text {
+    font-size: 14px;
+    line-height: 18px;
+    position: absolute;
+    top: -27px;
+    left: 80px;
+    @include padding(0px, opx, 3px, 3px);
+  }
+}
+hr {
+  width: 100%;
+  color: gray;
+  margin-top: 10px;
+}
+
+.privacy-Terms-div {
+  text-align: center;
+}
+
+.button {
+  color: $text_tertiary;
+  border: 1px solid $brand_primary;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin-top: 20px;
+  background: $brand_primary;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background: $background_blue;
+    border: 1px solid $background_blue;
+    color: $primary_white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.button_contained {
+  @extend .button;
+  color: white;
+}
+
+.sign-up-link {
+  text-decoration: none;
+}
+
+.sign-in-bottom-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .sign-in-inner-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+  }
+
+  .p-1 {
+    position: relative;
+    font-size: 14px;
+    color: $brand_primary;
+    color: $text_primary;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70px;
+      background-color: $text_secondary;
+      height: 1px;
+      top: 10px;
+      left: -0px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      background-color: $text_secondary;
+      height: 1px;
+      top: 10px;
+      right: -0px;
+    }
+  }
+
+  .google-git-btns {
+    display: flex;
+    column-gap: 11px;
+    margin-block: 15px;
+    button {
+      background-color: $background_primary;
+      width: 144.5px;
+      height: 46px;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1px solid $background_primary;
+    }
+    .google-icon {
+      width: 24px;
+    }
+    .github-icon {
+      width: 24px;
+    }
+  }
+
+  .p-2 {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: $text_primary;
+    a {
+      color: #52aaff;
+    }
+  }
+}
+.privacy-terms {
+  color: $text_primary;
+  display: block;
+  margin-top: 15px !important;
+  text-decoration: none;
+  font-size: 14px;
+  &:visited {
+    color: $text_primary;
+  }
+}
+
+.hr {
+  background-color: $text_secondary;
+  width: 100%;
+  height: 1px;
+  margin-top: 10px;
+}
+.privacy-terms-div {
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .login_main {
+    padding-top: 50px;
+  }
+
+  .sign-in-section {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px;
+
+    .sign-in-inner-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 90%;
+      overflow: hidden;
+    }
+
+    .google-git-btns {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+    .privacy-terms-div {
+      align-self: flex-end;
+      justify-self: flex-end;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .p-1 {
+      position: relative;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+    .p-1:before {
+      top: 11px;
+      left: -140px;
+      width: 80%;
+    }
+    .p-1::after {
+      top: 11px;
+      right: -140px;
+      width: 80%;
+    }
+  }
+}
+.auth-button-wrapper {
+  max-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 300px;
+  gap: 10px;
+  @include respond-to(tablet-view) {
+    max-width: 300px;
+    padding: 0px;
+  }
+}
+
+.auth-buttons {
+  background-color: $background_secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 46px;
+  cursor: pointer;
+  border: $button_border;
+  border-radius: $social_buttons_radius;
+  &:hover {
+    background-color: $brancd_secondary;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  @include respond-to(mobile-view) {
+    padding: 24px 0;
+    width: 120px;
+    height: 46px;
+  }
+}
+.error-message {
+  color: $status_error;
+  font-family: "__Inter_aaf875";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  padding: 10px;
+}
+.loading-wrapper-signin {
+  padding-top: 10px;
+}
+.privacy-terms-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-and-login {
+  margin-top: 14px !important;
+  font-size: 14px;
+}

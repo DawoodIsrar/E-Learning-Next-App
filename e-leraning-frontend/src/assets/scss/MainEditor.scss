@@ -1,0 +1,170 @@
+@import "./theme";
+
+.mainEditor {
+  width: calc(100vw - 1.75rem);
+  margin: 0 auto;
+  max-width: 100vw;
+  padding-bottom: 1.5rem;
+  max-width: 100%;
+  @include sm {
+    margin: 0 1%;
+    width: 98%;
+  }
+
+  .courseStructureHeader {
+    margin-bottom: 2rem;
+    @include md {
+      margin-top: 2rem;
+    }
+    @include sm {
+      margin-top: 2rem;
+    }
+  }
+
+  .mainEditorHeader_Main {
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;
+    gap: 0.5rem;
+    margin-top: 2rem;
+
+    @include md {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .mainEditorHeader_LogoContainer {
+    display: flex;
+    gap: 2.2rem;
+
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        height: 4.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        height: 1.2rem;
+        background-color: $Blue_Upload;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+        font-weight: 300;
+        color: $white-color;
+        cursor: pointer;
+        padding: 0 0.5rem;
+      }
+    }
+
+    & > div:nth-child(2) {
+      span {
+        font-size: 0.875rem;
+        color: $white-color;
+        font-weight: 300;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-top: 0.875rem;
+      }
+    }
+  }
+
+  .mainEditorHeader_Badges {
+    h4 {
+      font-size: 0.875rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      row-gap: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    span {
+      padding: 2px 0.65rem;
+      font-size: 1.125rem;
+      color: $Font_Body_Light;
+      background-color: $Box_Text_Light;
+      border-radius: 0.65rem;
+    }
+  }
+
+  .mainEditorTableHeading {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+  }
+}
+
+.tableCourseIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: $white-color;
+
+  img {
+    max-width: 90%;
+  }
+
+  span {
+    font-size: 0.65rem;
+    color: $Blue_Path;
+    font-weight: 700;
+  }
+}
+
+.tableCourseIcon2 {
+  height: 75px;
+
+  img {
+    height: 100%;
+    max-width: 100px;
+  }
+}
+
+.tableAssignedEditor {
+  img {
+    height: 1rem;
+    margin-left: 0.25rem;
+  }
+}
+
+.tableButtons {
+  button {
+    color: $white-color;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    height: 2.2rem;
+    width: 10.5rem;
+    background: $Sky_Blue;
+    border: 1px solid $Light_Sky_Blue;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0;
+
+    img {
+      height: 1.2rem;
+    }
+  }
+}

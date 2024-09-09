@@ -1,0 +1,262 @@
+@import "../../assets/scss/theme";
+@import "@/assets/scss/variables.scss";
+
+.userSettingsModal_light {
+  background-color: $BG_Body_Light !important;
+  color: $black-color !important;
+
+  input {
+    color: $black-color !important;
+    background-color: $white-color !important;
+    border: 1px solid rgba(0, 0, 0, 0.5) !important;
+  }
+}
+.errorMessage {
+  color: red;
+  border: none;
+  padding: 0;
+  min-height: 20px;
+}
+.userSettingsModal {
+  // height: 200px;
+  width: 707px;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem;
+  box-shadow: 0px 0px 5px #c8c8c8;
+  background-color: $background_primary;
+  gap: 1rem;
+  min-height: fit-content;
+
+  @include md {
+    padding: 1rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+
+    @include md {
+      font-size: 1.25rem;
+    }
+
+    svg {
+      font-weight: 400;
+      transform: translate(-8px, 5px);
+      font-size: 1.8rem;
+
+      @include md {
+        transform: translate(-5px, 5px);
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  input {
+    height: 2.5rem;
+    width: 400px;
+    max-width: 90%;
+    outline: none;
+    border-radius: 0.3rem;
+    padding: 0 0.7rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    color: $text_primary;
+    background-color: $background_secondary;
+    border: 1px solid rgba(230, 230, 230, 0.5);
+
+    @include md {
+      font-size: 1rem;
+      height: 2.25rem;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    text-align: center;
+
+    @include md {
+      font-size: 1rem;
+    }
+
+    svg {
+      transform: translate(-8px, 4px);
+    }
+  }
+
+  h6 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+
+    @include md {
+      font-size: 1.125rem;
+    }
+  }
+
+  .userSettingsModal_colorInputContainer {
+    display: flex;
+    align-items: center;
+
+    @include md {
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    @include md {
+      input {
+        &[type="text"] {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  &_submitBtn {
+    height: 2.5rem;
+    width: 200px;
+    background: $brand_primary;
+    border-radius: 0.9rem;
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+    color: $text_tertiary;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background: $background_blue;
+      color: $text_primary;
+    }
+    @include md {
+      width: fit-content;
+      padding: 0 1.75rem;
+      height: 2rem;
+      font-size: 1rem;
+    }
+  }
+  .userSettingsModal_submitBtn {
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &_delete {
+    @extend .userSettingsModal_submitBtn;
+    background-color: $status_error;
+
+    @include sm {
+      min-height: 2rem;
+      height: fit-content;
+    }
+  }
+
+  &_forgetPassword {
+    font-size: 1.125rem;
+    cursor: pointer;
+    color: $User_Settings_Blue;
+    font-family: "Roboto", sans-serif;
+
+    @include md {
+      font-size: 1rem;
+    }
+  }
+
+  &_inputsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    max-width: 100%;
+    .userSettingsModal_settingBtn {
+      cursor: pointer;
+      color: $text_primary !important;
+      &:hover {
+        // border: 1px solid $status_error;
+      }
+    }
+  }
+
+  &_btnRightAlign {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &_btnBetweenAlign {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &_btnsCenter {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+
+    @include sm {
+      gap: 1rem;
+    }
+  }
+
+  &_settingBtn {
+    height: 2.75rem;
+    width: 335px;
+    max-width: 90%;
+    background-color: transparent;
+    border-radius: 0.65rem;
+    color: $white-color;
+    border: 1px solid $Grey_Border;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-family: "Roboto", sans-serif;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      color: $Grey-Border;
+    }
+  }
+
+  &_contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  &_IconContainer {
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+
+    img {
+      &:first-child {
+        height: 100%;
+        width: 100%;
+      }
+
+      &:last-child {
+        height: 1.9rem;
+        width: 1.9rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(10%, 10%);
+      }
+    }
+  }
+}

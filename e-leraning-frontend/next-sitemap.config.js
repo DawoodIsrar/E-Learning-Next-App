@@ -1,0 +1,82 @@
+const siteUrl = `${process.env.NEXTAUTH_URL}/`;
+
+module.exports = {
+  siteUrl,
+  exclude: [
+    "/404",
+    "/401",
+    "*/sitemap.xml",
+    "/email-verify",
+    "/feedback",
+    "/forgetPassword",
+    "/login",
+    "/logout",
+    "/membership-plan",
+    "/my-library-courses",
+    "/course-list",
+    "/recently-viewed",
+    "/register",
+    "/search-result",
+    "/server-image-sitemap.xml",
+    "/server-course-sitemap.xml",
+    "/server-topic-sitemap.xml",
+    "/user-setting-view",
+    "/course-search-result",
+    "/forgot-password",
+    "/member",
+    "/my-recently-viewed",
+    "/my-library",
+    "/topic-search-result",
+    "/tagPage/",
+    "/_next/",
+    "/02-course-category-icon-cover/",
+    "/040-bg-images/",
+    "/030-topic-og-images/",
+  ],
+  generateRobotsTxt: true,
+  additionalPaths: async (config) => [
+    await config.transform(config, "/"),
+    await config.transform(config, "/about"),
+    await config.transform(config, "/blogs"),
+  ],
+  robotsTxtOptions: {
+    transformRobotsTxt: async (_, robotsTxt) => {
+      const withoutHost = robotsTxt.replace(`# Host\nHost: ${siteUrl}\n\n`, "");
+
+      return withoutHost;
+    },
+    policies: [
+      {
+        userAgent: "*",
+        disallow: [
+          "/404",
+          "/401",
+          "/email-verify",
+          "/feedback",
+          "/forgetPassword",
+          "/login",
+          "/logout",
+          "/membership-plan",
+          "/my-library-courses",
+          "/course-list",
+          "/recently-viewed",
+          "/register",
+          "/topic-search-result/",
+          "/course-search-result/",
+          "/user-setting-view",
+          "/_next/",
+          "/02-course-category-icon-cover/",
+          "/040-bg-images/",
+          "/030-topic-og-images/",
+        ],
+      },
+      { userAgent: "*", allow: "/" },
+    ],
+    additionalSitemaps: [
+      `${siteUrl}server-course-sitemap.xml`,
+      `${siteUrl}server-topic-sitemap.xml`,
+      `${siteUrl}server-image-sitemap.xml`,
+      `${siteUrl}server-blog-sitemap.xml`,
+    ],
+  },
+};

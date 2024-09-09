@@ -1,0 +1,22 @@
+@import "@/assets/scss/mixins.scss";
+
+.sidebar {
+  border-radius: 16px;
+  position: sticky;
+  top: 80px;
+  width: 295px;
+  height: 608px;
+  max-height: 100%;
+  @include respond-to(tablet-view) {
+    display: none;
+  }
+
+  h4 {
+    margin: 0px 0px 32px 0px;
+    text-align: center;
+  }
+
+  .accordion-root {
+    margin-bottom: 32px;
+  }
+}

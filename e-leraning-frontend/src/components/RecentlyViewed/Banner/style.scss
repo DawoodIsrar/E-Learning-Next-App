@@ -1,0 +1,36 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.recently-viewed-main-wrapper {
+  background-color: $background_primary;
+}
+.recently-viewed-courses-container {
+  padding-block: 0px;
+}
+.recently-viewed-banner-title {
+  @include dflexwithalign(center);
+  gap: 12px;
+
+  @include respond-to(mobile-view) {
+    svg {
+      width: 25px !important;
+      height: 25px !important;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    .library-icon {
+      display: none !important;
+    }
+  }
+}
+
+.recently-viewed-courses-banner {
+  @include max-alignment;
+  height: 40px;
+  padding-block: 0px !important;
+  @include dflexwithalign(center);
+  gap: 12px;
+  @include respond-to(mobile-view) {
+    display: none;
+  }
+}

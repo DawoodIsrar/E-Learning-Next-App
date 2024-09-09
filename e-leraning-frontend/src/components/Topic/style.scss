@@ -1,0 +1,63 @@
+@import "./mixins.scss";
+
+.detailpage {
+  .width_handle_basic.topic-main-page-wrapper {
+    @media only screen and (min-width: 1360px) and (max-width: 1460px) {
+      padding-inline: 24px;
+      .topic-content-handler {
+        gap: 30px;
+      }
+      .topic-page-content {
+        width: 650px;
+      }
+    }
+  }
+  .topic-main-page-wrapper {
+    // gap: 60px;
+    // @include flex-center(unset, start);
+    @include respond-to(tablet-view) {
+      padding: 16px 32px;
+      gap: 0px;
+    }
+    @include respond-to(mobile-view) {
+      padding: 16px;
+      gap: 0px;
+    }
+    .topic-main-page-container {
+      margin: 0;
+      padding: 0;
+      max-width: 1600px;
+      width: 100%;
+      margin-inline: auto;
+    }
+    .topic-content-handler {
+      height: 100%;
+      width: 100%;
+      gap: 60px;
+      @include flex-center(unset, start);
+      @include respond-to(tablet-view) {
+        @include flex-center(center, center);
+        flex-direction: column;
+        gap: 0px;
+      }
+    }
+  }
+  .courses_footer {
+    margin-top: 0px;
+    position: sticky;
+    z-index: 0;
+    bottom: 0;
+    bottom: 0;
+    left: unset;
+    transform: unset;
+  }
+  .editor-footer-position {
+    bottom: 35px;
+    @media only screen and (min-width: 519px) and (max-width: 576px) {
+      bottom: 45px;
+    }
+    @media only screen and (max-width: 518px) {
+      bottom: 55px;
+    }
+  }
+}

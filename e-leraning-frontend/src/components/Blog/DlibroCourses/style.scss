@@ -1,0 +1,39 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.blog-course-slider {
+  position: relative;
+  background-color: $background_primary;
+  padding: 64px 20px 120px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  .width_handle_basic {
+    @include respond-to(mobile-view) {
+      padding-inline: 24px;
+    }
+  }
+  .course-card {
+    @include respond-to(tablet-view) {
+      margin-bottom: 24px;
+      width: 240px;
+      height: 195px;
+    }
+  }
+
+  @include respond-to(tablet-view) {
+    padding: 0px;
+    padding-inline: 0px;
+    .width_handle_basic {
+      padding-top: 24px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .slider-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 60px;
+  }
+}

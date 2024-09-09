@@ -1,0 +1,43 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.back-btn-wrapper {
+  max-width: 1600px;
+  margin: auto;
+  .back-btn {
+    cursor: pointer;
+    margin-left: 32px;
+    margin-top: 16px;
+    @include dflexwithalign(center);
+    @include respond-to(mobile-view) {
+      margin-left: 8px;
+    }
+  }
+}
+.topic-search {
+  background-color: $background_primary;
+  @include max-alignment;
+  padding-top: 0px;
+  padding-bottom: 110px;
+
+  .topic-search-result {
+    .search-icon-title-container {
+      padding-top: 24px;
+      @include dflexwithalign(center);
+      gap: 12px;
+      svg {
+        width: 36px;
+        height: 36px;
+      }
+      @include respond-to(mobile-view) {
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    .topic-search-result-container {
+      padding-top: 50px;
+    }
+  }
+}

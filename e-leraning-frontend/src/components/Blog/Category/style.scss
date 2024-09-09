@@ -1,0 +1,165 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.category-blog-wrapper {
+  width: 100%;
+  .divider {
+    &:last-of-type {
+      display: none;
+      @include respond-to(mobile-view) {
+        display: block;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &:last-child {
+    .posts-and-card-container {
+      margin-bottom: 32px;
+    }
+  }
+  .posts-and-card-container {
+    margin-top: 24px;
+
+    @include dflexwithjustify(space-between);
+    gap: 20px;
+    @include respond-to(tablet-view) {
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
+    @include respond-to(mobile-view) {
+      flex-direction: column-reverse;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      align-items: center;
+    }
+    .category-post-div {
+      .mobile-view-blogs {
+        display: none;
+      }
+      @include dflexwithjustify(space-between);
+      @include respond-to(tablet-view) {
+        flex-direction: column;
+        width: 100%;
+      }
+      @include respond-to(mobile-view) {
+        .web-view-blogs {
+          display: none;
+        }
+        .mobile-view-blogs {
+          display: block;
+        }
+      }
+
+      .first-paragraph {
+        @media only screen and (max-width: 1564px) and (min-width: 1000px) {
+          height: 88px;
+        }
+        @media only screen and (max-width: 920px) and (min-width: 663px) {
+          height: 60px;
+        }
+        @media only screen and (max-width: 662px) and (min-width: 500px) {
+          height: 80px;
+        }
+      }
+      .posts-div {
+        display: flex;
+        // flex-wrap: wrap
+
+        .posts-chunk-div {
+          height: 400px;
+          display: flex;
+          flex-direction: column;
+          @media only screen and (max-width: 1564px) {
+            height: 100%;
+          }
+          @include respond-to(mobile-view) {
+            height: unset;
+          }
+          h4 {
+            padding-top: 16px;
+            @media only screen and (max-width: 1554px) and (min-width: 1000px) {
+              height: 88px;
+            }
+            @media only screen and (max-width: 999px) and (min-width: 743px) {
+              height: 64px;
+            }
+            @media only screen and (max-width: 742px) and (min-width: 500px) {
+              height: 80px;
+            }
+          }
+          @include respond-to(mobile-view) {
+            &:first-of-type {
+              .single-post-div {
+                &:first-of-type {
+                  h4 {
+                    padding-top: 0px;
+                  }
+                }
+              }
+            }
+            &:last-of-type {
+              .single-post-div {
+                &:first-of-type {
+                  h4 {
+                    padding-top: 0px;
+                  }
+                }
+              }
+            }
+          }
+          //   gap: 18px;
+          width: 50%;
+          @include respond-to(mobile-view) {
+            width: 100%;
+          }
+          &:first-child {
+            &:first-child {
+              .divider {
+                &:last-child {
+                  display: none;
+                  @include respond-to(tablet-view) {
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child {
+            &:last-child {
+              .divider {
+                &:last-child {
+                  display: none;
+                  @include respond-to(tablet-view) {
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @include respond-to(mobile-view) {
+          flex-wrap: wrap;
+        }
+
+        gap: 20px;
+        .single-post-div {
+          height: 50%;
+          @media only screen and (max-width: 1564px) {
+            height: 100%;
+          }
+          gap: 16px;
+          @include respond-to(mobile-view) {
+            height: unset;
+          }
+          @include respond-to(tablet-view) {
+            width: 100%;
+          }
+          .single-post-content {
+            margin-block: 16px;
+          }
+        }
+      }
+    }
+  }
+}

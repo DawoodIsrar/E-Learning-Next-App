@@ -1,0 +1,61 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.dropdown {
+  border: 1px solid $primary_border;
+  background-color: $background_primary;
+
+  @include dflexwithjustifyandalign(center, center);
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 44px;
+  max-height: 44px;
+  width: 100%;
+  height: 100%;
+  gap: 8px;
+  border-radius: 46px;
+  cursor: pointer;
+
+  .dropdown-menu {
+    background-color: $background_primary;
+    border: 1px solid $primary_border;
+    position: absolute;
+    top: 55px;
+    list-style-type: none;
+    padding: 10px 0px;
+    margin: 5px 0;
+    width: 130px;
+    border-radius: 20px;
+    z-index: 999;
+    li {
+      &:hover {
+        background-color: $background_tertiary;
+        &:first-of-type {
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+        }
+        &:last-of-type {
+          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+    }
+
+    .menu-item {
+      cursor: pointer;
+      border: none;
+      user-select: none;
+      @include dflexwithjustify(space-between);
+      padding: 5px 0;
+      div {
+        @include dflexwithjustifyandalign(center, center);
+        gap: 5px;
+        width: 100%;
+      }
+    }
+  }
+
+  .theme-mode {
+    margin-top: 4px;
+  }
+}

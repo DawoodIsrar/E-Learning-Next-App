@@ -1,0 +1,50 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.bookmark-courses-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include respond-to(tablet-view) {
+    gap: 10px;
+  }
+}
+.bookmark-course-header {
+  @include dflexwithalign(center);
+  gap: 10px;
+  color: $primary_black;
+  @include respond-to(tablet-view) {
+  }
+  .bookmark-icon {
+    width: 35px;
+    height: 35px;
+    @include respond-to(tablet-view) {
+      width: $course_card_font;
+      height: $course_card_font;
+    }
+  }
+}
+
+.topic-slider {
+  display: flex;
+  gap: 20px;
+}
+
+.bookmark-header-h3 {
+  font-weight: $primary_weight;
+  letter-spacing: 0.00054em;
+  @include respond-to(tablet-view) {
+    letter-spacing: 0.02em;
+  }
+}
+.loading-wrapper {
+  @include dflexwithalign(center);
+  flex-direction: column;
+  margin: 32px 0px;
+}
+.helper-text {
+  font-size: 19px;
+  @include respond-to(tablet-view) {
+    font-size: 16px;
+  }
+}

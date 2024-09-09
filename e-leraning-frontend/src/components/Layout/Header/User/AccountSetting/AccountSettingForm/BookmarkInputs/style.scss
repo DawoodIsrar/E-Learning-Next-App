@@ -1,0 +1,50 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.bookmark-container {
+  position: relative;
+  margin-top: 12px;
+  .bookmark-input {
+    position: relative;
+    @include dflexwithalign(center);
+    gap: 8px;
+    button {
+      background-color: unset !important;
+      border: none;
+    }
+    .color-input {
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      z-index: -1;
+    }
+    .color-selection-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bookmark-input-field {
+      width: 312px;
+      @include respond-to(mobile-view) {
+        width: 270px;
+      }
+    }
+  }
+}
+
+.delete-bookmark-button {
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.5;
+  }
+  :hover {
+    color: red;
+  }
+
+  .svg {
+    :hover {
+      color: red;
+    }
+  }
+}

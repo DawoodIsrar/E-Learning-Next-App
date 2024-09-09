@@ -1,0 +1,21 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.blog-all-banner-wrapper {
+  padding-block: 0px;
+  background-color: $background_tertiary;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .blog-main-banner {
+    @include max-alignment;
+    height: 40px;
+    padding-block: 0px;
+    @include dflexwithalign(center);
+    gap: 12px;
+    @include respond-to(mobile-view) {
+      padding-inline: 24px;
+    }
+  }
+}

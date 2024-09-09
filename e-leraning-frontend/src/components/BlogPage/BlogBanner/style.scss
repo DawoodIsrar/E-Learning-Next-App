@@ -1,0 +1,128 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.blog-banner-wrapper {
+  @include respond-to(tablet-view) {
+    padding: 20px;
+  }
+  @include respond-to(mobile-view) {
+    div {
+      &:first-of-type {
+        border-radius: 24px;
+      }
+    }
+  }
+
+  .width_handle_basic {
+    @include respond-to(mobile-view) {
+      padding: 26px 35px 18px 35px;
+    }
+  }
+  // background-color: #c8eaee;
+  @include respond-to(mobile-view) {
+    margin: 5px;
+    border-radius: 24px;
+  }
+  .width_handle_basic {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-inline: 120px;
+    @media only screen and (max-width: 700px) and (min-width: 501px) {
+      padding-inline: 60px;
+    }
+    @include respond-to(mobile-view) {
+      padding-top: 26px;
+      padding-bottom: 18px;
+      padding-inline: 35px;
+    }
+  }
+  .wrapper {
+    @include dflexwithjustifyandalign(space-between, center);
+    @include respond-to(mobile-view) {
+      gap: 20px;
+    }
+
+    .content {
+      max-width: 698px;
+      h1 {
+        color: black;
+      }
+      p {
+        color: black;
+
+        margin-top: 24px;
+      }
+      .author-name-and-date {
+        @include respond-to(mobile-view) {
+          max-width: 225px;
+          width: 100%;
+        }
+
+        @include dflexwithalign(center);
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+    @include respond-to(tablet-view) {
+      flex-direction: column;
+      .content {
+        p,
+        author-name-and-date {
+          display: none;
+        }
+      }
+    }
+    .img-div {
+      .responsive-img {
+        width: 296px;
+        height: 306px;
+        @include respond-to(mobile-view) {
+          width: 135px;
+          height: 138px;
+        }
+      }
+      .content {
+        p,
+        author-name-and-date {
+          display: none;
+        }
+        @include respond-to(tablet-view) {
+          p,
+          author-name-and-date {
+            display: flex;
+          }
+        }
+      }
+      @include respond-to(tablet-view) {
+        @include dflexwithalign(center);
+        flex-direction: column;
+      }
+    }
+    @include respond-to(mobile-view) {
+      .content p {
+        margin-top: 0px;
+      }
+      .img-div {
+        @include dflexwithalign(center);
+        flex-direction: column;
+        gap: 20px;
+
+        img {
+          width: 181px;
+          height: 185px;
+        }
+        svg {
+          width: 167px;
+          height: 185px;
+        }
+
+        .author-name-and-date {
+          &:first-of-type {
+            margin-top: 24px;
+          }
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

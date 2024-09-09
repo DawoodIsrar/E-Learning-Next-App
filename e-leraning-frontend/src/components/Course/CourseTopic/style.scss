@@ -1,0 +1,7 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+.chapter-container {
+  .chapter-slick-carusal {
+    background-color: $background_banner;
+  }
+}

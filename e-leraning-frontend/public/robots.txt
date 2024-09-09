@@ -1,0 +1,32 @@
+# *
+User-agent: *
+Disallow: /404
+Disallow: /401
+Disallow: /email-verify
+Disallow: /feedback
+Disallow: /forgetPassword
+Disallow: /login
+Disallow: /logout
+Disallow: /membership-plan
+Disallow: /my-library-courses
+Disallow: /course-list
+Disallow: /recently-viewed
+Disallow: /register
+Disallow: /topic-search-result/
+Disallow: /course-search-result/
+Disallow: /user-setting-view
+Disallow: /_next/
+Disallow: /02-course-category-icon-cover/
+Disallow: /040-bg-images/
+Disallow: /030-topic-og-images/
+
+# *
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: http://localhost:3000//server-course-sitemap.xml
+Sitemap: http://localhost:3000//server-topic-sitemap.xml
+Sitemap: http://localhost:3000//server-image-sitemap.xml
+Sitemap: http://localhost:3000//server-blog-sitemap.xml

@@ -1,0 +1,34 @@
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/variables.scss";
+
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.course-main-content-wrapper-non-member {
+  background-color: $background_tertiary;
+}
+
+.course-main-content-wrapper {
+  background-color: $background_primary;
+
+  .course-page-content-container {
+    @include max-alignment;
+    width: 100%;
+    padding-inline: 48px;
+    @include respond-to(tablet-view) {
+      padding-inline: 10px;
+    }
+  }
+
+  .course-page-content-wrapper {
+    background-color: $background_tertiary;
+    @include max-alignment;
+    margin-inline: auto;
+    .detailpage {
+      width: 100%;
+    }
+  }
+}
